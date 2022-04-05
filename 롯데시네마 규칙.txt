@@ -1,4 +1,0 @@
-롯데시네마
-
-* view -> class, id class-name
-* git -> https://github.com/Junyeong0218/test_coop
