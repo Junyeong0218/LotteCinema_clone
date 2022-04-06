@@ -1,0 +1,166 @@
+* {
+    background-repeat: no-repeat;
+}
+#header-section {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 194px;
+    background-color: rgba(26, 25, 27, 0.499);
+}
+
+.logo {
+    margin-left: -109px;
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    z-index: 1;
+    width: 219px;
+    height: 37px;
+}
+
+.gnb {
+    position: relative;
+    margin: 0 auto;
+    width: 980px;
+    height: 71px;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.g-menu1 {
+    display: flex;
+    float: left;
+    opacity: 0.5;
+    margin-top: 40px;
+    height: 14px;
+}
+
+.facebook :first-child {
+    background-image: url(../images/gnb_facebook_wht.png);
+}
+
+.youtube :first-child {
+    background-image: url(../images/gnb_youtube_wht.png);
+}
+
+.instagram :first-child {
+    background-image: url(../images/gnb_follow_wht.png);
+    margin-right: 0;
+}
+
+.g-menu1 li {
+    margin-right: 14px;
+
+}
+
+.g-menu1 li a {
+    padding-left: 16px;
+    height: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.g-menu2 {
+    display: flex;
+    float: right;
+    margin-top: 40px;
+    opacity: 0.5;
+}
+
+.g-menu2 li {
+    margin-left: 14px;
+}
+
+.g-menu2 li a {
+    height: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.g-menu3 {
+    position: absolute;
+    display: flex;
+    white-space: nowrap;
+    top: 88px;
+    right: 0;
+    margin-top: 0;
+    width: 205.81px;
+    height: 14px;
+
+}
+
+.g-menu3 li {
+    margin-left: 25px;
+}
+
+.g-menu3 li a {
+    padding-left: 15px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 11px;
+    color: #ccc;
+}
+
+.btn-my :first-child {
+    background-image: url(../images/nav_side_my_wht.png);
+}
+
+.btn-reverse :first-child {
+    background-image: url(../images/nav_side_reserve_wht.png);
+}
+
+.btn-menu-all button {
+    border: none;
+    background: none;
+}
+
+
+
+#nav {
+    display: flex;
+    justify-content: center;
+    margin: 3px auto 0;
+    text-align: center;
+    width: 980px;
+    height: 40px;
+
+}
+
+#nav ul {
+    display: flex;
+}
+
+#nav ul li {
+    position: relative;
+}
+
+#nav ul li a {
+    display: block;
+    padding: 0 24px;
+    line-height: 40px;
+    height: 40px;
+
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+
+#nav ul li:not(:first-child) a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 9px;
+    margin-top: -5px;
+    border-left: 1px solid #707070;
+}
+
+.nav-nav {
+    width: 100%;
+    height: 38px;
+}
+
