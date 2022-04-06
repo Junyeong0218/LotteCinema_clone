@@ -1,0 +1,233 @@
+.container {
+        position: relative;
+        min-width: 1024px;
+}
+
+body {
+        overflow-y: scroll;
+}
+
+header {
+        position: relative;
+        display: block;
+        height: 115px;
+        border-bottom: 1px solid #EEE;
+        background-color: white;
+        width: 100%;
+}
+
+header.fixed {
+        position: fixed;
+        z-index: 90;
+        top: 0;
+        left: 0;
+        height: 43px;
+}
+
+.fixed>.logo {
+        display: none;
+}
+
+.fixed>.sns-and-links {
+        height: auto;
+        border-bottom: none;
+}
+
+.fixed>.sns-and-links>.sns,
+.fixed>.sns-and-links>.links,
+.fixed>.sns-and-links>.links2 {
+        display: none;
+}
+
+.fixed>.header-nav {
+        border-bottom: 1px solid #EEE;
+}
+
+.logo {
+        position: absolute;
+        z-index: 1;
+        top: 18px;
+        left: 50%;
+        margin-left: -109px;
+        background: url("/images/logo.png") no-repeat center center;
+}
+
+.logo>a {
+        display: block;
+        text-indent: -9999px;
+        width: 219px;
+        height: 37px;
+}
+
+.sns-and-links {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 980px;
+        height: 71px;
+        margin: 0 auto;
+        border-bottom: 1px solid #B2B2B2;
+}
+
+.sns,
+.links,
+.links2 {
+        margin-top: 40px;
+        display: flex;
+        justify-content: flex-start;
+        height: 14px;
+}
+
+.sns>li {
+        margin-right: 14px;
+}
+
+.sns>li>a {
+        display: flex;
+        align-items: center;
+}
+
+.sns>li>a>span,
+.links2>li>a>span {
+        height: 14px;
+        line-height: 14px;
+        font-size: 12px;
+        color: #656565;
+}
+
+.sns>li>a>span:first-child {
+        display: block;
+        width: 14px;
+        background-repeat: no-repeat;
+        background-position: 0 center;
+}
+
+.sns>li:nth-child(2)>a>span:first-child {
+        width: 15px;
+}
+
+.sns>li>a>span:last-child {
+        padding-left: 4px;
+}
+
+.facebook span:first-child {
+        background-image: url("/images/sns_facebook.png");
+}
+
+.youtube span:first-child {
+        background-image: url("/images/sns_youtube.png");
+}
+
+.instagram span:first-child {
+        background-image: url("/images/sns_instagram.png");
+}
+
+.links>li {
+        margin-left: 14px;
+}
+
+.links>li>a {
+        display: block;
+        line-height: 14px;
+        color: #656565;
+}
+
+.links2 {
+        position: absolute;
+        top: 88px;
+        right: 0;
+        margin-top: 0;
+}
+
+.links2>li {
+        margin-left: 25px;
+}
+
+.links2>li>a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+}
+
+.links2>li>a>span {
+        display: block;
+        font-size: 11px;
+        line-height: 13px;
+}
+
+.links2>li>a>span:last-child {
+        padding-left: 4px;
+}
+
+.whole-menu {
+        position: relative;
+        top: 2px;
+        width: 17px;
+        height: 14px;
+}
+
+.whole-menu>button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        background-image: url("/images/nav_side_all.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+}
+
+.to-signup span:first-child {
+        width: 14px;
+        height: 14px;
+        background-image: url("/images/nav_side_my.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+}
+
+.to-reserve span:first-child {
+        width: 14px;
+        height: 14px;
+        background-image: url("/images/nav_side_reserve.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+}
+
+.header-nav {
+        margin: 3px auto 0;
+        width: 980px;
+        height: 40px;
+        text-align: center;
+        background-color: white;
+}
+
+.header-nav>ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+}
+
+.header-nav>ul>li>a {
+        position: relative;
+        padding: 0 24px;
+        display: block;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        white-space: nowrap;
+}
+
+.header-nav>ul>li:not(:first-child)>a:before {
+        content: '';
+        opacity: 0.2;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 9px;
+        margin-top: -9px;
+        border-left: 1px solid #707070;
+}
+
+.hidden {
+        display: none;
+}

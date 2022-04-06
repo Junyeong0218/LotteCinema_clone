@@ -1,0 +1,65 @@
+.side-banner-wrapper {
+        position: absolute;
+        left: 50%;
+        margin-left: -660px;
+        z-index: 10;
+        width: 145px;
+        height: 145px;
+}
+
+.side-banner-wrapper.fixed {
+        position: fixed;
+}
+
+.side-banner-closer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 13px;
+        height: 13px;
+        background: url("/images/side_banner_closer.png") no-repeat;
+        cursor: pointer;
+}
+
+.banner-section {
+        padding-top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+}
+
+.banner_01 {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+}
+
+.footer-banner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+}
+
+.footer-banner>a {
+        position: relative;
+        z-index: 1;
+}
+
+.banner-flexer {
+        position: absolute;
+        top: 44px;
+        width: 100%;
+        height: 196px;
+}
+
+.banner-type01 .banner-flexer {
+        background-color: rgb(0, 92, 185);
+}
+
+.banner-type02 .banner-flexer {
+        background-color: rgb(227, 230, 239);
+}

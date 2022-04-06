@@ -1,0 +1,89 @@
+main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+}
+
+.contents {
+        width: 980px;
+        padding-top: 50px;
+}
+
+.product-wrapper {
+        margin: 40px 0 80px;
+        display: flex;
+        align-items: flex-start;
+        min-height: 650px;
+}
+
+.product-image {
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        height: 397px;
+}
+
+.product-image>img {
+        width: 478px;
+        height: 100%;
+}
+
+.product-detail {
+        margin-left: 50px;
+        width: 430px;
+}
+
+.detail-table {
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: left;
+        border: none;
+}
+
+.detail-table th,
+.detail-table td {
+        border-bottom: 1px solid #EEE;
+        padding: 20px 0;
+}
+
+.table-title {
+        padding: 10px 0 22px;
+        font-size: 28px;
+        font-weight: normal;
+}
+
+.detail-table td {
+        font-size: 15px;
+        color: #666;
+}
+
+.discount-ratio,
+.discounted-price,
+.origin-price {
+        font-family: 'Roboto',
+                'Noto Sans KR';
+        font-weight: bold;
+}
+
+.discount-ratio {
+        font-size: 18px;
+        font-weight: bold;
+        color: #FF243E;
+}
+
+.discounted-price {
+        margin-right: 20px;
+        font-size: 25px;
+        color: black;
+}
+
+.origin-price {
+        font-size: 16px;
+        text-decoration: line-through;
+        color: #666;
+        opacity: 0.4;
+        vertical-align: middle;
+}
