@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 * {
     background-repeat: no-repeat;
+    background-position: 0 50%;
 }
 #header-section {
     position: absolute;
     z-index: 2;
     width: 100%;
     height: 194px;
-    background-color: rgba(26, 25, 27, 0.499);
 }
 
 .logo {
@@ -30,11 +31,12 @@
 
 
 .g-menu1 {
-    display: flex;
     float: left;
     opacity: 0.5;
     margin-top: 40px;
+    width: 224.19px;
     height: 14px;
+    white-space: nowrap;
 }
 
 .facebook :first-child {
@@ -50,16 +52,16 @@
     margin-right: 0;
 }
 
+
 .g-menu1 li {
     margin-right: 14px;
-
+    display: inline-block;
 }
 
 .g-menu1 li a {
     padding-left: 16px;
     height: 14px;
     line-height: 14px;
-    font-weight: 500;
     color: #fff;
 }
 
@@ -77,7 +79,6 @@
 .g-menu2 li a {
     height: 14px;
     line-height: 14px;
-    font-weight: 500;
     color: #fff;
 }
 
@@ -196,8 +197,9 @@
     color: #fff;
     height: 18px;
     line-height: 18px;
-    font-size: 11px;
+    font-size: 12px;
     white-space: nowrap;
+    
 }
 
 .nav-nav2 {
@@ -222,6 +224,180 @@
 }
 
 
+#sub-section {
+    position: relative;
+    width: 100%;
+    height: 2365.11px;
+}
 
+.visual-ad {
+    background: black;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3));
+}
 
+.slide-wrap {
+    width: 100%;
+    height: 100%;
+}
 
+.slide-stage-outer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-stage {
+    max-width: 100%;
+    min-width: 1000px;
+    overflow: hidden;
+    height: 774px;
+}
+.slide-img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-img > li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-img>li>img {
+    width: 1920px;
+    height: 774px;
+}
+
+.slide-btn {
+    margin-top: -10px;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    right: auto;
+}
+
+.left-btn {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: 31px;
+    height: 60px;
+    margin-top: -15px;
+    background-size: auto;
+    background-image: url(../images/arr_lf_31_wht.png);
+    opacity: 0.6;
+    border: none;
+    background-color: transparent;
+}
+
+.right-btn {
+    position: absolute;
+    margin-top: -15px;
+    background-size: auto;
+    background-image: url(../images/arr_rg_31_wht.png);
+    top: 50%;
+    right: 30px;
+    width: 31px;
+    height: 60px;
+
+    opacity: 0.6;
+    border: none;
+    background-color: transparent;
+
+}
+
+.dot-btns {
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+    margin: 0 -455px 0 0;
+    position: absolute;
+    right: 50%;
+    left: auto;
+    top: auto;
+    bottom: 95px;
+}
+
+.dot-btn {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000;
+    border: none;
+}
+
+.dot-btn>span {
+    margin: 0 3px;
+    width: 6px;
+    height: 6px;
+}
+
+#content {
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 980px;
+    height: 1591.11px;
+}
+
+.movie-current-list {
+    margin-top: -100px;
+    margin-bottom: 70px;
+    width: 100%;
+    height: 384.89px;
+    background-color: #ccc;
+}
+
+#main-special-cinema {
+    margin-bottom: 33px;
+    width: 100%;
+    height: 101.69px;
+    background-color: antiquewhite;
+}
+
+#main-event-list {
+    margin-bottom: 33px;
+    width: 100%;
+    height: 540.69px;
+    background-color: #ccc;
+}
+
+.main-cont-premiere {
+    margin: 15px 0 53px 0;
+    width: 100%;
+    height: 215.61px;
+    background-color: antiquewhite;
+}
+
+.mid-menu-wrap {
+    margin-bottom: 50px;
+    width: 100%;
+    height: 133px;
+    background-color: #ccc;
+}
+
+.main-cont-notice {
+    padding-bottom: 10px;
+    width: 100%;
+    height: 26.23px;
+    border-bottom: 1px solid #aaa;
+}
+
+#banner-section {
+    padding-top: 70px;
+    width: 100%;
+    height: 540px;
+    background-color: #ccc;
+}
+
+#footer-section {
+    padding-top: 80px;
+    width: 100%;
+    height: 349.38px;
+    background-color: antiquewhite;
+}
+
+.tab-wrap {
+    
+}
