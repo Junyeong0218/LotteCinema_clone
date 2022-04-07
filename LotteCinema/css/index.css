@@ -231,8 +231,7 @@
 }
 
 .visual-ad {
-    background: black;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3));
+    overflow: hidden;
 }
 
 .slide-wrap {
@@ -249,24 +248,40 @@
 .slide-stage {
     max-width: 100%;
     min-width: 1000px;
-    overflow: hidden;
     height: 774px;
 }
 .slide-img {
-    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
     height: 100%;
 }
 
 .slide-img > li {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    display: block;
+    width: auto;
     height: 100%;
 }
 
 .slide-img>li>img {
+    position: relative;
     width: 1920px;
     height: 774px;
+}
+
+.slide-img>li>img::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 100%);
+}
+
+.active {
+    z-index: 1;
 }
 
 .slide-btn {
@@ -385,10 +400,50 @@
 }
 
 #banner-section {
-    padding-top: 70px;
+    position: absolute;
+    top: 704px;
+    left: 0;
     width: 100%;
-    height: 540px;
-    background-color: #ccc;
+    height: 405px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.banner-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 980px;
+    height: auto;
+}
+
+.banner-list > li {
+    position: relative;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 184px;
+}
+
+.banner-list > li> img {
+    width: 100%;
+    height: 262px;
 }
 
 #footer-section {
@@ -399,5 +454,69 @@
 }
 
 .tab-wrap {
-    
+    padding-top: 50px;
+    width: 100%;
+    height: 384.89px;
+
+}
+
+.slide-container {
+    width: 100%;
+    height: 334.89px;
+}
+
+.slide-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.stage-outer {
+    width: 100%;
+    height: 325.89px;
+}
+
+.stage {
+    width: auto;
+    height: 100%;
+}
+
+.slide-items {
+    margin-right: 15px;
+    width: 184px;
+    height: 325.89px;
+}
+
+.items {
+    width: 100%;
+    height: 315.89px;
+}
+
+.top-info {
+    width: 184px;
+    height: 262px;
+}
+
+.bottom-info {
+    margin-top: 20px;
+    width: 184px;
+    height: 33.89px;
+}
+
+.poster-info {
+    display: block;
+    width: 100%;
+    height: 262px;
+}
+
+.num-info {
+    padding-left: 10px;
+    display: block;
+    position: absolute;
+    height: 23px;
+
+    font-weight: bold;
+    font-size: 26px;
+    font-style: italic;
+    text-align: left;
+
 }
