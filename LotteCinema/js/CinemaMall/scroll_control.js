@@ -7,15 +7,16 @@ const side_banner = document.querySelector(".side-banner-wrapper");
 function fixControlForHeader(event) {
         const scroll_y = event.path[1].scrollY;
         if (scroll_y > 50) {
-                top_image.style.top = "120px";
+                if (top_image != null)
+                        top_image.style.top = "120px";
                 contents.style.marginTop = "120px";
                 header.classList.add("fixed");
         } else {
-                top_image.style.top = "";
+                if (top_image != null)
+                        top_image.style.top = "";
                 contents.style = "";
                 header.classList.remove("fixed");
         }
-        console.log(event);
 }
 
 function fixControlForAside(event) {

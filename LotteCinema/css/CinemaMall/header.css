@@ -43,6 +43,10 @@ header.fixed {
         border-bottom: 1px solid #EEE;
 }
 
+.fixed>.header-nav>ul>li>div {
+        top: 42px;
+}
+
 .logo {
         position: absolute;
         z-index: 1;
@@ -201,10 +205,13 @@ header.fixed {
 }
 
 .header-nav>ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
+        height: 100%;
+}
+
+.header-nav>ul>li {
+        display: inline-block;
+        align-items: center;
         height: 100%;
 }
 
@@ -212,6 +219,8 @@ header.fixed {
         position: relative;
         padding: 0 24px;
         display: block;
+        height: 100%;
+        line-height: 40px;
         font-size: 14px;
         letter-spacing: 0.1em;
         white-space: nowrap;
@@ -224,8 +233,76 @@ header.fixed {
         left: 0;
         top: 50%;
         height: 9px;
-        margin-top: -9px;
+        margin-top: -5px;
         border-left: 1px solid #707070;
+}
+
+.header-nav>ul>.active {
+        border-bottom: 2px solid #FF1744;
+}
+
+.nav-sub-list,
+.region-list {
+        position: absolute;
+        top: 114px;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 38px;
+        background-color: #F8F8F8;
+        z-index: 2;
+}
+
+.region-list {
+        top: 38px;
+        display: flex;
+        justify-content: center;
+        height: auto;
+        background-color: black;
+}
+
+.nav-sub-list>ul {
+        display: inline-block;
+        height: 100%;
+}
+
+
+.nav-sub-list>ul>li {
+        display: inline-block;
+        margin: 0 10px;
+}
+
+.nav-sub-list>ul>li>a {
+        display: inline-block;
+        padding: 0 5px;
+        height: 38px;
+        line-height: 38px;
+        color: #666;
+}
+
+.region-list>ul {
+        margin: 10px 0;
+        display: inline-block;
+        width: 980px;
+        min-height: 18px;
+}
+
+.region-list>ul>li {
+        display: inline-block;
+        margin: 0 4px;
+}
+
+.region-list>ul>li>a {
+        height: 18px;
+        line-height: 18px;
+        display: block;
+        padding: 0 5px;
+        color: white;
+        opacity: 0.6;
+}
+
+.region-list>ul>li>a:hover {
+        opacity: 1;
 }
 
 .hidden {
