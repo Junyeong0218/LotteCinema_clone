@@ -22,10 +22,10 @@ function fixControlForHeader(event) {
 function fixControlForAside(event) {
         const scroll_y = event.path[1].scrollY;
         if (scroll_y > 144) {
-                aside.style.paddingTop = "53px";
+                aside.style.top = "30px";
                 aside.classList.add("fixed");
         } else {
-                aside.style = "padding-top: 145px;";
+                aside.style = "top: 115px;";
                 aside.classList.remove("fixed");
         }
 }
@@ -41,13 +41,3 @@ function fixControlForsideBanner(event) {
         }
 }
 
-function moveTabUnderline(event) {
-        const target = event.target;
-        for (let i = 0; i < tabs.length; i++) {
-                if (tabs[i] == target) {
-                        tabs[i].classList.add("tab-active");
-                } else {
-                        tabs[i].classList.remove("tab-active");
-                }
-        }
-}
