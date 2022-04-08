@@ -8,6 +8,7 @@
     z-index: 2;
     width: 100%;
     height: 194px;
+    background: linear-gradient(to bottom, rgba(29, 29, 31, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .logo {
@@ -231,12 +232,8 @@
 }
 
 .visual-ad {
+    position: relative;
     overflow: hidden;
-}
-
-.slide-wrap {
-    width: 100%;
-    height: 100%;
 }
 
 .slide-stage-outer {
@@ -263,21 +260,22 @@
     height: 100%;
 }
 
-.slide-img>li>img {
+.slide-img>li>div>img {
     position: relative;
     width: 1920px;
     height: 774px;
+    z-index: 1;
 }
 
-.slide-img>li>img::after {
+.slide-img>li>div::after {
     content: "";
     position: absolute;
-    z-index: 0;
+    z-index: 2;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -51px;
     height: 140px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1) 100%);
 }
 
 .active {
@@ -304,6 +302,7 @@
     opacity: 0.6;
     border: none;
     background-color: transparent;
+    z-index: 2;
 }
 
 .right-btn {
@@ -319,7 +318,7 @@
     opacity: 0.6;
     border: none;
     background-color: transparent;
-
+    z-index: 2;
 }
 
 .dot-btns {
@@ -332,6 +331,7 @@
     left: auto;
     top: auto;
     bottom: 95px;
+    z-index: 1;
 }
 
 .dot-btn {
@@ -349,9 +349,153 @@
     height: 6px;
 }
 
+#banner-section {
+    position: absolute;
+    top: 710px;
+    left: 0;
+    width: 100%;
+    height: 405px;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 0;
+}
+
+.banner-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1040px;
+    width: 100%;
+    height: 100%;
+}
+
+.date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.banner-list {
+    padding-top: 33px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 980px;
+    height: auto;
+}
+
+.banner-list > li {
+    position: relative;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 184px;
+}
+
+.banner-list > li> img {
+    width: 100%;
+    height: 262px;
+}
+
+
+.banner-list>li>span {
+    padding-left: 10px;
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    height: 23px;
+
+    font-weight: bold;
+    font-size: 26px;
+    color: white;
+    font-style: italic;
+    text-align: left;
+}
+
+.banner-desc {
+    margin-top: 20px;
+    width: 184px;
+    height: 33.89px;
+}
+
+.banner-title {
+    display: inline-block;
+    margin-bottom: 6px;
+    width: 184px;
+    height: 14.3px;
+
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 13.59px;
+}
+
+.scores >span {
+    position: relative;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.scores :nth-child(2)::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 2px;
+        left: -7px;
+        width: 1px;
+        height: 8px;
+        background: #B2B2B2;
+}
+
+.scores :nth-last-child(2) {
+    background-image: url(/images/ic_star.png);
+    color: white;
+}
+
+.scores :nth-child(2)::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: 40px;
+    width: 1px;
+    height: 8px;
+    background: #B2B2B2;
+}
+
+.scores :nth-last-child(1){
+    margin-left: 20px;
+    padding-left: 15px;
+    background-image: url(/images/heart_rnd_16_off.png);
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color:transparent;
+}
+
+
+
+.scores :nth-last-child(3) {
+   margin-left: 10px;
+   padding-left: 0;
+   color: white;
+}
+
+
 #content {
-    margin: 0 auto;
-    padding-top: 50px;
+    margin: 400px auto 0;
     width: 980px;
     height: 1591.11px;
 }
@@ -362,6 +506,18 @@
     width: 100%;
     height: 384.89px;
     background-color: #ccc;
+}
+
+.sec-title {
+    width: 100%;
+    height: 30px;
+}
+
+.sec-title>span {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    border-bottom: 1px dashed #d9d9d9;
 }
 
 #main-special-cinema {
@@ -399,124 +555,15 @@
     border-bottom: 1px solid #aaa;
 }
 
-#banner-section {
-    position: absolute;
-    top: 704px;
-    left: 0;
-    width: 100%;
-    height: 405px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
-.banner-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
 
-.date {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
 
-.banner-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 980px;
-    height: auto;
-}
 
-.banner-list > li {
-    position: relative;
-    margin-right: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 184px;
-}
 
-.banner-list > li> img {
-    width: 100%;
-    height: 262px;
-}
 
 #footer-section {
     padding-top: 80px;
     width: 100%;
     height: 349.38px;
     background-color: antiquewhite;
-}
-
-.tab-wrap {
-    padding-top: 50px;
-    width: 100%;
-    height: 384.89px;
-
-}
-
-.slide-container {
-    width: 100%;
-    height: 334.89px;
-}
-
-.slide-wrap {
-    width: 100%;
-    height: 100%;
-}
-
-.stage-outer {
-    width: 100%;
-    height: 325.89px;
-}
-
-.stage {
-    width: auto;
-    height: 100%;
-}
-
-.slide-items {
-    margin-right: 15px;
-    width: 184px;
-    height: 325.89px;
-}
-
-.items {
-    width: 100%;
-    height: 315.89px;
-}
-
-.top-info {
-    width: 184px;
-    height: 262px;
-}
-
-.bottom-info {
-    margin-top: 20px;
-    width: 184px;
-    height: 33.89px;
-}
-
-.poster-info {
-    display: block;
-    width: 100%;
-    height: 262px;
-}
-
-.num-info {
-    padding-left: 10px;
-    display: block;
-    position: absolute;
-    height: 23px;
-
-    font-weight: bold;
-    font-size: 26px;
-    font-style: italic;
-    text-align: left;
-
 }
