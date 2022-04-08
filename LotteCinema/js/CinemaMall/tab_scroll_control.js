@@ -2,14 +2,6 @@ const tab_wrapper = document.querySelector(".tab-wrapper");
 const tabs = tab_wrapper.querySelectorAll("a");
 const content_all = document.querySelectorAll(".content");
 
-window.onscroll = (event) => {
-        fixControlForHeader(event);
-        fixControlForTab(event);
-        fixControlForAside(event);
-        fixControlForsideBanner(event);
-        moveTabUnderline(event);
-}
-
 for (let i = 0; i < tabs.length; i++) {
         tabs[i].onclick = moveTab;
 }
@@ -24,7 +16,7 @@ function moveTab(event) {
         } else {
                 window.scrollTo(0, selected_tab.offsetTop - fixed_height);
         }
-        moveTabUnderline(event);
+        moveTabUnderline();
 }
 
 function fixControlForTab(event) {
@@ -36,10 +28,9 @@ function fixControlForTab(event) {
         }
 }
 
-function moveTabUnderline(event) {
+function moveTabUnderline() {
         const fixed_height = document.querySelector("header").offsetHeight + document.querySelector(".tab-wrapper").offsetHeight;
         const scroll_y = window.scrollY;
-        const temp = window.page
         if (scroll_y <= content_all[1].offsetTop - fixed_height - 20) {
                 addClassForTab(0);
         } else if (scroll_y >= content_all[3].offsetTop - fixed_height - 10) {

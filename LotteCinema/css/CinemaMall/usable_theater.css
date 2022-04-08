@@ -1,0 +1,103 @@
+.usable-theater {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+}
+
+.usable-theater.active {
+        display: flex;
+}
+
+.theater-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 700px;
+        border-radius: 10px;
+        background-color: white;
+        overflow: hidden;
+}
+
+.usable-theater-title {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 55px;
+        border-bottom: 1px solid #CCC;
+}
+
+.usable-theater-title>span {
+        font-size: 18px;
+        color: black;
+        line-height: 58px;
+}
+
+.usable-theater-closer {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 19px;
+        height: 19px;
+        border: none;
+        background: url("/images/usable_theater_closer.png") no-repeat 0 0;
+}
+
+.usable-theater-contents,
+.usable-theater-contents>ul {
+        width: 100%;
+        position: relative;
+}
+
+.region-selector {
+        padding: 10px 16px;
+        display: block;
+        width: 175px;
+        border: none;
+        border-bottom: 1px solid #EBEBEB;
+        font-size: 13px;
+        text-align: left;
+        background-color: white;
+}
+
+.active>.region-selector {
+        background-color: #F5F5F5;
+}
+
+.regions {
+        position: absolute;
+        top: 0;
+        left: 175px;
+        padding: 15px 30px;
+        display: none;
+        width: 525px;
+        height: 100%;
+        background-color: #F5F5F5;
+        overflow-y: scroll;
+}
+
+.active>.regions {
+        display: block;
+}
+
+.region {
+        margin: 0 0.7% 10px;
+        display: inline-block;
+        width: 23%;
+        height: 50px;
+        border: 1px solid #EEE;
+        border-radius: 4px;
+        background-color: white;
+        font-size: 13px;
+        text-align: center;
+        vertical-align: center;
+        line-height: 50px;
+}
