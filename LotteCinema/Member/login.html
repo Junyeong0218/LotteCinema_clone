@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/LotteCinema/css/Member/container.css">
+    <link rel="stylesheet" href="/LotteCinema/css/container.css">
+    <link rel="stylesheet" href="/LotteCinema/css/Member/login_header.css">
     <link rel="stylesheet" href="/LotteCinema/css/Member/login.css">
 </head>
 
@@ -338,15 +339,55 @@
             </div>
         </header>
         <div class="contents">
-            <div class="login-contents">
-                <ul class="select-login">
-                    <li class="">
-
-                    </li>
-                    <li></li>
-                    <li></li>
-                </ul>
+            <div class="select-button">
+                <div>
+                    <button type="button" class="member-btn">회원</button>
+                </div>
+                <div>
+                    <button type="button" class="not-member-btn">비회원</button>
+                </div>
+                <div>
+                    <button type="button" class="social-login-btn">소셜 로그인</button>
+                </div>
             </div>
+            <div class="select-contents">
+                <div class="member">
+                    <div class="login-box">
+                        <p class="tip">L.POINT, 롯데시네마 ID로 별도의 회원가입 없이 이용 가능 합니다.</p>
+                        <div class="login-area">
+                            <div class="login-input-box">
+                                <input type="text" class="username" placeholder="아이디 또는 이메일을 입력해 주세요.">
+                                <input type="password" class="password" placeholder="비밀번호를 입력해 주세요.">
+                            </div>
+                            <button>로그인</button>
+                        </div>
+                        <div class="login-assist">
+                            <div class="login-check">
+                                <input type="checkbox" id="checkSavedID">
+                                <label for="checkSavedID">아이디 저장</label>
+                            </div>
+                            <div class="login-menu">
+                                <a href="#">회원가입</a>
+                                <a href="#">아이디 찾기</a>
+                                <a href="#">비밀번호 찾기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-banner">
+                        <a href="#"><img src="../images/login_banner.png"></a>
+                    </div>
+                </div>
+                <div class="not-member">
+
+                </div>
+                <div class="social-login">
+
+                </div>
+            </div>
+        </div>
+        <div class="banner-side">
+            <a href="#"><img src="../images/side_banner_01.png"></a>
+            <button class="btn-close"></button>
         </div>
         <div class="banner">
 
