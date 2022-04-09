@@ -1,0 +1,108 @@
+#contents {
+        padding-top: 50px;
+        width: 980px;
+}
+
+.title-wrapper {
+        margin: 28px 0 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+}
+
+.contents-title {
+        font-size: 24px;
+        color: black;
+}
+
+.searcher {
+        display: flex;
+        height: 100%;
+}
+
+.searcher>input {
+        padding: 0 18px;
+        width: 175px;
+        height: 29px;
+        border: 1px solid #DDD;
+        border-radius: 4px;
+        line-height: 29px;
+        font-size: 13px;
+        background-color: transparent;
+}
+
+.searcher>button {
+        margin-left: 9px;
+        padding: 0 30px;
+        height: 28px;
+        border: 1px solid #414141;
+        border-radius: 4px;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        background-color: #414141;
+        line-height: 26px;
+}
+
+.content-wrapper {
+        position: relative;
+        left: -19px;
+        width: calc(100% + 19px);
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+}
+
+.content {
+        margin: 0 0 55px 19px;
+        position: relative;
+        width: 314px;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+
+.content>img {
+        border-radius: 4px;
+}
+
+.content-date {
+        padding-left: 18px;
+        font-family: 'Roboto';
+        font-size: 11px;
+}
+
+.d-day {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        padding: 4px 8px;
+        width: 46px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: black;
+        font-family: 'Roboto';
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 2px;
+        text-align: center;
+        opacity: 0.5;
+}
+
+.load-more-movies {
+        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 36px;
+        border: 1px solid #ECECEC;
+        background-color: white;
+}
+
+.load-more-movies>span {
+        margin-right: 11px;
+}
