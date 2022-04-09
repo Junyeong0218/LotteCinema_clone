@@ -3,7 +3,6 @@ window.onscroll = (event) => {
         fixControlForTab(event);
         fixControlForAside(event);
         fixControlForsideBanner(event);
-        moveTabUnderline(event);
 }
 
 window.onload = () => {

@@ -1,0 +1,244 @@
+#contents {
+        padding-top: 50px;
+        width: 980px;
+}
+
+.contents-title {
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #EEE;
+}
+
+.contents-title>h2 {
+        font-size: 24px;
+        font-weight: normal;
+        color: black;
+}
+
+.to-event-board {
+        margin-top: 10px;
+        display: flex;
+}
+
+.to-event-board>a {
+        position: relative;
+        padding: 0 14px;
+        display: block;
+        font-size: 15px;
+        color: #666;
+}
+
+.to-event-board>a:first-child {
+        padding-left: 0;
+}
+
+.to-event-board>a:last-child {
+        padding-right: 0;
+}
+
+.to-event-board>a:not(:first-child)::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        height: 14px;
+        border-left: 1px solid #CCC;
+}
+
+.content-list {
+        margin-top: 54px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+}
+
+.contents-title+.content-list {
+        margin-top: 34px;
+}
+
+.title-wrapper {
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+}
+
+.title-wrapper>h3 {
+        font-size: 18px;
+        font-weight: normal;
+}
+
+.title-wrapper>a {
+        position: relative;
+        display: flex;
+        align-items: center;
+}
+
+.title-wrapper>a>span {
+        padding-right: 10px;
+        font-size: 10px;
+        color: #666;
+}
+
+.title-wrapper>a>img {
+        position: absolute;
+        top: 2px;
+        right: 0;
+}
+
+.content-wrapper {
+        width: 100%;
+        height: 210px;
+        display: flex;
+        justify-content: space-between;
+}
+
+.content {
+        position: relative;
+        width: 314px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+
+.content>img {
+        border-radius: 4px;
+}
+
+.content-date {
+        padding-left: 18px;
+        font-family: 'Roboto';
+        font-size: 11px;
+}
+
+.d-day {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        padding: 4px 8px;
+        width: 46px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: black;
+        font-family: 'Roboto';
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 2px;
+        text-align: center;
+        opacity: 0.5;
+}
+
+.content-button {
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%;
+        border: 1px solid #D8D8D8;
+        border-radius: 4px;
+        background-color: white;
+}
+
+.promotion-button {
+        position: relative;
+        padding: 26px 30px 30px 40px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        border: none;
+        background-color: white;
+}
+
+.content-button>span {
+        pointer-events: none;
+}
+
+.promotion-region {
+        display: inline-block;
+        padding: 5px 35px;
+        min-width: 70px;
+        border-radius: 16px;
+        background-color: #3866C2;
+        font-size: 19px;
+        font-weight: bold;
+        color: white;
+}
+
+.promotion-region.red {
+        background-color: #C23838;
+}
+
+.promotion-title {
+        margin-top: 13px;
+        font-size: 24px;
+        color: #666;
+}
+
+.promotion-date {
+        position: absolute;
+        top: 50%;
+        right: 70px;
+        margin-top: -7px;
+        font-size: 15px;
+        color: #666;
+}
+
+.promotion-date::after {
+        content: "";
+        position: absolute;
+        top: 25%;
+        right: -40px;
+        display: inline-block;
+        width: 13px;
+        height: 8px;
+        background: url("/images/event_down_arrow.png") no-repeat;
+}
+
+.active>.promotion-date::after {
+        background: url("/images/event_up_arrow.png") no-repeat;
+}
+
+.button-description {
+        padding: 30px;
+        display: none;
+        width: 100%;
+        background-color: #F8F8F8;
+        border-top: 1px solid #D8D8D8;
+        border-radius: 4px;
+}
+
+.button-description>ul>li {
+        font-size: 15px;
+}
+
+.li-number {
+        margin-left: 17px;
+}
+
+.active+.button-description {
+        display: block;
+}
+
+.caution {
+        margin: 40px 0 17px;
+        padding-bottom: 7px;
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid #dedede;
+}
+
+.caution>span {
+        margin-left: 4px;
+        font-size: 15px;
+}
+
+.caution-messages {
+        padding: 0 11px;
+        width: 100%;
+}
