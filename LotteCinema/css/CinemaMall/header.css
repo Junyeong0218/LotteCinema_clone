@@ -7,6 +7,35 @@ body {
         overflow-y: scroll;
 }
 
+.top-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        z-index: 10;
+}
+
+.top-banner-wrapper {
+        position: relative;
+        width: 980px;
+        height: 80px;
+}
+
+.top-banner-wrapper>a {
+        height: 100%;
+}
+
+.top-banner-closer {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        border: none;
+        background: url("/images/top_banner_closer.png") no-repeat 50% 50%;
+}
+
 header {
         position: relative;
         display: block;
@@ -178,6 +207,194 @@ header.fixed {
         background-image: url("/images/nav_side_all.png");
         background-repeat: no-repeat;
         background-size: contain;
+        cursor: pointer;
+}
+
+.pop-up {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+}
+
+.to-show {
+        display: flex;
+}
+
+.whole-menu-wrapper {
+        position: relative;
+        top: -70px;
+        padding-top: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 980px;
+        height: 662px;
+        background-color: white;
+}
+
+.top-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+}
+
+.menu-wrapper {
+        padding: 0 20px;
+        width: 660px;
+}
+
+header table {
+        width: 100%;
+        border: none;
+        border-collapse: collapse;
+        border-spacing: none;
+}
+
+header th {
+        font-weight: normal;
+}
+
+.menu-title {
+        padding: 0 5px;
+        text-align: left;
+}
+
+.menu-title>span {
+        display: inline-block;
+        border-bottom: 1px solid #707070;
+        font-size: 14px;
+}
+
+.menu-items {
+        padding: 0 5px 30px;
+        font-size: 11px;
+        vertical-align: top;
+}
+
+.menu-items>ul {
+        margin-top: 8px;
+}
+
+.menu-items>ul>li {
+        margin: 5px 0;
+}
+
+.menu-items>ul>li>a {
+        font-size: 11px;
+        color: black;
+}
+
+.user-wrapper {
+        padding: 0 30px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 317px;
+        border-left: 1px solid rgba(112, 112, 112, 0.1);
+}
+
+.user-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+}
+
+.login-button {
+        margin-bottom: 13px;
+        width: 100%;
+        height: 33px;
+        border: 1px solid black;
+        border-radius: 4px;
+}
+
+.login-button>a {
+        padding: 0 14px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: black;
+        font-size: 14px;
+        line-height: 31px;
+        text-align: center;
+}
+
+.nomember-box {
+        position: relative;
+        margin: 10px 0;
+        padding: 20px 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        border-radius: 8px;
+        background-color: #F5F5F5;
+}
+
+.nomember-box>span {
+        font-size: 13px;
+        color: #666;
+}
+
+.nomember-box>span:nth-child(2) {
+        margin-top: 4px;
+}
+
+.nomember-box>a {
+        margin-top: 35px;
+        padding: 0 14px;
+        display: inline-block;
+        height: 33px;
+        border: 1px solid black;
+        border-radius: 16.5px;
+        background-color: white;
+        font-size: 14px;
+        color: black;
+        text-align: center;
+        line-height: 31px;
+}
+
+.modal-small-banner {
+        margin-top: 25px;
+        width: 100%;
+        height: 125px;
+}
+
+.modal-small-banner>a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+}
+
+.pop-up-banner {
+        width: 100%;
+        height: 180px;
+}
+
+.pop-up-banner>a {
+        width: 100%;
+        height: 100%;
+
+}
+
+.whole-menu-closer {
+        position: absolute;
+        top: 0;
+        right: -63px;
+        width: 43px;
+        height: 43px;
+        background: url("/images/whole_menu_closer.png") no-repeat center center;
+        border: none;
+        cursor: pointer;
 }
 
 .to-signup span:first-child {
