@@ -254,6 +254,10 @@
     height: 100%;
 }
 
+.slide-action {
+    transform: translate3d(1920px,0,0);
+}
+
 .slide-img > li {
     display: block;
     width: auto;
@@ -273,9 +277,9 @@
     z-index: 2;
     left: 0;
     right: 0;
-    bottom: -51px;
+    bottom: -1px;
     height: 140px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6) 100%);
 }
 
 .active {
@@ -284,15 +288,16 @@
 
 .slide-btn {
     margin-top: -10px;
-    width: auto;
-    top: 50%;
-    left: 50%;
-    right: auto;
+    position: fixed;
+    width: 100%;
+    top: 400px;
+    left: 0;
+    z-index: 10;
 }
 
 .left-btn {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 30px;
     width: 31px;
     height: 60px;
@@ -305,12 +310,16 @@
     z-index: 2;
 }
 
+.left-btn :hover {
+
+}
+
 .right-btn {
     position: absolute;
     margin-top: -15px;
     background-size: auto;
     background-image: url(../images/arr_rg_31_wht.png);
-    top: 50%;
+    top: 0;
     right: 30px;
     width: 31px;
     height: 60px;
@@ -351,7 +360,7 @@
 
 #main-banners {
     position: absolute;
-    top: 710px;
+    top: 765px;
     left: 0;
     width: 100%;
     height: 405px;
@@ -373,6 +382,8 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 3;
+    color: white;
 }
 
 .banner-list {
@@ -518,7 +529,7 @@
 
 
 #content {
-    margin: 400px auto 0;
+    margin: 450px auto 0;
     width: 980px;
     height: 1591.11px;
 }
