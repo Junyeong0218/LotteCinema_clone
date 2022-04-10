@@ -64,6 +64,34 @@
         line-height: 26px;
 }
 
+.event-tab {
+        margin: 32px 0 20px;
+        display: flex;
+        width: 100%;
+        height: 50px;
+}
+
+.event-tab>li {
+        width: 20%;
+        height: 100%;
+}
+
+.tab-button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-bottom: 1px solid #7F7F7F;
+        background-color: white;
+        font-size: 15px;
+        line-height: 50px;
+        color: #7F7F7F;
+}
+
+.tab-button.active {
+        border-bottom: 2px solid #111;
+        color: #000;
+}
+
 .content-wrapper {
         position: relative;
         left: -19px;
@@ -73,7 +101,8 @@
         flex-wrap: wrap;
 }
 
-.content {
+.content,
+.past-content {
         margin: 0 0 55px 19px;
         position: relative;
         width: 314px;
@@ -83,8 +112,33 @@
         justify-content: space-between;
 }
 
-.content>img {
+.content>img,
+.past-content>img {
+        width: 314px;
+        height: 184px;
         border-radius: 4px;
+}
+
+.event-done-message {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 184px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        line-height: 184px;
+        cursor: pointer;
+        z-index: 1;
+}
+
+.active>.event-done-message {
+        display: block;
 }
 
 .content-date {
@@ -225,6 +279,11 @@
 
 .button-description>ul>li {
         font-size: 15px;
+}
+
+.button-description>ul>li>b {
+        font: inherit;
+        font-weight: 500;
 }
 
 .li-number {
