@@ -21,6 +21,25 @@
         height: 100%;
 }
 
+.searcher>select {
+        margin-right: 9px;
+        padding: 0 35px 0 18px;
+        width: 110px;
+        height: 29px;
+        line-height: 29px;
+        font-size: 13px;
+        appearance: none;
+        outline: none;
+        border: 1px solid #DDD;
+        border-radius: 4px;
+        background: url("/images/small_down_arrow.png") no-repeat top 50% right 6px #FFF;
+}
+
+.searcher>select>option {
+        font-size: 13px;
+        line-height: 29px;
+}
+
 .searcher>input {
         padding: 0 18px;
         width: 175px;
@@ -79,7 +98,7 @@
         top: 10px;
         right: 0;
         padding: 4px 8px;
-        width: 46px;
+        min-width: 46px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         background-color: black;
@@ -105,4 +124,134 @@
 
 .load-more-movies>span {
         margin-right: 11px;
+}
+
+.d-day.finish {
+        opacity: 1;
+        font-weight: bold;
+        letter-spacing: 0;
+}
+
+.content-button {
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%;
+        border: 1px solid #D8D8D8;
+        border-radius: 4px;
+        background-color: white;
+}
+
+.promotion-button {
+        position: relative;
+        padding: 26px 30px 30px 40px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        border: none;
+        background-color: white;
+}
+
+.content-button>span,
+.promotion-button>span {
+        pointer-events: none;
+}
+
+.promotion-region {
+        display: inline-block;
+        padding: 5px 35px;
+        min-width: 70px;
+        border-radius: 16px;
+        background-color: #3866C2;
+        font-size: 19px;
+        font-weight: bold;
+        color: white;
+}
+
+.promotion-region.red {
+        background-color: #C23838;
+}
+
+.promotion-region.purple {
+        background-color: #676790;
+}
+
+.promotion-region.yellow {
+        background-color: #CB9936;
+}
+
+.promotion-region.orange {
+        background-color: #EC6A46;
+}
+
+.promotion-title {
+        margin-top: 13px;
+        font-size: 24px;
+        color: #666;
+}
+
+.promotion-date {
+        position: absolute;
+        top: 50%;
+        right: 70px;
+        margin-top: -7px;
+        font-size: 15px;
+        color: #666;
+}
+
+.promotion-date::after {
+        content: "";
+        position: absolute;
+        top: 25%;
+        right: -40px;
+        display: inline-block;
+        width: 13px;
+        height: 8px;
+        background: url("/images/event_down_arrow.png") no-repeat;
+}
+
+.active>.promotion-date::after {
+        background: url("/images/event_up_arrow.png") no-repeat;
+}
+
+.button-description {
+        padding: 30px;
+        display: none;
+        width: 100%;
+        background-color: #F8F8F8;
+        border-top: 1px solid #D8D8D8;
+        border-radius: 4px;
+}
+
+.button-description>ul>li {
+        font-size: 15px;
+}
+
+.li-number {
+        margin-left: 17px;
+}
+
+.active+.button-description {
+        display: block;
+}
+
+.caution {
+        margin: 40px 0 17px;
+        padding-bottom: 7px;
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid #dedede;
+}
+
+.caution>span {
+        margin-left: 4px;
+        font-size: 15px;
+}
+
+.caution-messages {
+        padding: 0 11px;
+        width: 100%;
 }
