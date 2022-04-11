@@ -2,6 +2,10 @@
     color: #8a8a8a;
 }
 
+img {
+    pointer-events: none;
+}
+
 .mast-body {
     width: 1312px;
     height: 1094px;
@@ -116,7 +120,7 @@
     border: none;
 }
 
-.compulsory-consent-top {
+.compulsory-consent {
     margin-top: 29px;
     padding-bottom: 23px;
     display: flex;
@@ -139,7 +143,7 @@
     overflow: hidden;
 }
 
-.compulsory-consent-top>button {
+.compulsory-consent>button {
     border: none;
     background-color: white;
     font-size: 15px;
@@ -149,7 +153,7 @@
     text-decoration: underline;
 }
 
-.compulsory-consent-top img {
+.compulsory-consent img {
     position: absolute;
     top: 0;
     left: 0;
@@ -157,8 +161,7 @@
     height: 100%;
 }
 
-.compulsory-consent-top label {
-
+.compulsory-consent label {
     margin-left: 7px;
     display: inline-block;
     font-size: 15px;
@@ -172,48 +175,7 @@
 .check-box-wrapper {
     display: flex;
     align-items: center;
-}
-
-.compulsory-consent-bottom {
-    margin-top: 29px;
-    padding-bottom: 23px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    line-height: 46px;
-    width: 1100px;
-    height: 46px;
-    border-bottom: 1px solid #d0d0d0;
-    color: #8a8a8a;
-}
-
-.compulsory-consent-bottom button {
-    position: relative;
-    width: 18px;
-    height: 18px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.compulsory-consent-bottom img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* 23px씩 이동 */
-    height: 100%;
-}
-
-.compulsory-consent-bottom label {
-    margin-left: 7px;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 18px;
-    color: #8a8a8a;
-    vertical-align: top;
-    cursor: pointer;
+    width: 200px;
 }
 
 .input-box {
