@@ -42,18 +42,23 @@
                             <label for="phone-check">휴대폰 본인확인 전체동의</label>
                         </div>
                         <div class="compulsory-consent-top">
-                            <div>
-                                <button type="button"><img src="/LotteCinema/images/radio_button_img.png"></button>
-                                <label for="compulsory-consent">개인정보 이용 동의(필수)</label>
-                                <button type="button">자세히</button>
+                            <div class="check-box-wrapper">
 
-                                <button type="button"><img src="/LotteCinema/images/radio_button_img.png"></button>
-                                <label for="compulsory-consent">고유식별 정보 처리 동의</label>
-                                <button type="button">자세히</button>
+                                <button type="button" class="check-box"><img
+                                        src="/LotteCinema/images/radio_button_img.png"></button>
+                                <label for="compulsory-consent">개인정보 이용 동의(필수)</label>
                             </div>
+                            <button type="button">자세히</button>
+                            <div class="check-box-wrapper">
+                                <button type="button" class="check-box"><img
+                                        src="/LotteCinema/images/radio_button_img.png"></button>
+                                <label for="compulsory-consent">고유식별 정보 처리 동의</label>
+
+                            </div>
+                            <button type="button">자세히</button>
                         </div>
                         <div class="compulsory-consent-bottom">
-                            <div>
+                            <div class="check-box-wrapper">
                                 <button type="button"><img src="/LotteCinema/images/radio_button_img.png"></button>
                                 <label for="compulsory-consent">서비스 이용약관 동의(필수)</label>
                                 <button type="button">자세히</button>
@@ -79,22 +84,51 @@
                             <div class="name">
                                 <label for="text">생년월일/성별</label>
                             </div>
-                            <div class="input-date">
+                            <div class="input-date-ft">
                                 <input type="text" placeholder="생년월일을 입력해주세요.">
                             </div>
-                            <span>-</span>
+                            <span class="hyphen">-</span>
+                            <div class="input-date-bk">
+                                <input type="text">
+                            </div>
+                            <div class="registration-number">
+                                <span>●●●●●●</span>
+                            </div>
                         </div>
                         <div class="personal-data">
                             <div class="name">
                                 <label for="text">휴대폰 번호</label>
                             </div>
                             <div class="input-nb">
-                                <button type="button"></button>
-                                <button type="button"></button>
-                                <button type="button"></button>
-                                <button type="button"></button>
+                                <select name="telecom">
+                                    <option value="SKT">SKT</option>
+                                    <option value="KT">KT</option>
+                                    <option value="LGU+">LGU+</option>
+                                    <option value="SKT알뜰폰">SKT알뜰폰</option>
+                                    <option value="KT알뜰폰">KT알뜰폰</option>
+                                    <option value="LGU+알뜰폰">LGU+알뜰폰</option>
+                                </select>
+                                <select name="first-number">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                <input type="text" name="middle-number">
+                                <span class="hyphen">-</span>
+                                <input type="text" name="last-number">
                             </div>
                         </div>
+                        <div class="terms">
+                            <span>-휴대폰 본인확인 시 타인 명의를 도용할 경우, "정보통신망법 제 49조"에 의거하여 5년 이하의 징역 또는 5천만원 이하의 벌금에 처할 수
+                                있습니다.</span>
+                        </div>
+                    </div>
+                    <div class="btn-center">
+                        <button type="button">취소</button>
+                        <button type="button">인증 요청</button>
                     </div>
                 </div>
             </div>
