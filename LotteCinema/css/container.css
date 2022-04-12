@@ -2,43 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Gugi&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        max-width: 100%;
-        min-width: 980px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 100%;
+    min-width: 980px;
 }
 
 * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Noto Sans KR",
-                "Roboto",
-                "dotum",
-                "sans-serif";
-        color: black;
-        font-size: 12px;
-        line-height: 1.1;
-        letter-spacing: -0.03em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR",
+        "Roboto",
+        "dotum",
+        "sans-serif";
+    color: black;
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 }
 
 a {
-        text-decoration: none;
+    text-decoration: none;
 }
 
 a,
 input,
 textarea {
-        outline: none;
+    outline: none;
 }
 
 button,
 a {
-        cursor: pointer;
+    cursor: pointer;
 }
 
 li {
-        list-style: none;
+    list-style: none;
 }

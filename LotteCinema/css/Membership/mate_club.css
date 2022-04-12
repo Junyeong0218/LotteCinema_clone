@@ -1,229 +1,229 @@
 body {
-        overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 #contents {
-        position: relative;
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
 }
 
 #contents::before {
-        position: absolute;
-        top: -50px;
-        content: "";
-        width: 100vw;
-        height: 334px;
-        background-color: #FF7787;
-        z-index: -1;
+    position: absolute;
+    top: -50px;
+    content: "";
+    width: 100vw;
+    height: 334px;
+    background-color: #FF7787;
+    z-index: -1;
 }
 
 .top-information {
-        margin-bottom: 50px;
-        padding: 40px 38px 62px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 980px;
-        border-radius: 10px;
-        background-color: white;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 10%);
+    margin-bottom: 50px;
+    padding: 40px 38px 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 980px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 10%);
 }
 
 .nouser-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .signup-message {
-        margin-bottom: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 18px;
-        line-height: 1.4;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.4;
 }
 
 .signup-message>span {
-        font: inherit;
-        color: #666;
+    font: inherit;
+    color: #666;
 }
 
 .signup-message>span:first-child {
-        color: black;
+    color: black;
 }
 
 .nouser-form>a {
-        margin-bottom: 20px;
-        padding: 0 14px;
-        height: 28px;
-        border: 1px solid black;
-        border-radius: 14px;
-        background-color: white;
-        font-size: 14px;
-        color: black;
-        line-height: 26px;
+    margin-bottom: 20px;
+    padding: 0 14px;
+    height: 28px;
+    border: 1px solid black;
+    border-radius: 14px;
+    background-color: white;
+    font-size: 14px;
+    color: black;
+    line-height: 26px;
 }
 
 .to-signin {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .to-signin>span {
-        display: block;
+    display: block;
 }
 
 .to-signin>a {
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-bottom: 1px solid #666;
-        font-size: 12px;
-        color: #666;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid #666;
+    font-size: 12px;
+    color: #666;
 }
 
 .mate-club-banner,
 .mate-club-banner>img {
-        width: 980px;
+    width: 980px;
 }
 
 .mate-club-information {
-        position: relative;
-        margin-top: 40px;
-        padding: 30px 0 70px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 980px;
+    position: relative;
+    margin-top: 40px;
+    padding: 30px 0 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 980px;
 }
 
 .mate-club-information>img {
-        position: absolute;
-        top: 0;
+    position: absolute;
+    top: 0;
 }
 
 .information-title {
-        font-size: 18px;
-        font-weight: 500;
-        color: #E5153C;
+    font-size: 18px;
+    font-weight: 500;
+    color: #E5153C;
 }
 
 .mate-club-information>p {
-        margin-top: 16px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mate-club-information>p>span {
-        font-size: 15px;
-        line-height: 20px;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 .mate-club-information>p:first-child {
-        margin: 0;
+    margin: 0;
 }
 
 .mate-club-information>p:last-child {
-        margin-top: 14px;
+    margin-top: 14px;
 }
 
 .mate-club-information .gray {
-        color: #666;
+    color: #666;
 }
 
 .join-descripitions {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 980px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 980px;
 }
 
 .description-title {
-        width: 100%;
-        height: 50px;
-        border-bottom: 2px solid black;
-        font-size: 18px;
-        font-weight: 400;
-        color: black;
-        text-align: center;
-        line-height: 50px;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    line-height: 50px;
 }
 
 .description-texts {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .steps {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .step {
-        padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 230px;
-        height: 80px;
-        border: 1px solid #EEE;
-        border-radius: 4px;
-        background-color: #F8F8F8;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    height: 80px;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    background-color: #F8F8F8;
 }
 
 .step-title {
-        font-family: 'Roboto';
-        font-weight: 400;
+    font-family: 'Roboto';
+    font-weight: 400;
 }
 
 .step-text {
-        margin-top: 6px;
-        font-size: 15px;
+    margin-top: 6px;
+    font-size: 15px;
 }
 
 .join-flow {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .flow-title {
-        margin-bottom: 14px;
-        font-size: 15px;
+    margin-bottom: 14px;
+    font-size: 15px;
 }
 
 .flow-text {
-        margin-top: 10px;
-        font-size: 13px;
+    margin-top: 10px;
+    font-size: 13px;
 }
 
 .flow-text:nth-child(2) {
-        margin: 0;
+    margin: 0;
 }
 
 .qr-code-wrapper {
-        margin-top: 20px;
-        padding: 10px 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        border: 1px solid #EEE;
-        border-radius: 4px;
+    margin-top: 20px;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #EEE;
+    border-radius: 4px;
 }

@@ -1,148 +1,148 @@
 main {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
 }
 
 .top-image {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 #contents {
-        padding-top: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: 980px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 980px;
 }
 
 .tab-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
 }
 
 .tab-wrapper.fixed {
-        position: fixed;
-        top: 43px;
-        width: 980px;
-        background-color: white;
-        z-index: 89;
+    position: fixed;
+    top: 43px;
+    width: 980px;
+    background-color: white;
+    z-index: 89;
 }
 
 .tab-wrapper>li {
-        width: 25%;
-        height: 100%;
+    width: 25%;
+    height: 100%;
 }
 
 
 .tab {
-        display: block;
-        width: 100%;
-        height: 100%;
-        font-size: 18px;
-        text-align: center;
-        line-height: 50px;
-        color: #7F7F7F;
-        border-bottom: 1px solid #CCC;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    color: #7F7F7F;
+    border-bottom: 1px solid #CCC;
 }
 
 .tab-active {
-        border-bottom: 2px solid #111;
-        color: black;
+    border-bottom: 2px solid #111;
+    color: black;
 }
 
 .tab-links {
-        margin-top: 20px;
-        width: 100%;
-        height: auto;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
 }
 
 .content {
-        margin-top: 30px;
-        width: 100%;
+    margin-top: 30px;
+    width: 100%;
 }
 
 .content-title {
-        padding: 20px 15px;
-        font-size: 16px;
-        font-weight: normal;
+    padding: 20px 15px;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .content-item {
-        display: inline-block;
-        margin-bottom: 35px;
-        width: 33%;
-        min-height: 320px;
+    display: inline-block;
+    margin-bottom: 35px;
+    width: 33%;
+    min-height: 320px;
 }
 
 .content-item>img {
-        margin-bottom: 5px;
-        width: 100%;
-        height: 260px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 260px;
 }
 
 .item-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
 }
 
 .badge-wrapper {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 18px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 18px;
 }
 
 .item-title {
-        margin: 5px 0;
-        font-size: 17px;
-        font-weight: normal;
+    margin: 5px 0;
+    font-size: 17px;
+    font-weight: normal;
 }
 
 .item-description {
-        margin-bottom: 10px;
-        height: 25px;
-        line-height: 1.2;
-        font-size: 11px;
-        color: #999;
-        overflow: hidden;
+    margin-bottom: 10px;
+    height: 25px;
+    line-height: 1.2;
+    font-size: 11px;
+    color: #999;
+    overflow: hidden;
 }
 
 .item-price {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .item-price>span {
-        margin-right: 5px;
-        font: inherit;
-        font-family: 'Roboto',
-                'Noto Sans KR';
+    margin-right: 5px;
+    font: inherit;
+    font-family: 'Roboto',
+        'Noto Sans KR';
 }
 
 .item-sale-ratio {
-        color: #FF243E;
+    color: #FF243E;
 }
 
 .origin-price {
-        font-size: 13px !important;
-        text-decoration: line-through;
-        opacity: 0.4;
+    font-size: 13px !important;
+    text-decoration: line-through;
+    opacity: 0.4;
 }

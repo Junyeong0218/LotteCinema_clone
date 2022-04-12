@@ -1,627 +1,627 @@
 body {
-        overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 #contents {
-        padding-top: 50px;
-        width: 980px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
+    padding-top: 50px;
+    width: 980px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .contents-title {
-        margin-bottom: 10px;
-        padding: 20px 0 10px;
-        width: 100%;
-        border-bottom: 1px solid #EEE;
-        font-size: 24px;
-        font-weight: normal;
-        text-align: left;
+    margin-bottom: 10px;
+    padding: 20px 0 10px;
+    width: 100%;
+    border-bottom: 1px solid #EEE;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: left;
 }
 
 .tab-selector {
-        display: flex;
-        width: 100%;
-        height: 50px;
+    display: flex;
+    width: 100%;
+    height: 50px;
 }
 
 .tab-selector>li {
-        width: 50%;
-        height: 100%;
+    width: 50%;
+    height: 100%;
 }
 
 .tab-selector>li>button {
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-bottom: 1px solid #CCC;
-        background: none;
-        font-size: 15px;
-        color: #7F7F7F;
-        line-height: 50px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    background: none;
+    font-size: 15px;
+    color: #7F7F7F;
+    line-height: 50px;
 }
 
 .tab-selector>li>button.active {
-        border-bottom: 2px solid #111;
-        color: black;
+    border-bottom: 2px solid #111;
+    color: black;
 }
 
 .content-wrapper,
 .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .content {
-        margin-top: 30px;
-        position: relative;
-        display: none;
+    margin-top: 30px;
+    position: relative;
+    display: none;
 }
 
 .content.active {
-        display: flex;
+    display: flex;
 }
 
 .content.friends::before {
-        position: absolute;
-        top: -10px;
-        left: -200%;
-        right: -200%;
-        content: "";
-        height: 280px;
-        background: url("/images/membership_friends_bg.jpg") no-repeat 50% 50%;
-        z-index: -1;
+    position: absolute;
+    top: -10px;
+    left: -200%;
+    right: -200%;
+    content: "";
+    height: 280px;
+    background: url("/images/membership_friends_bg.jpg") no-repeat 50% 50%;
+    z-index: -1;
 }
 
 .content.vip::before {
-        position: absolute;
-        top: -10px;
-        left: -200%;
-        right: -200%;
-        content: "";
-        height: 280px;
-        background: url("/images/membership_vip_bg.jpg") no-repeat 50% 50%;
-        z-index: -1;
+    position: absolute;
+    top: -10px;
+    left: -200%;
+    right: -200%;
+    content: "";
+    height: 280px;
+    background: url("/images/membership_vip_bg.jpg") no-repeat 50% 50%;
+    z-index: -1;
 }
 
 .content-title {
-        position: relative;
-        width: 100%;
-        height: 130px;
-        margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+    height: 130px;
+    margin-bottom: 50px;
 }
 
 .vip>.content-title {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .content-title>img {
-        position: absolute;
-        top: 40px;
-        right: 135px;
+    position: absolute;
+    top: 40px;
+    right: 135px;
 }
 
 .vip>.content-title>img {
-        position: relative;
-        top: 0;
-        right: 0;
+    position: relative;
+    top: 0;
+    right: 0;
 }
 
 .top-information {
-        margin-bottom: 50px;
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 10%);
-        background-color: white;
+    margin-bottom: 50px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 10%);
+    background-color: white;
 }
 
 .nouser-form {
-        margin: 40px 38px 62px;
+    margin: 40px 38px 62px;
 }
 
 .nouser-form,
 .signup-message {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .signup-message {
-        margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .signup-message>span {
-        font-size: 18px;
-        color: #666;
-        line-height: 1.4;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.4;
 }
 
 .signup-message>span:first-child {
-        color: black;
-        font-weight: bold;
+    color: black;
+    font-weight: bold;
 }
 
 .nouser-form>a {
-        margin-bottom: 20px;
-        padding: 0 14px;
-        height: 28px;
-        border: 1px solid black;
-        border-radius: 14px;
-        font-size: 14px;
-        color: black;
-        line-height: 26px;
+    margin-bottom: 20px;
+    padding: 0 14px;
+    height: 28px;
+    border: 1px solid black;
+    border-radius: 14px;
+    font-size: 14px;
+    color: black;
+    line-height: 26px;
 }
 
 .to-signin {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .to-signin>a {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        border-bottom: 1px solid #666;
-        font-size: 12px;
-        color: #666;
-        vertical-align: middle;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid #666;
+    font-size: 12px;
+    color: #666;
+    vertical-align: middle;
 }
 
 .benefit-wrapper {
-        margin-top: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .benefit-title {
-        font-size: 18px;
-        font-weight: normal;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 .card-wrapper {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: 150px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
 }
 
 .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 310px;
-        height: 100%;
-        border: 1px solid #EAE9E4;
-        border-radius: 4px;
-        background-color: #FFFCEF;
-        font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 100%;
+    border: 1px solid #EAE9E4;
+    border-radius: 4px;
+    background-color: #FFFCEF;
+    font-size: 12px;
 }
 
 .level {
-        width: 72px;
-        height: 72px;
+    width: 72px;
+    height: 72px;
 }
 
 .level-description {
-        margin-left: 18px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 175px;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 175px;
 }
 
 .level-description>span:first-child {
-        padding-bottom: 8px;
-        font-size: 15px;
+    padding-bottom: 8px;
+    font-size: 15px;
 }
 
 .description-row {
-        position: relative;
-        margin-top: 4px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
+    position: relative;
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .level-description>span:nth-child(2) {
-        margin: 0;
+    margin: 0;
 }
 
 .description-row>span:first-child {
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
 }
 
 .description-row>span:last-child {
-        font-size: 13px;
-        line-height: 20px;
+    font-size: 13px;
+    line-height: 20px;
 }
 
 .description-row>span:last-child::before {
-        position: absolute;
-        top: 7px;
-        right: 38px;
-        content: "";
-        width: 11px;
-        height: 11px;
-        background: url("/images/membership_multiple.png") no-repeat;
+    position: absolute;
+    top: 7px;
+    right: 38px;
+    content: "";
+    width: 11px;
+    height: 11px;
+    background: url("/images/membership_multiple.png") no-repeat;
 }
 
 .ticket-count {
-        font-family: 'Roboto';
-        font-size: 18px;
-        font-weight: normal;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: normal;
 }
 
 .description-title {
-        margin-bottom: 12px;
-        font-family: 'Roboto';
-        font-size: 15px;
-        font-weight: 400;
+    margin-bottom: 12px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .description-texts {
-        padding: 30px 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        width: 100%;
-        border: 1px solid #EEE;
-        border-radius: 4px;
-        line-height: 17px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    line-height: 17px;
 }
 
 .description-texts.gray {
-        padding: 0;
-        border: none;
-        border-radius: none;
+    padding: 0;
+    border: none;
+    border-radius: none;
 }
 
 .description-texts>span {
-        margin-top: 30px;
-        font-size: 15px;
-        font-weight: 500;
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .description-text {
-        margin: 0 0 5px 8px;
-        font-size: 13px;
-        color: #333;
-        letter-spacing: -0.5px;
-        line-height: 1.4;
+    margin: 0 0 5px 8px;
+    font-size: 13px;
+    color: #333;
+    letter-spacing: -0.5px;
+    line-height: 1.4;
 }
 
 .description-text::before {
-        content: "";
-        display: inline-block;
-        width: 3px;
-        height: 3px;
-        margin: 8px 5px 0 0;
-        border-radius: 50%;
-        vertical-align: top;
-        background-color: #666;
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 8px 5px 0 0;
+    border-radius: 50%;
+    vertical-align: top;
+    background-color: #666;
 }
 
 .description-texts>span+.description-text,
 .description-texts>strong+.description-text {
-        margin-top: 12px;
+    margin-top: 12px;
 }
 
 .description-texts.gray>.description-text {
-        color: #666;
+    color: #666;
 }
 
 .description-texts.gray>.description-text::before {
-        margin-top: 0;
-        content: "-";
-        display: inline-block;
-        width: auto;
-        height: auto;
-        border: none;
-        border-radius: 0;
-        vertical-align: top;
-        color: #666;
-        background-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
+    content: "-";
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    vertical-align: top;
+    color: #666;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .description-texts>strong {
-        font-size: 15px;
-        font-weight: 500;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .rank-table {
-        margin-top: 20px;
-        width: 100%;
-        border-top: 1px solid #BBB;
-        border-collapse: collapse;
-        border-spacing: 0;
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px solid #BBB;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 .rank-table th {
-        padding: 40px 0 16px;
-        border-bottom: 1px solid #BBB;
+    padding: 40px 0 16px;
+    border-bottom: 1px solid #BBB;
 }
 
 .rank-table th>span {
-        padding: 0 4px;
-        display: inline-block;
-        min-width: 54px;
-        height: 24px;
-        border-radius: 12px;
-        font-family: 'Roboto';
-        font-size: 11px;
-        font-weight: 500;
-        color: white;
-        line-height: 26px;
+    padding: 0 4px;
+    display: inline-block;
+    min-width: 54px;
+    height: 24px;
+    border-radius: 12px;
+    font-family: 'Roboto';
+    font-size: 11px;
+    font-weight: 500;
+    color: white;
+    line-height: 26px;
 }
 
 .vip-text {
-        background-color: #675448;
+    background-color: #675448;
 }
 
 .vvip-text {
-        background-color: #969697;
+    background-color: #969697;
 }
 
 .gold-text {
-        background-color: #756023;
+    background-color: #756023;
 }
 
 .platinum-text {
-        background-color: black;
+    background-color: black;
 }
 
 .rank-table td {
-        padding: 28px 0;
-        border-bottom: 1px solid #EEE;
-        font-size: 15px;
-        text-align: center;
+    padding: 28px 0;
+    border-bottom: 1px solid #EEE;
+    font-size: 15px;
+    text-align: center;
 }
 
 .vip-benefits {
-        margin-top: 60px;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .vip-benefits>li {
-        position: relative;
-        padding: 56px 18px 10px;
-        display: flex;
-        flex-direction: column;
-        width: 230px;
-        border: 1px solid #DDD;
-        border-radius: 4px;
-        background-color: #F8F8F8;
-        font-size: 12px;
+    position: relative;
+    padding: 56px 18px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    background-color: #F8F8F8;
+    font-size: 12px;
 }
 
 .vip-benefits>li>span {
-        position: absolute;
-        top: -40px;
-        left: 50%;
-        margin-left: -40px;
-        padding-top: 45px;
-        width: 80px;
-        height: 80px;
-        text-align: center;
-        border: 1px solid #999;
-        border-radius: 40px;
-        box-shadow: 0px 5px 10px 3px #e6e6e6;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    padding-top: 45px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px 3px #e6e6e6;
 }
 
 .vip-badge {
-        background: url("/images/membership_vip_crown.png") no-repeat center 23px white;
-        color: #666;
+    background: url("/images/membership_vip_crown.png") no-repeat center 23px white;
+    color: #666;
 }
 
 .vvip-badge {
-        background: url("/images/membership_vvip_crown.png") no-repeat center 21px white;
-        color: #666;
+    background: url("/images/membership_vvip_crown.png") no-repeat center 21px white;
+    color: #666;
 }
 
 .gold-badge {
-        background: url("/images/membership_gold_crown.png") no-repeat center 17px white;
-        color: #756023;
+    background: url("/images/membership_gold_crown.png") no-repeat center 17px white;
+    color: #756023;
 }
 
 .platinum-badge {
-        background: url("/images/membership_platinum_crown.png") no-repeat center 16px white;
-        color: black;
+    background: url("/images/membership_platinum_crown.png") no-repeat center 16px white;
+    color: black;
 }
 
 .benefit {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .benefit>.title {
-        padding-bottom: 8px;
-        width: 100%;
-        border-bottom: 1px solid black;
-        font-size: 15px;
-        font-weight: 400;
+    padding-bottom: 8px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .benefit>.title>span {
-        margin-left: 5px;
-        font-size: 11px;
-        color: #333;
+    margin-left: 5px;
+    font-size: 11px;
+    color: #333;
 }
 
 .type-wrapper {
-        position: relative;
-        margin-top: 30px;
-        width: 100%;
-        border: 1px solid #333;
-        border-radius: 5px;
-        background-color: white;
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: white;
 }
 
 .type-title {
-        position: absolute;
-        top: -12px;
-        left: 50%;
-        margin-left: -30px;
-        padding: 0 20px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        border-radius: 12px;
-        background-color: #FF7787;
-        font-size: 13px;
-        color: white;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    margin-left: -30px;
+    padding: 0 20px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #FF7787;
+    font-size: 13px;
+    color: white;
 }
 
 .type-title>b {
-        font-family: 'Roboto';
-        font-size: 15px;
-        font-weight: 500;
-        color: white;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
 }
 
 .type-wrapper>ul,
 .benefit>ul {
-        padding: 15px;
-        width: 100%;
+    padding: 15px;
+    width: 100%;
 }
 
 .type-wrapper>ul>li,
 .benefit>ul>li {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 26px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 26px;
 }
 
 .type-wrapper>ul>li+li,
 .benefit>ul>li+li {
-        margin-top: 4px;
+    margin-top: 4px;
 }
 
 .type-wrapper>ul>li>strong,
 .benefit>ul>li>strong {
-        font-size: 13px;
-        font-weight: 500;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .type-wrapper>ul>li>strong::before,
 .benefit>ul>li>strong::before {
-        display: inline-block;
-        content: "·";
-        padding-right: 4px;
+    display: inline-block;
+    content: "·";
+    padding-right: 4px;
 }
 
 .type-wrapper>ul>li>span,
 .benefit>ul>li>span {
-        position: relative;
-        font-size: 13px;
+    position: relative;
+    font-size: 13px;
 }
 
 .type-wrapper>ul>li>span::before,
 .benefit>ul>li>span::before {
-        content: '';
-        position: absolute;
-        right: 35px;
-        top: 5px;
-        width: 11px;
-        height: 11px;
-        background: url("/images/membership_cross.png") no-repeat;
+    content: '';
+    position: absolute;
+    right: 35px;
+    top: 5px;
+    width: 11px;
+    height: 11px;
+    background: url("/images/membership_cross.png") no-repeat;
 }
 
 .type-wrapper>ul>li>span>.red,
 .benefit>ul>li>span>.red {
-        font-family: 'Roboto';
-        font-size: 18px;
-        color: #FF7787;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #FF7787;
 }
 
 .type-separator {
-        padding-top: 8px;
-        font-size: 11px;
-        color: #333;
-        text-align: center;
+    padding-top: 8px;
+    font-size: 11px;
+    color: #333;
+    text-align: center;
 }
 
 .type-separator+.type-wrapper {
-        margin-top: 18px;
+    margin-top: 18px;
 }
 
 .benefit+.benefit {
-        margin-top: 24px;
+    margin-top: 24px;
 }
 
 .benefit:last-child {
-        margin: 0;
-        padding-top: 24px;
-        border-top: 1px dashed #DDDDDD;
+    margin: 0;
+    padding-top: 24px;
+    border-top: 1px dashed #DDDDDD;
 }
 
 .benefit-image-wrapper {
-        margin-top: 100px;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 255px;
-        background: url("/images/membership_benefit_image_bg.jpg");
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 255px;
+    background: url("/images/membership_benefit_image_bg.jpg");
 }
 
 .benefit-image {
-        position: relative;
-        padding-top: 110px;
-        display: flex;
-        flex-direction: column;
-        width: 140px;
+    position: relative;
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    width: 140px;
 }
 
 .benefit-image:first-child {
-        margin-left: 140px;
+    margin-left: 140px;
 }
 
 .benefit-image:last-child {
-        margin-right: 160px;
+    margin-right: 160px;
 }
 
 .benefit-image>img {
-        position: absolute;
-        top: -40px;
-        left: 0;
+    position: absolute;
+    top: -40px;
+    left: 0;
 }
 
 .image-number {
-        display: block;
-        width: 42px;
-        height: 17px;
-        background-color: #786D4C;
-        font-size: 11px;
-        text-align: center;
-        color: white;
-        line-height: 17px;
+    display: block;
+    width: 42px;
+    height: 17px;
+    background-color: #786D4C;
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    line-height: 17px;
 }
 
 .image-text {
-        margin-top: 8px;
-        font-size: 16px;
-        letter-spacing: -0.5px;
-        line-height: 20px;
+    margin-top: 8px;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    line-height: 20px;
 }
