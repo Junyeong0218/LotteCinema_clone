@@ -4,7 +4,6 @@
     align-items: center;
     padding-top: 105px;
     width: 100%;
-
 }
 
 .select-button {
@@ -234,6 +233,215 @@
     background-color: #f5f5f5;
 }
 
+.banner {
+    display: block;
+    width: 100%;
+    padding-top: 70px;
+    height: 540px;
+}
+
+.h-banner{
+    margin: 0px auto 50px;
+    width: 980px;
+    height: 180px;
+
+    cursor: pointer;
+}
+
+.f-banner{
+    background-color: rgb(0, 92, 185);
+    background-image: url(/LotteCinema/images/background-img.jpg);
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+
+}
+
+.f-banner a{
+    display: block;
+    width: 980px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+.quick-wrap{
+    position: absolute;
+    z-index: 11px;
+    top: 140px;
+    right: 20px;
+    width: 82px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0 / 16%);
+    border-radius: 4px;
+}
+
+.quick-menu{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 76px;
+    border-radius: 4px;
+    background-color: #fff;
+    text-align: center;
+    
+    overflow: hidden;
+}
+
+.quick-menu a {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.quick-menu a img {
+    display: block;
+}
+
+.quick-top{
+    background-color: #3a3a3a;
+    font-size: 11px;
+    color: #fff;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    padding-left: 13px;
+    width: 76px;
+
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    width: 100%;
+}
+
+.inner{
+    display: flex;
+    flex-direction: column;
+    width: 980px;
+    margin: 0px auto;
+}
+
+.f-logo img{
+    width: 203px;
+    height: 36px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.f-menu {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.f-menu li{
+    margin-right: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.f-menu li>a{
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.f-menu li:not(:first-child)>a::after{
+    position: absolute;
+    content: "";
+    left: 0px;
+    top: 2px;
+    height: 10px;
+    border-left: 1px solid #707070;
+    clear: both;
+}
+
+.bx-address{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 36px;
+    line-height: 1.5px;
+    font-size: 12px;
+    color: #4d4d4d;
+}
+
+.bx-address span{
+    display: inline;
+    height: 36px;
+    width: 980px;
+    margin-right: 10px;
+    color: #4d4d4d;
+}
+
+.bar{
+   position: relative;
+   padding-left: 10px;
+   margin-right: 10px;
+}
+
+.bx-address> div {
+    display: block;
+}
+
+.bx-address span {
+    height: 18px;
+}
+
+.bx-address span.bar::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 4px;
+    height: 10px;
+    border-left: 1px solid #707070;
+}
+
+.award{
+    margin-top: 50px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.award > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 980px;
+}
+
+.inner {
+    position: relative;
+    width: 980px;
+}
+
+.inner ul>li:first-child{
+    padding-left: 0px;
+}
+.inner ul>li>a{
+    display: block;
+}
+.inner ul>li:last-child{
+    margin-right: 0px;
+}
+
 .hidden {
     display: none;
+}
+
+.copyright {
+    margin-top: 4px;
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #4D4D4D;
 }
