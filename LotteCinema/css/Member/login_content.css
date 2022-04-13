@@ -1,0 +1,302 @@
+.contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 105px;
+    width: 100%;
+}
+
+.select-button {
+    display: flex;
+    justify-content: space-between;
+    width: 980px;
+}
+
+.select-button div {
+    width: 100%;
+}
+
+.select-button div>button {
+    display: block;
+    border: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+    color: #7f7f7f;
+
+    background-color: #fff;
+    cursor: pointer;
+
+}
+
+.select-contents {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.member {
+    display: none;
+    justify-content: space-between;
+
+    width: 980px;
+    height: 363.5px;
+    padding: 60px 0px;
+}
+
+.login-box {
+    width: 470px;
+    min-height: 220px;
+
+}
+
+.tip {
+    font-size: 16px;
+
+}
+
+.login-area {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 21px;
+}
+
+.login-input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    width: 350px;
+    height: 45px;
+    padding: 0px 18px;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+
+    background-color: #fff;
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+.password {
+    width: 350px;
+    height: 45px;
+    padding: 0px 18px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+
+    background-color: #fff;
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+.login-area button {
+    padding: 1px 6px;
+    width: 110px;
+    height: 100px;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff243e;
+}
+
+.login-assist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 470px;
+    height: 25px;
+    margin: 15px 0px 40px;
+
+}
+
+/* #checkSavedID {
+    width: 20px;
+    height: 20px;
+    border: none;
+} */
+
+#checkSavedID::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#checkSavedID:checked::before {
+    background: url("/LotteCinema/images/login_check.png") no-repeat 50% 50% white;
+}
+
+.login-check {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.login-check label {
+    margin-left: 12px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.login-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    line-height: 20px;
+    width: 206.23px;
+    height: 25px;
+}
+
+.login-menu a {
+    color: #666;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-menu a:not(:first-child):before {
+    content: '';
+    position: absolute;
+    opacity: 0.2;
+    left: -11px;
+    top: 50%;
+    margin-top: -5px;
+    width: 1px;
+    height: 10px;
+    border-left: 1px solid #707070;
+}
+
+.login-banner {
+    width: 451px;
+    height: 220px;
+
+    margin-top: 20px;
+}
+
+.not-member {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 781.19px;
+    background-color: #f5f5f5;
+}
+
+.not-member-login {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    padding: 30px 0px 60px;
+    width: 980px;
+}
+
+.not-member-select-btn {
+    display: flex;
+}
+
+.not-member-select-btn button:first-child {
+    position: relative;
+    padding-left: 0;
+}
+
+.not-member-select-btn button:first-child::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 1px;
+    height: 14px;
+    background-color: #e0e0e0;
+}
+
+.not-member-select-btn button {
+    padding: 0px 10px;
+    border: none;
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+
+    font-size: 15px;
+
+    background-color: #f5f5f5;
+}
+
+.n-login-input-box {
+    display: flex;
+    flex-direction: column;
+    width: 980px;
+}
+
+.n-login-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.n-login-input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.label-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.label-box label {
+    font-size: 15px;
+    line-height: 40px;
+    position: relative;
+}
+
+.label-box label::after {
+    position: absolute;
+    right: 340px;
+    top: 10px;
+    content: '*';
+    color: #FF243E;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.label-box label>input {
+    font-size: 15px;
+    padding: 0px 18px;
+    margin-left: 45px;
+    width: 310px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.label-box:not(:first-child)>label {
+    margin-top: 5px;
+
+}
+
+.n-login-banner img {
+    width: 450px;
+    height: 220px;
+    margin-top: 20px;
+
+}

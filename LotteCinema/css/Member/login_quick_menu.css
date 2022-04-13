@@ -1,0 +1,36 @@
+.quick-wrap {
+    position: absolute;
+    z-index: 11px;
+    top: 140px;
+    right: 20px;
+    width: 82px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0 / 16%);
+    border-radius: 4px;
+}
+
+.quick-menu {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 76px;
+    border-radius: 4px;
+    background-color: #fff;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.quick-menu a {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.quick-menu a img {
+    display: block;
+}
