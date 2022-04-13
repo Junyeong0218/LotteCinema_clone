@@ -1,4 +1,3 @@
-const index = document.createElement("div");
 const slide_img = document.querySelector(".slide-img");
 const visual_ad = document.querySelector(".visual-ad");
 const left_btn = document.querySelector(".left-btn");
@@ -9,10 +8,11 @@ const banner_close_btn = document.querySelector(".banner-close");
 const header = document.querySelector("#header-section");
 const gnb = document.querySelector(".gnb");
 const mid_banner = document.querySelector(".banner-01 img");
+const dot_btns = document.querySelector(".dot-btns");
+let toggleSilde;
 
 let height = 80;
 
-let prevPosition = 0;
 let imageCount = 0;
 let currentIndex = 0;
 let currentPosition = 0;
@@ -22,6 +22,8 @@ window.onload = () => {
     imageCount = slide_img.children.length;
     randomImg();
     randomMidBannerImg();
+    addDotButtons();
+    toggleSilde = setInterval(autoSlide, 6000);
 }
 
 window.onresize = alignImageCenter;
@@ -38,35 +40,94 @@ window.onscroll = () => {
     }     
 };
 
+visual_ad.onmouseover = slideStop;
+visual_ad.onmouseout = () => {
+    toggleSilde = setInterval(autoSlide, 6000);
+};
+
 banner_close_btn.onclick = () => {
     top_banner.style.display = "none";
     height = 0;
 }
 
-right_btn.onclick = () => {
-    if (currentIndex < imageCount - 1) {
-        currentPosition = (currentIndex + 1) * (-1920);
-        slide_img.style = `transform: translate3d(${currentPosition}px,0,0); transition: all 0.25s ease 0s;"`;
-        currentIndex++;
-    } else {
-        currentPosition = 0;
-        currentIndex = 0;
-        slide_img.style = `transform: translate3d(${currentPosition}px,0,0); transition: all 0.25s ease 0s;"`;
+function addDotButtons() {
+    for(let i = 0; i < imageCount; i++){
+        const dot = makeDotButtons();
+        if(i == 0) dot.classList.add("active");
+        dot_btns.appendChild(dot);
+    }
+    const dot_btn = dot_btns.querySelectorAll("button");
+    for(let i = 0; i < dot_btn.length; i++){
+        dot_btn[i].onclick = (event) => {
+            showSpecificImage(event, dot_btn);
+        }
     }
 }
 
+function showSpecificImage(event, dot_btn) {
+    for(let i=0; i< dot_btn.length; i++) {
+        if(dot_btn[i] == event.target) {
+            currentIndex = i;
+            break;
+        }
+    }
+    calcImagePosition();
+    slideShow();
+    activeDotButton();
+}
+
+function activeDotButton() {
+    const dot_btn = dot_btns.querySelectorAll("button");
+    for(let i=0; i<dot_btn.length; i++) {
+        if(i == currentIndex) dot_btn[i].classList.add("active");
+        else dot_btn[i].classList.remove("active");
+    }
+}
+
+function makeDotButtons() {
+    const dot = document.createElement("button");
+    dot.type="button";
+    dot.className="dot-btn";
+    dot.innerHTML=`<span></span>`;
+    return dot;
+}
+
+function slideStop() {
+    clearInterval(toggleSilde);
+}
+
+function autoSlide() {
+    imageIndexUp();
+    calcImagePosition();
+    slideShow();
+}
+
+function slideShow() {
+    slide_img.style = `transform: translate3d(${currentPosition}px,0,0); transition: all 0.25s ease 0s;"`;
+    activeDotButton();
+}
+
+function calcImagePosition() {
+    currentPosition = currentIndex * (-1920);
+}
+
+function imageIndexUp() {
+    currentIndex++;
+    if(currentIndex > imageCount - 1) currentIndex = 0;
+}
+
+function imageIndexDown() {
+    currentIndex--;
+    if(currentIndex < 0) currentIndex = imageCount -1;
+}
+
+right_btn.onclick = autoSlide;
+   
 left_btn.onclick = () => {
-    if (currentIndex < imageCount && currentIndex > 0) {
-        currentPosition += 1920;
-        slide_img.style = `transform: translate3d(${currentPosition}px,0,0); transition: all 0.25s ease 0s;"`;
-        currentIndex--;
-    }else {
-        currentPosition = -7680;
-        currentIndex = imageCount - 1;
-        slide_img.style = `transform: translate3d(${currentPosition}px,0,0); transition: all 0.25s ease 0s;"`;
-    }
+    imageIndexDown();
+    calcImagePosition();
+    slideShow();
 }
-
 
 function alignImageCenter() {
     const margin = (1920 - window.innerWidth) / 2;
