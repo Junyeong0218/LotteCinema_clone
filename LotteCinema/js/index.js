@@ -63,7 +63,8 @@ function addDotButtons() {
         }
     }
 }
-//버튼 돔객체[i]번째가 클릭됐을때 버튼인덱스와 같으면 currentIndex = i;
+// 버튼 돔객체[i]번째가 클릭됐을때 버튼인덱스와 같으면 currentIndex = i;
+// index 변경 -> position 계산 -> image slide -> active dot
 function showSpecificImage(event, dot_btn) {
     for(let i=0; i< dot_btn.length; i++) {
         if(dot_btn[i] == event.target) {
