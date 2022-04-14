@@ -1,0 +1,160 @@
+* {
+    color: #8a8a8a;
+}
+
+.mast-body {
+    width: 1312px;
+    height: 1094px;
+}
+
+.main-container {
+    margin: 0 auto;
+    padding: 40px 0 100px;
+    max-width: 1100px;
+    height: 1000px;
+}
+
+.main-headline span {
+    width: 388px;
+    height: 62px;
+}
+
+.main-contents {
+    width: 1100px;
+    height: 623.22px;
+}
+
+.card-section {
+    margin-bottom: 70px;
+    width: 100%;
+    height: 222.22px;
+}
+
+.select-card {
+    padding-bottom: 5px;
+    width: 100%;
+    height: 31px;
+    border-bottom: 1px solid #000;
+}
+
+.select-card span {
+    position: relative;
+    top: 4px;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    width: 100%;
+    height: 165.23px;
+}
+
+.card-list li {
+    margin-right: 8px;
+    padding: 5px 10px;
+    width: 176.66px;
+    height: 54.81px;
+    border: 2px solid #c0c0c0;
+}
+
+.card-list :nth-child(6) {
+    margin-right: 0%;
+}
+
+.logo-img img {
+    width: 152.66px;
+    height: 40.81px;
+}
+
+.card-desceiption {
+    width: 100%;
+    height: 33.59px;
+}
+
+.card-desceiption p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.card-desceiption a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #009bfa;
+    text-decoration: underline;
+}
+
+.select-subject span {
+    font-size: 17px;
+    color: #000;
+}
+
+
+.type-section {
+    margin-bottom: 70px;
+    width: 100%;
+    height: 221px;
+}
+
+.select-subject {
+    padding-bottom: 5px;
+    width: 100%;
+    height: 31px;
+    border-bottom: 1px solid #000;
+}
+
+.checking {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    width: 100%;
+    height: 190px;
+
+}
+
+.checking-box {
+    position: relative;
+    padding: 19px 120px 23px 0;
+    width: 550px;
+    height: 65px;
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.app-cert {
+    width: 18px;
+    height: 18px;
+}
+
+.checking-box input {
+    color: #8a8a8a;
+}
+
+.checking-box label {
+    position: absolute;
+    top: 17px;
+    left: 23px;
+    margin-left: 3px;
+    height: 18px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #8a8a8a;
+}
+
+.checking-box button {
+    position: absolute;
+    top: 17px;
+    right: 100px;
+    font-size: 15px;
+    color: #8a8a8a;
+    border: none;
+    text-decoration: underline;
+}
+
+.btn-center {
+    margin-top: 160px;
+}
