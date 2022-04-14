@@ -23,6 +23,7 @@ window.onload = () => {
     randomImg();
     randomMidBannerImg();
     addDotButtons();
+    overAction();
     toggleSilde = setInterval(autoSlide, 6000);
 }
 
@@ -159,3 +160,33 @@ function randomMidBannerImg() {
     const index = Math.floor(Math.random()*5);
     mid_banner.src=`/images/under_main_banner_0${index+1}.jpg`;
 }
+
+function overAction() {
+    const poster_img_box = document.querySelectorAll(".poster-img-box");
+    for(let i= 0; i < poster_img_box.length; i++) {
+        poster_img_box[i].onmouseenter = () => {
+            const box = makeActiveBox();
+            poster_img_box[i].appendChild(box);
+        }
+        poster_img_box[i].onmouseout = (event) => {
+            console.log(event);
+            if(event.relatedTarget == null) return;
+            if(event.relatedTarget.className=="banner-wrapper") {
+                const box = poster_img_box[i].querySelector(".over-box");
+                box.remove();
+            }
+        }
+    }
+}
+
+function makeActiveBox() {
+    const elementBox = document.createElement("div");
+    elementBox.className="over-box";
+    elementBox.innerHTML=`
+    <a href="#" class="box-in">예매하기</a>
+    <a href="#" class="box-in">상세정보</a>
+    `;
+    
+    return elementBox;
+}
+

@@ -533,7 +533,7 @@
     height: auto;
 }
 
-.banner-list > li {
+.poster-img-box {
     position: relative;
     margin-right: 15px;
     display: flex;
@@ -541,6 +541,41 @@
     justify-content: space-between;
     align-items: center;
     width: 184px;
+}
+
+.poster-img-box > span,
+.poster-img-box > .banner-desc > span {
+    pointer-events: none;
+}
+
+.over-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 280px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.box-in {
+    margin-bottom: 15px;
+    padding: 0 14px;
+    width: 148px;
+    height: 28px;
+
+    border: 2px solid #fff;
+    border-radius: 4px;
+
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    line-height: 23px;
+    color: white;
 }
 
 .banner-list > li> img {
@@ -565,9 +600,9 @@
 }
 
 .banner-desc {
-    margin-top: 20px;
+    padding-top: 20px;
     width: 184px;
-    height: 33.89px;
+    height: 53.89px;
 }
 
 .banner-title {
@@ -591,26 +626,33 @@
     height: 13.59px;
 }
 
-
-.scores :nth-child(2)::before {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        top: 3px;
-        left: -6px;
-        width: 1px;
-        height: 8px;
-        background: #B2B2B2;
+.scores > span {
+    position: relative;
 }
 
+.scores :nth-child(1)::after,
+.scores :nth-child(2)::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    right: -8px;
+    width: 1px;
+    height: 8px;
+    background: #B2B2B2;
+}
+    
 .scores :nth-last-child(1) {
-    margin-left: 20px;
+    position: relative;
+    top: -2px;
+    margin-left: 15px;
     padding-left: 15px;
     background-image: url(/images/heart_rnd_16_off.png);
     width: 16px;
     height: 16px;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .star{
@@ -622,17 +664,6 @@
     font-size: 11px;
 }
 
-.scores :nth-child(2)::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 3px;
-    left: 35px;
-    width: 1px;
-    height: 8px;
-    background: #B2B2B2;
-}
-
 
 .scores :nth-last-child(3) {
    margin-left: 10px;
@@ -642,9 +673,8 @@
 
 
 .d-day{
-    position: relative;
     padding-left: 5px;
-    margin-left: 15px;
+    margin-left: 12px;
     background-image: none;
     color: #ed4c6b;
     font-size: 11px;
