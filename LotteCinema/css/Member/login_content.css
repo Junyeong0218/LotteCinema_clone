@@ -301,7 +301,223 @@
 
 }
 
+.birth-year-label {
+    margin-right: 45px;
+    position: relative;
+}
+
+.birth-year-label::after {
+    position: absolute;
+    left: 61px;
+    top: 10px;
+    content: '*';
+    color: #FF243E;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
 .birth-select {
+    display: flex;
+    justify-content: space-between;
     width: 310px;
     height: 40px;
+}
+
+#birthyear {
+    width: 108px;
+    margin-top: 5px;
+    padding: 0px 18px;
+    border: 1px solid #ddd;
+    background: #fff url(/LotteCinema/images/arr_dw_13.png);
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    background-position: right 6px top 50%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    appearance: none;
+
+}
+
+#birthmonth {
+    width: 91px;
+    margin-top: 5px;
+    padding: 0px 18px;
+    border: 1px solid #ddd;
+    background: #fff url(/LotteCinema/images/arr_dw_13.png);
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    background-position: right 6px top 50%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    appearance: none;
+}
+
+#birthday {
+    width: 91px;
+    margin-top: 5px;
+    padding: 0px 18px;
+    border: 1px solid #ddd;
+    background: #fff url(/LotteCinema/images/arr_dw_13.png);
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    background-position: right 6px top 50%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    appearance: none;
+}
+
+.n-login-info>p {
+    margin-top: 40px;
+    padding-left: 128px;
+    color: #666;
+    font-size: 13px;
+}
+
+.n-login-info>p::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    margin: 8px 5px 0 0;
+    border-radius: 50%;
+    vertical-align: top;
+    background-color: #666;
+}
+
+.txtarea-box {
+    margin: 30px 0px 30px;
+    width: 980px;
+    height: 177px;
+}
+
+.txtarea {
+    padding: 21px 32px;
+    overflow-y: scroll;
+    height: 177px;
+    line-height: 1.6;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.focus-textarea {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.color-red {
+    color: #ff7787;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.agreement-check-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 28px;
+    text-align: right;
+}
+
+#privacy-Ok1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    vertical-align: middle;
+    border: none 0;
+}
+
+.agreement-check-box:first-child Label {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#privacy-Ok2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    vertical-align: middle;
+    border: none 0;
+}
+
+.agreement-check-box:last-child label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.agreement-check-box label::before {
+    border-color: #000;
+    background: #fff url(/LotteCinema/images/icon_rad_12.png) no-repeat center center;
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.signup-signin-button {
+    display: flex;
+    justify-content: center;
+    margin: 90px 0px 0px;
+    text-align: center;
+    height: 45px;
+}
+
+.signup-signin-button a {
+    min-width: 160px;
+    margin: 0px 3px;
+}
+
+.btn-signup {
+    height: 45px;
+    line-height: 43px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    font-size: 14px;
+    color: #000000 !important;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.btn-signin {
+    height: 45px;
+    line-height: 43px;
+    padding: 0px 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #414141;
+    font-size: 14px;
+    color: #ffffff !important;
+    background-color: #414141;
+
 }
