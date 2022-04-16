@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/LotteCinema/css/container.css">
-    <link rel="stylesheet" href="/LotteCinema/css/Member/login_header.css">
-    <link rel="stylesheet" href="/LotteCinema/css/Member/login.css">
-    <link rel="stylesheet" href="/LotteCinema/css/Member/login_footer.css">
-    <link rel="stylesheet" href="/LotteCinema/css/Member/login_quick_menu.css">
-    <link rel="stylesheet" href="/LotteCinema/css/Member/login_content.css">
+    <link rel="stylesheet" href="/static/css/container.css">
+    <link rel="stylesheet" href="/static/css/Member/login_header.css">
+    <link rel="stylesheet" href="/static/css/Member/login.css">
+    <link rel="stylesheet" href="/static/css/Member/login_footer.css">
+    <link rel="stylesheet" href="/static/css/Member/login_quick_menu.css">
+    <link rel="stylesheet" href="/static/css/Member/login_content.css">
 
 </head>
 
 <body>
     <div class="container">
         <header class="h-container">
-            <h1 class="logo"><a href="#"><img src="/LotteCinema/images/logo.png" alt="LotteCinema"></a></h1>
+            <h1 class="logo"><a href="#"><img src="/static/images/logo.png" alt="LotteCinema"></a></h1>
             <div class="high-box">
                 <ul class="h-menu1">
                     <li><a href="#" class="btn-facebook">페이스북</a></li>
@@ -344,12 +344,12 @@
         </header>
         <div class="quick-wrap">
             <div class="quick-menu">
-                <a href="#"><img src="/LotteCinema/images/aside_bar_booking.png" alt=""></a>
-                <a href="#"><img src="/LotteCinema/images/aside_bar_timetable.png" alt=""></a>
-                <a href="#"><img src="/LotteCinema/images/aside_bar_discount_info.png" alt=""></a>
-                <a href="#"><img src="/LotteCinema/images/aside_bar_club_membership.png" alt=""></a>
-                <a href="#"><img src="/LotteCinema/images/aside_bar_customer_center.png" alt=""></a>
-                <a href="#"><img src="/LotteCinema/images/aside_bar_special_theater.png" alt=""></a>
+                <a href="#"><img src="/static/images/aside_bar_booking.png" alt=""></a>
+                <a href="#"><img src="/static/images/aside_bar_timetable.png" alt=""></a>
+                <a href="#"><img src="/static/images/aside_bar_discount_info.png" alt=""></a>
+                <a href="#"><img src="/static/images/aside_bar_club_membership.png" alt=""></a>
+                <a href="#"><img src="/static/images/aside_bar_customer_center.png" alt=""></a>
+                <a href="#"><img src="/static/images/aside_bar_special_theater.png" alt=""></a>
                 <a href="#" class="quick-top">TOP</a>
             </div>
         </div>
@@ -389,7 +389,7 @@
                         </div>
                     </div>
                     <div class="login-banner">
-                        <a href="#"><img src="../images/login_banner.png"></a>
+                        <a href="#"><img src="/static/images/login_banner.png"></a>
                     </div>
                 </div>
                 <div class="not-member">
@@ -598,7 +598,7 @@
                                     </div>
                                 </div>
                                 <div class="n-login-banner">
-                                    <img src="/LotteCinema/images/n_login_banner.jpg" alt="">
+                                    <img src="/static/images/n_login_banner.jpg" alt="">
                                 </div>
                             </div>
                             <div class="n-login-info">
@@ -635,6 +635,60 @@
                             <a href="#" class="btn-signin">비회원 로그인</a>
                         </div>
                     </div>
+                    <div class="not-member-reservation">
+                        <div class="not-member-select-btn">
+                            <button>비회원 로그인</button>
+                            <button>비회원 예매확인</button>
+                        </div>
+                        <div class="n-login-input-box">
+                            <div class="n-login-items">
+                                <div class="n-reservation-input">
+                                    <div class="label-box">
+                                        <label for="username">이름<input type="text" placeholder="이름을 입력해 주세요"></label>
+                                    </div>
+                                    <div class="label-box">
+                                        <label for="userphone">휴대폰번호<input type="text"
+                                                placeholder="휴대폰 번호(- 생략)를 입력해 주세요."></label>
+                                    </div>
+                                    <div class="label-box">
+                                        <label for="passowrd2">예매 비밀번호<input type="text"
+                                                placeholder="예매 비밀번호 (4자리)를 입력해 주세요."></label>
+                                    </div>
+                                </div>
+                                <div class="n-login-banner">
+                                    <img src="/static/images/n_login_banner.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="txtarea-box">
+                            <div class="txtarea-box">
+                                <div class="txtarea">
+                                    <span class="focus-textarea"> 개인정보의 수집목적 및 항목</span><br>
+                                    ① 개인정보 수집 목적: 비회원 에매확인 및 이용자 식별<br>
+                                    ②수집항목: 이름, 휴대폰번호, 생년월일, 고유번호<br><br>
+                                    <span class="color-red">
+                                        <br>개인정보의 보유 및 이용기간<br>
+                                        개인정보는 영화 예매 완료 후 동의일로부터 70일까지 위 이용 목적으로 이용 및 보유 합니다. (단, 생년월일은 이용자 식별 목적으로 이용되며
+                                        별도 보관되지 않습니다.)<br>
+                                        다만, 상법 등 관련법령의 규정에 의하여 거래 관련 관리 의무 관계의 확인 등을 이유로 일정기간 보유하여야 할 필요가 있을 경우 아래와 같이
+                                        보유합니다.<br>
+                                        대금결제 및 재화 등의 공급에 관한 기록 : 5년
+                                    </span>
+                                    <br><br>※ 비회원 예매서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다.
+                                </div>
+                            </div>
+                            <div class="agreement-check-box">
+                                <input type="radio" name="agree-check" id="privacy-Ok1">
+                                <label for="privacy-Ok1">동의</label>
+                                <input type="radio" name="agree-check" id="privacy-Ok2">
+                                <label for="privacy-Ok2">동의하지 않음</label>
+                            </div>
+                        </div>
+                        <div class="signup-signin-button">
+                            <a href="#" class="btn-signup">회원가입</a>
+                            <a href="#" class="btn-signin">비회원 예매확인</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="social-login">
 
@@ -642,21 +696,21 @@
             </div>
         </div>
         <div class="banner-side">
-            <a href="#"><img src="../images/side_banner_01.png"></a>
+            <a href="#"><img src="/static/images/side_banner_01.png"></a>
             <button class="btn-close"></button>
         </div>
         <div class="banner">
             <div class="h-banner">
-                <a href="#"><img src="/LotteCinema/images/under_main_banner_05.jpg" alt=""></a>
+                <a href="#"><img src="/static/images/under_main_banner_05.jpg" alt=""></a>
             </div>
             <div class="f-banner">
-                <a href="#"><img src="/LotteCinema/images/footer_banner_01.jpg" alt=""></a>
+                <a href="#"><img src="/static/images/footer_banner_01.jpg" alt=""></a>
             </div>
         </div>
         <div class="footer">
             <div class="inner">
                 <span class="f-logo">
-                    <img src="/LotteCinema/images/logo_footer.gif" alt="LOTTE CINEMA">
+                    <img src="/static/images/logo_footer.gif" alt="LOTTE CINEMA">
                 </span>
                 <ul class="f-menu">
                     <li><a href="">회원약관</a></li>
@@ -686,15 +740,15 @@
             </div>
             <div class="award">
                 <ul>
-                    <li><img src="/LotteCinema/images/footer_award_NCSI6.png" alt="NCSI / NCSI 영화관부문 6년 연속 1위"></li>
-                    <li><img src="/LotteCinema/images/footer_award_kcsi.png" alt="KCSI 영화관부문 7년 연속 1위(총12회)"></li>
-                    <li><img src="/LotteCinema/images/footer_award_kssqi-1.png" alt="KS-SQI 영화관부문 9년 연속 1위(총12회)"></li>
-                    <li><img src="/LotteCinema/images/footer_award_brandcinema.png" alt="올해의 브랜드대상 영화관 부문 10년 연속 1위">
+                    <li><img src="/static/images/footer_award_NCSI6.png" alt="NCSI / NCSI 영화관부문 6년 연속 1위"></li>
+                    <li><img src="/static/images/footer_award_kcsi.png" alt="KCSI 영화관부문 7년 연속 1위(총12회)"></li>
+                    <li><img src="/static/images/footer_award_kssqi-1.png" alt="KS-SQI 영화관부문 9년 연속 1위(총12회)"></li>
+                    <li><img src="/static/images/footer_award_brandcinema.png" alt="올해의 브랜드대상 영화관 부문 10년 연속 1위">
                     </li>
-                    <li><img src="/LotteCinema/images/footer_award_greenstar.png" alt="그린스타 영화관 부문 4년 연속 1위"></li>
-                    <li><img src="/LotteCinema/images/footer_award_brandstar.png" alt="대한민국 브랜드 스타 영화관 부문 1위"></li>
-                    <li><img src="/LotteCinema/images/footer_award_familyship.png" alt="가족친화 인증기업 선정"></li>
-                    <li><img src="/LotteCinema/images/footer_award_winner.png" alt="소셜미디어 브랜드분야 WINNER 수상"></li>
+                    <li><img src="/static/images/footer_award_greenstar.png" alt="그린스타 영화관 부문 4년 연속 1위"></li>
+                    <li><img src="/static/images/footer_award_brandstar.png" alt="대한민국 브랜드 스타 영화관 부문 1위"></li>
+                    <li><img src="/static/images/footer_award_familyship.png" alt="가족친화 인증기업 선정"></li>
+                    <li><img src="/static/images/footer_award_winner.png" alt="소셜미디어 브랜드분야 WINNER 수상"></li>
                 </ul>
             </div>
         </div>

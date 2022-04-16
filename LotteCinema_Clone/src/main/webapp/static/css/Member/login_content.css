@@ -139,7 +139,7 @@
 }
 
 #checkSavedID:checked::before {
-    background: url("/LotteCinema/images/login_check.png") no-repeat 50% 50% white;
+    background: url("/static/images/login_check.png") no-repeat 50% 50% white;
 }
 
 .login-check {
@@ -200,7 +200,7 @@
 }
 
 .not-member-login {
-    display: flex;
+    display: none;
     flex-direction: column;
     margin: 0px auto;
     padding: 30px 0px 60px;
@@ -329,7 +329,7 @@
     margin-top: 5px;
     padding: 0px 18px;
     border: 1px solid #ddd;
-    background: #fff url(/LotteCinema/images/arr_dw_13.png);
+    background: #fff url(/static/images/arr_dw_13.png);
     background-repeat: no-repeat;
     border-radius: 4px;
     background-position: right 6px top 50%;
@@ -345,7 +345,7 @@
     margin-top: 5px;
     padding: 0px 18px;
     border: 1px solid #ddd;
-    background: #fff url(/LotteCinema/images/arr_dw_13.png);
+    background: #fff url(/static/images/arr_dw_13.png);
     background-repeat: no-repeat;
     border-radius: 4px;
     background-position: right 6px top 50%;
@@ -360,7 +360,7 @@
     margin-top: 5px;
     padding: 0px 18px;
     border: 1px solid #ddd;
-    background: #fff url(/LotteCinema/images/arr_dw_13.png);
+    background: #fff url(/static/images/arr_dw_13.png);
     background-repeat: no-repeat;
     border-radius: 4px;
     background-position: right 6px top 50%;
@@ -472,7 +472,7 @@
 
 .agreement-check-box label::before {
     border-color: #000;
-    background: #fff url(/LotteCinema/images/icon_rad_12.png) no-repeat center center;
+    background: #fff url(/static/images/icon_rad_12.png) no-repeat center center;
     content: "";
     display: inline-block;
     width: 18px;
@@ -520,4 +520,20 @@
     color: #ffffff !important;
     background-color: #414141;
 
+}
+
+.not-member-reservation {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    padding: 30px 0px 60px;
+    width: 980px;
+}
+
+.n-reservation-input {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
 }

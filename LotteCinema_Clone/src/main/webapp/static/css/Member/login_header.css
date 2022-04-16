@@ -48,7 +48,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    background-image: url("/LotteCinema/images/sns_facebook.png");
+    background-image: url("/static/images/sns_facebook.png");
     background-position: 0 center;
     background-repeat: no-repeat;
 }
@@ -61,7 +61,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    background-image: url("/LotteCinema/images/sns_youtube.png");
+    background-image: url("/static/images/sns_youtube.png");
     background-position: 0 center;
     background-repeat: no-repeat;
 }
@@ -74,7 +74,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    background-image: url("/LotteCinema/images/sns_instagram.png");
+    background-image: url("/static/images/sns_instagram.png");
     background-position: 0 center;
     background-repeat: no-repeat;
 }
@@ -121,7 +121,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    background-image: url("/LotteCinema/images/nav_side_my.png");
+    background-image: url("/static/images/nav_side_my.png");
     background-repeat: no-repeat;
 
 }
@@ -133,7 +133,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    background-image: url("/LotteCinema/images/nav_side_reserve.png");
+    background-image: url("/static/images/nav_side_reserve.png");
     background-repeat: no-repeat;
 }
 
@@ -144,7 +144,7 @@
     border: none;
 
     background-color: #fff;
-    background-image: url("/LotteCinema/images/nav_side_all.png");
+    background-image: url("/static/images/nav_side_all.png");
     background-repeat: no-repeat;
     text-indent: -9999em;
 }
