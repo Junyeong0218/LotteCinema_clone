@@ -33,7 +33,7 @@ body {
     width: 20px;
     height: 20px;
     border: none;
-    background: url("/images/top_banner_closer.png") no-repeat 50% 50%;
+    background: url("/static/images/top_banner_closer.png") no-repeat 50% 50%;
 }
 
 header {
@@ -82,7 +82,7 @@ header.fixed {
     top: 18px;
     left: 50%;
     margin-left: -109px;
-    background: url("/images/logo.png") no-repeat center center;
+    background: url("/static/images/logo.png") no-repeat center center;
 }
 
 .logo>a {
@@ -144,15 +144,15 @@ header.fixed {
 }
 
 .facebook span:first-child {
-    background-image: url("/images/sns_facebook.png");
+    background-image: url("/static/images/sns_facebook.png");
 }
 
 .youtube span:first-child {
-    background-image: url("/images/sns_youtube.png");
+    background-image: url("/static/images/sns_youtube.png");
 }
 
 .instagram span:first-child {
-    background-image: url("/images/sns_instagram.png");
+    background-image: url("/static/images/sns_instagram.png");
 }
 
 .links>li {
@@ -204,7 +204,7 @@ header.fixed {
     height: 100%;
     border: none;
     background-color: rgba(0, 0, 0, 0);
-    background-image: url("/images/nav_side_all.png");
+    background-image: url("/static/images/nav_side_all.png");
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
@@ -392,7 +392,7 @@ header th {
     right: -63px;
     width: 43px;
     height: 43px;
-    background: url("/images/whole_menu_closer.png") no-repeat center center;
+    background: url("/static/images/whole_menu_closer.png") no-repeat center center;
     border: none;
     cursor: pointer;
 }
@@ -400,7 +400,7 @@ header th {
 .to-signup span:first-child {
     width: 14px;
     height: 14px;
-    background-image: url("/images/nav_side_my.png");
+    background-image: url("/static/images/nav_side_my.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
@@ -408,7 +408,7 @@ header th {
 .to-reserve span:first-child {
     width: 14px;
     height: 14px;
-    background-image: url("/images/nav_side_reserve.png");
+    background-image: url("/static/images/nav_side_reserve.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }

@@ -39,7 +39,7 @@ function hideTopBanner() {
 function setWholeMenuBanner() {
     const index = getRandomNumber(5);
     const imageTag = pop_up_banner.querySelector("img");
-    imageTag.src = `/images/whole_menu_banner_0${index + 1}.jpg`;
+    imageTag.src = `/static/images/whole_menu_banner_0${index + 1}.jpg`;
     if (index == 0) imageTag.alt = "신비한 동물들과 덤블도어의 비밀";
     else if (index == 1) imageTag.alt = "로스트 시티";
     else if (index == 2) imageTag.alt = "수퍼 소닉 2";
@@ -50,7 +50,7 @@ function setWholeMenuBanner() {
 function setTopBanner() {
     const index = getRandomNumber(4);
     top_banner.style.backgroundColor = `rgb(${background_color_array[index]})`;
-    top_banner.querySelector("img").src = `/images/top_banner_0${index + 1}.jpg`;
+    top_banner.querySelector("img").src = `/static/images/top_banner_0${index + 1}.jpg`;
 }
 
 function getRandomNumber(multiple) {

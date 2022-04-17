@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const slide_img = document.querySelector(".slide-img");
 const visual_ad = document.querySelector(".visual-ad");
 const left_btn = document.querySelector(".left-btn");
@@ -6,9 +7,15 @@ const top_banner = document.querySelector(".top-banner");
 const banner_img_wrap = document.querySelector(".banner-img-wrap");
 const banner_close_btn = document.querySelector(".banner-close");
 const header = document.querySelector("#header-section");
+const sub_section = document.querySelector("#sub-section");
 const gnb = document.querySelector(".gnb");
 const mid_banner = document.querySelector(".banner-01 img");
 const dot_btns = document.querySelector(".dot-btns");
+const all_menu_close_btn = document.querySelector(".all-menu-close-btn");
+const all_menu_bg = document.querySelector(".all-menu-bg");
+const g_menu_button = document.querySelector(".g-menu-button");
+const footer_banner = document.querySelector(".banner-02");
+const footer_banner_img = document.querySelector(".banner-02 img");
 let toggleSilde;
 
 let height = 80;
@@ -24,21 +31,22 @@ window.onload = () => {
     randomMidBannerImg();
     addDotButtons();
     overAction();
+    randomFooterBannerImg();
     toggleSilde = setInterval(autoSlide, 6000);
 }
 
 window.onresize = alignImageCenter;
 
 window.onscroll = () => {
-    if (window.scrollY > 71+height) {
+    if (window.scrollY > 71 + height) {
         header.classList.add("fixed");
-        if(header.className="fixed"){
-            gnb.style.top=(-75-height)+"px";
+        if (header.className = "fixed") {
+            gnb.style.top = (-75 - height) + "px";
         }
     } else {
         header.classList.remove("fixed");
-        gnb.style.top="0px";
-    }     
+        gnb.style.top = "0px";
+    }
 };
 
 visual_ad.onmouseover = slideStop;
@@ -52,13 +60,13 @@ banner_close_btn.onclick = () => {
 }
 
 function addDotButtons() {
-    for(let i = 0; i < imageCount; i++){
+    for (let i = 0; i < imageCount; i++) {
         const dot = makeDotButtons();
-        if(i == 0) dot.classList.add("active");
+        if (i == 0) dot.classList.add("active");
         dot_btns.appendChild(dot);
     }
     const dot_btn = dot_btns.querySelectorAll("button");
-    for(let i = 0; i < dot_btn.length; i++){
+    for (let i = 0; i < dot_btn.length; i++) {
         dot_btn[i].onclick = (event) => {
             showSpecificImage(event, dot_btn);
         }
@@ -67,8 +75,8 @@ function addDotButtons() {
 // 버튼 돔객체[i]번째가 클릭됐을때 버튼인덱스와 같으면 currentIndex = i;
 // index 변경 -> position 계산 -> image slide -> active dot
 function showSpecificImage(event, dot_btn) {
-    for(let i=0; i< dot_btn.length; i++) {
-        if(dot_btn[i] == event.target) {
+    for (let i = 0; i < dot_btn.length; i++) {
+        if (dot_btn[i] == event.target) {
             currentIndex = i;
             break;
         }
@@ -80,17 +88,17 @@ function showSpecificImage(event, dot_btn) {
 
 function activeDotButton() {
     const dot_btn = dot_btns.querySelectorAll("button");
-    for(let i=0; i<dot_btn.length; i++) {
-        if(i == currentIndex) dot_btn[i].classList.add("active");
+    for (let i = 0; i < dot_btn.length; i++) {
+        if (i == currentIndex) dot_btn[i].classList.add("active");
         else dot_btn[i].classList.remove("active");
     }
 }
 
 function makeDotButtons() {
     const dot = document.createElement("button");
-    dot.type="button";
-    dot.className="dot-btn";
-    dot.innerHTML=`<span></span>`;
+    dot.type = "button";
+    dot.className = "dot-btn";
+    dot.innerHTML = `<span></span>`;
     return dot;
 }
 
@@ -115,16 +123,16 @@ function calcImagePosition() {
 
 function imageIndexUp() {
     currentIndex++;
-    if(currentIndex > imageCount - 1) currentIndex = 0;
+    if (currentIndex > imageCount - 1) currentIndex = 0;
 }
 
 function imageIndexDown() {
     currentIndex--;
-    if(currentIndex < 0) currentIndex = imageCount -1;
+    if (currentIndex < 0) currentIndex = imageCount - 1;
 }
 
 right_btn.onclick = autoSlide;
-   
+
 left_btn.onclick = () => {
     imageIndexDown();
     calcImagePosition();
@@ -139,54 +147,73 @@ function alignImageCenter() {
 }
 
 function randomImg() {
-    const img_array = ['top_banner_01.jpg','top_banner_02.jpg','top_banner_03.jpg','top_banner_04.jpg'];
-    const index = Math.floor(Math.random()*img_array.length);
+    const img_array = ['top_banner_01.jpg', 'top_banner_02.jpg', 'top_banner_03.jpg', 'top_banner_04.jpg'];
+    const index = Math.floor(Math.random() * img_array.length);
     const random_img = img_array[index];
     const background_color_array = [
         "242, 191, 181", "191, 226, 245", "0, 0, 0", "0, 0, 0"];
     let banner_img = document.createElement('div');
-    banner_img.innerHTML = 
-    `
+    banner_img.innerHTML =
+        `
     <a href="">
-        <img src="/images/${random_img}" class="top-banner-img" alt="">
+        <img src="/static/images/${random_img}" class="top-banner-img" alt="">
     </a>`;
-        
-       top_banner.style.backgroundColor= `rgb(${background_color_array[index]})`;
-    
+
+    top_banner.style.backgroundColor = `rgb(${background_color_array[index]})`;
+
     banner_img_wrap.appendChild(banner_img);
 }
 
+
 function randomMidBannerImg() {
-    const index = Math.floor(Math.random()*5);
-    mid_banner.src=`/images/under_main_banner_0${index+1}.jpg`;
+    const index = Math.floor(Math.random() * 5);
+    mid_banner.src = `/static/images/under_main_banner_0${index + 1}.jpg`;
+}
+
+function randomFooterBannerImg() {
+    const f_img_array = ['footer_banner_01', 'footer_banner_02'];
+    const index = Math.floor(Math.random() * f_img_array.length);
+    const f_random_img = f_img_array[index];
+    const background_color_array = ["0, 92, 185", "227,230,239"];
+    footer_banner_img.src = `/static/images/${f_random_img}.jpg`;
+    footer_banner.style.backgroundImage = `url("/static/images/background-img.jpg")`;
+    footer_banner.style.backgroundColor = `rgb(${background_color_array[index]})`;
 }
 
 function overAction() {
     const poster_img_box = document.querySelectorAll(".poster-img-box");
-    for(let i= 0; i < poster_img_box.length; i++) {
+    for (let i = 0; i < poster_img_box.length; i++) {
         poster_img_box[i].onmouseenter = () => {
             const box = makeActiveBox();
             poster_img_box[i].appendChild(box);
         }
-        poster_img_box[i].onmouseout = (event) => {
-            console.log(event);
-            if(event.relatedTarget == null) return;
-            if(event.relatedTarget.className=="banner-wrapper") {
-                const box = poster_img_box[i].querySelector(".over-box");
-                box.remove();
-            }
+
+        poster_img_box[i].onmouseleave = () => {
+            const box = poster_img_box[i].querySelector(".over-box");
+            box.remove();
         }
     }
 }
 
 function makeActiveBox() {
     const elementBox = document.createElement("div");
-    elementBox.className="over-box";
-    elementBox.innerHTML=`
+    elementBox.className = "over-box";
+    elementBox.innerHTML = `
     <a href="#" class="box-in">예매하기</a>
     <a href="#" class="box-in">상세정보</a>
     `;
-    
+
     return elementBox;
 }
+
+g_menu_button.onclick = () => {
+    all_menu_bg.style.display = "flex";
+    body.style.overflow = "hidden";
+}
+
+all_menu_close_btn.onclick = () => {
+    all_menu_bg.style = "";
+    body.style.overflow = "scroll";
+}
+
 
