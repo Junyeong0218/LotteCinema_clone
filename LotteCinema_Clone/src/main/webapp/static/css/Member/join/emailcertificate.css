@@ -1,0 +1,20 @@
+.main-headline {
+    margin: 0;
+    padding-top: 30px;
+    height: 132.48px;
+}
+
+.main-headline span {
+    position: relative;
+    top: -5px;
+}
+
+.step-image img {
+    width: 50px;
+    height: 7px;
+}
+
+.main-contents {
+    width: 1213px;
+    height: 853px;
+}
