@@ -33,20 +33,31 @@
 
 .select-contents {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     width: 100%;
     height: 100%;
+}
+
+.member-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+
     background-color: #f5f5f5;
 }
 
 .member {
-    display: none;
+    display: flex;
     justify-content: space-between;
 
     width: 980px;
     height: 363.5px;
     padding: 60px 0px;
+
 }
 
 .login-box {
@@ -191,7 +202,7 @@
 }
 
 .not-member {
-    display: flex;
+    display: none;
     justify-content: center;
 
     width: 100%;
@@ -425,7 +436,7 @@
     text-align: right;
 }
 
-#privacy-Ok1 {
+#privacyOk1 {
     position: relative;
     top: 0;
     left: 0;
@@ -446,7 +457,7 @@
     cursor: pointer;
 }
 
-#privacy-Ok2 {
+#privacyOk2 {
     position: relative;
     top: 0;
     left: 0;
@@ -472,14 +483,18 @@
 
 .agreement-check-box label::before {
     border-color: #000;
-    background: #fff url(/static/images/icon_rad_12.png) no-repeat center center;
+    background-color: #fff;
+    border: 1px solid #ddd;
     content: "";
     display: inline-block;
     width: 18px;
     height: 18px;
     margin-right: 5px;
-    border: 1px solid #ddd;
     border-radius: 50%;
+}
+
+.agreement-check-box input[type="radio"]:checked+label::before {
+    background: url(/static/images/icon_rad_12.png) no-repeat 50% 50%;
 }
 
 .signup-signin-button {
@@ -536,4 +551,113 @@
     justify-content: center;
     flex-direction: column;
     padding-top: 20px;
+}
+
+.login-social {
+    display: none;
+    justify-content: center;
+
+    margin-top: 30px;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.login-box-social {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    padding: 60px 0px;
+    width: 980px;
+}
+
+.login-items-social {
+    display: flex;
+}
+
+.a-box-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.a-box-social>a {
+    padding-left: 48px;
+    width: 470px;
+    height: 50px;
+    line-height: 48px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-naver-social {
+    margin-top: 50px;
+}
+
+.btn-cacao-social {
+    margin-top: 10px;
+}
+
+.btn-naver-social::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 56px;
+    height: 50px;
+    border-right: 1px solid #ddd;
+    background: url(/static/images/social_naver.png) no-repeat;
+    background-position: center center;
+}
+
+.btn-cacao-social::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 56px;
+    height: 50px;
+    border-right: 1px solid #ddd;
+    background: url(/static/images/social_cacao.png) no-repeat;
+    background-position: center center;
+}
+
+.login-menu-social {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px 0px;
+    padding-left: 56px;
+}
+
+.login-menu-social>a {
+    color: #666;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.login-menu-social a:not(:first-child) {
+    margin-left: 20px;
+}
+
+.login-menu-social a:not(:first-child)::after {
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    margin-top: -5px;
+    width: 1px;
+    height: 10px;
+    background-color: #ddd;
+}
+
+.login-banner-social img {
+    width: 450px;
+    height: 220px;
+    margin-top: 20px;
 }
