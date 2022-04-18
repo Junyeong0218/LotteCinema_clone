@@ -73,7 +73,7 @@ body {
     right: -200%;
     content: "";
     height: 280px;
-    background: url("/images/membership_friends_bg.jpg") no-repeat 50% 50%;
+    background: url("/static/images/membership_friends_bg.jpg") no-repeat 50% 50%;
     z-index: -1;
 }
 
@@ -84,7 +84,7 @@ body {
     right: -200%;
     content: "";
     height: 280px;
-    background: url("/images/membership_vip_bg.jpg") no-repeat 50% 50%;
+    background: url("/static/images/membership_vip_bg.jpg") no-repeat 50% 50%;
     z-index: -1;
 }
 
@@ -260,7 +260,7 @@ body {
     content: "";
     width: 11px;
     height: 11px;
-    background: url("/images/membership_multiple.png") no-repeat;
+    background: url("/static/images/membership_multiple.png") no-repeat;
 }
 
 .ticket-count {
@@ -429,22 +429,22 @@ body {
 }
 
 .vip-badge {
-    background: url("/images/membership_vip_crown.png") no-repeat center 23px white;
+    background: url("/static/images/membership_vip_crown.png") no-repeat center 23px white;
     color: #666;
 }
 
 .vvip-badge {
-    background: url("/images/membership_vvip_crown.png") no-repeat center 21px white;
+    background: url("/static/images/membership_vvip_crown.png") no-repeat center 21px white;
     color: #666;
 }
 
 .gold-badge {
-    background: url("/images/membership_gold_crown.png") no-repeat center 17px white;
+    background: url("/static/images/membership_gold_crown.png") no-repeat center 17px white;
     color: #756023;
 }
 
 .platinum-badge {
-    background: url("/images/membership_platinum_crown.png") no-repeat center 16px white;
+    background: url("/static/images/membership_platinum_crown.png") no-repeat center 16px white;
     color: black;
 }
 
@@ -546,7 +546,7 @@ body {
     top: 5px;
     width: 11px;
     height: 11px;
-    background: url("/images/membership_cross.png") no-repeat;
+    background: url("/static/images/membership_cross.png") no-repeat;
 }
 
 .type-wrapper>ul>li>span>.red,
@@ -583,7 +583,7 @@ body {
     justify-content: space-between;
     width: 100%;
     height: 255px;
-    background: url("/images/membership_benefit_image_bg.jpg");
+    background: url("/static/images/membership_benefit_image_bg.jpg");
 }
 
 .benefit-image {

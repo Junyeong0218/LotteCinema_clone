@@ -76,17 +76,17 @@
 }
 
 .to-first-page {
-    background: url("/images/border_first_page.png") no-repeat 50% 50% white;
+    background: url("/static/images/border_first_page.png") no-repeat 50% 50% white;
 }
 
 .to-prev-page {
-    background: url("/images/border_prev_page.png") no-repeat 50% 50% white;
+    background: url("/static/images/border_prev_page.png") no-repeat 50% 50% white;
 }
 
 .to-next-page {
-    background: url("/images/border_next_page.png") no-repeat 50% 50% white;
+    background: url("/static/images/border_next_page.png") no-repeat 50% 50% white;
 }
 
 .to-last-page {
-    background: url("/images/border_last_page.png") no-repeat 50% 50% white;
+    background: url("/static/images/border_last_page.png") no-repeat 50% 50% white;
 }

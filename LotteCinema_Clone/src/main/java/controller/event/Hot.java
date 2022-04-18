@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Hot
  */
-@WebServlet("/Event/Hot")
+@WebServlet("/event/hot")
 public class Hot extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/Event/hot.html").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/Event/hot.jsp").forward(request, response);
 	}
 
 }

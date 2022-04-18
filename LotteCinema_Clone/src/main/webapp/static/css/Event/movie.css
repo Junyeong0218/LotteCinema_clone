@@ -32,7 +32,7 @@
     outline: none;
     border: 1px solid #DDD;
     border-radius: 4px;
-    background: url("/images/small_down_arrow.png") no-repeat top 50% right 6px #FFF;
+    background: url("/static/images/small_down_arrow.png") no-repeat top 50% right 6px #FFF;
 }
 
 .searcher>select>option {
@@ -261,11 +261,11 @@
     display: inline-block;
     width: 13px;
     height: 8px;
-    background: url("/images/event_down_arrow.png") no-repeat;
+    background: url("/static/images/event_down_arrow.png") no-repeat;
 }
 
 .active>.promotion-date::after {
-    background: url("/images/event_up_arrow.png") no-repeat;
+    background: url("/static/images/event_up_arrow.png") no-repeat;
 }
 
 .button-description {

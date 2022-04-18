@@ -3,17 +3,10 @@ const slide_img = document.querySelector(".slide-img");
 const visual_ad = document.querySelector(".visual-ad");
 const left_btn = document.querySelector(".left-btn");
 const right_btn = document.querySelector(".right-btn");
-const top_banner = document.querySelector(".top-banner");
-const banner_img_wrap = document.querySelector(".banner-img-wrap");
-const banner_close_btn = document.querySelector(".banner-close");
-const header = document.querySelector("#header-section");
 const sub_section = document.querySelector("#sub-section");
-const gnb = document.querySelector(".gnb");
 const mid_banner = document.querySelector(".banner-01 img");
 const dot_btns = document.querySelector(".dot-btns");
-const all_menu_close_btn = document.querySelector(".all-menu-close-btn");
 const all_menu_bg = document.querySelector(".all-menu-bg");
-const g_menu_button = document.querySelector(".g-menu-button");
 const footer_banner = document.querySelector(".banner-02");
 const footer_banner_img = document.querySelector(".banner-02 img");
 let toggleSilde;
@@ -26,8 +19,8 @@ let currentPosition = 0;
 
 window.onload = () => {
     alignImageCenter();
-    imageCount = slide_img.children.length;
     randomImg();
+    imageCount = slide_img.children.length;
     randomMidBannerImg();
     addDotButtons();
     overAction();
@@ -54,10 +47,7 @@ visual_ad.onmouseout = () => {
     toggleSilde = setInterval(autoSlide, 6000);
 };
 
-banner_close_btn.onclick = () => {
-    top_banner.style.display = "none";
-    height = 0;
-}
+
 
 function addDotButtons() {
     for (let i = 0; i < imageCount; i++) {
@@ -146,23 +136,7 @@ function alignImageCenter() {
     }
 }
 
-function randomImg() {
-    const img_array = ['top_banner_01.jpg', 'top_banner_02.jpg', 'top_banner_03.jpg', 'top_banner_04.jpg'];
-    const index = Math.floor(Math.random() * img_array.length);
-    const random_img = img_array[index];
-    const background_color_array = [
-        "242, 191, 181", "191, 226, 245", "0, 0, 0", "0, 0, 0"];
-    let banner_img = document.createElement('div');
-    banner_img.innerHTML =
-        `
-    <a href="">
-        <img src="/static/images/${random_img}" class="top-banner-img" alt="">
-    </a>`;
 
-    top_banner.style.backgroundColor = `rgb(${background_color_array[index]})`;
-
-    banner_img_wrap.appendChild(banner_img);
-}
 
 
 function randomMidBannerImg() {
@@ -204,16 +178,6 @@ function makeActiveBox() {
     `;
 
     return elementBox;
-}
-
-g_menu_button.onclick = () => {
-    all_menu_bg.style.display = "flex";
-    body.style.overflow = "hidden";
-}
-
-all_menu_close_btn.onclick = () => {
-    all_menu_bg.style = "";
-    body.style.overflow = "scroll";
 }
 
 

@@ -7,15 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Discount
- */
-@WebServlet("/event/discount")
-public class Discount extends HttpServlet {
+@WebServlet("/event/nearCinema")
+public class NearCinemaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/Event/discount.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/Event/nearCinema.jsp").forward(request, response);
 	}
-
 }

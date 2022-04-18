@@ -7,15 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Discount
- */
-@WebServlet("/event/discount")
-public class Discount extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-   
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/Event/discount.jsp").forward(request, response);
-	}
 
+@WebServlet("/event/pastevents")
+public class PastEventsServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+ 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/views/Event/pastEvents.jsp").forward(request, response);
+	}
 }

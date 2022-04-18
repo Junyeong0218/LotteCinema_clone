@@ -15,7 +15,7 @@ public class CinemaMallServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/CinemaMall/CinemaMall.html").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/CinemaMall/CinemaMall.jsp").forward(request, response);
 		
 	}
 
