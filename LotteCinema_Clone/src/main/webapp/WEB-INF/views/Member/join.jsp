@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -74,13 +76,13 @@
                     </div>
                 </div>
                 <div class="top-certified">
-                    <a href="/WEB-INF/views/Member/certificate.html"><img src="/static/images/phone_logo.png"><span>휴대폰
+                    <a href="/join/phone-certificate"><img src="/static/images/phone_logo.png"><span>휴대폰
                             인증</span></a>
-                    <a href="/WEB-INF/views/Member/cardcertificate.html"><img
+                    <a href="/join/card-certificate"><img
                             src="/static/images/credit_card_logo.jpg"><span>카드 인증</span></a>
                 </div>
                 <div class="bottom-certified">
-                    <a href="/WEB-INF/views/Member/emailcertificate.html"><img src="/static/images/email_logo.jpg"
+                    <a href="/join/email-certificate"><img src="/static/images/email_logo.jpg"
                             alt="이메일로고"><span>이메일
                             인증</span></a>
                     <p>이메일 인증을 통해 간편회원으로 가입 시 회원혜택이 제한됩니다.</p>

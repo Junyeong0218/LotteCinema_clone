@@ -15,7 +15,7 @@
             <li><a href="">로그인</a></li>
         </ul>
         <ul class="g-menu3">
-            <li class="btn-my"><a href="" class="g-menu-text">회원가입</a></li>
+            <li class="btn-my"><a href="/join" class="g-menu-text">회원가입</a></li>
             <li class="btn-reverse"><a href="" class="g-menu-text">바로 예매</a></li>
             <li class="btn-menu-all"><button type="button" class="g-menu-button"></button></li>
         </ul>

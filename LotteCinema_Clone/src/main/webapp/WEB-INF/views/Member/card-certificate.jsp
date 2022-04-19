@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +19,7 @@
 
 <body>
     <main class="container">
-       <jsp:include page="/WEB-INF/views/Member/join-header.jsp"></jsp:include>
+       <jsp:include page="/WEB-INF/views/Member/join-header.jsp" />
         <!-- certificate 작업 필요 -->
         <div class="mast-body">
             <div class="main-container">
@@ -38,28 +40,28 @@
                         <div class="kind-card">
                             <div class="card-list">
                                 <button type="button" class="input-button">
-                                    <img src="/static/images/lotteCard_LOGO_01.png" alt=""></label>
+                                    <img src="/static/images/lotteCard_LOGO_01.png" alt="">
                                 </button>
                                 <button type="button" class="input-button">
-                                    <img src="/static/images/CDCO_LOGO_02.png" alt=""></label>
+                                    <img src="/static/images/CDCO_LOGO_02.png" alt="">
                                 </button>
                                 <button type="button" class="input-button">
-                                    <img src="/static/images/CDCO_LOGO_03.png" alt=""></label>
+                                    <img src="/static/images/CDCO_LOGO_03.png" alt="">
                                 </button>
                                 <button type="button" class="input-button">
-                                    <img src="/static/images/CDCO_LOGO_04.png" alt=""></label>
+                                    <img src="/static/images/CDCO_LOGO_04.png" alt="">
                                 </button>
                                 <button type="button" class="input-button">
-                                    <img src="/static/images/CDCO_LOGO_05.png" alt=""></label>
+                                    <img src="/static/images/CDCO_LOGO_05.png" alt="">
                                 </button>
                                 <button type="button" class="input-button">
-                                    <img src="/static/images/CDCO_LOGO_06.png" alt=""></label>
+                                    <img src="/static/images/CDCO_LOGO_06.png" alt="">
                                 </button>
                                 <button type="button" class="input-button">
-                                    <img src="/static/images/CDCO_LOGO_07.png" alt=""></label>
+                                    <img src="/static/images/CDCO_LOGO_07.png" alt="">
                                 </button>
                                 <button type="button" class="input-button">
-                                    <img src="/static/images/CDCO_LOGO_08.png" alt=""></label>
+                                    <img src="/static/images/CDCO_LOGO_08.png" alt="">
                                 </button>
                             </div>
                         </div>
@@ -114,7 +116,7 @@
         </div>
     </main>
 
-    <jsp:include page="/WEB-INF/views/Member/join-footer.jsp"></jsp:include>
+    <jsp:include page="/WEB-INF/views/Member/join-footer.jsp" />
     <script src="/static/js/Member/join/cardcertificate.js"></script>
 </body>
 

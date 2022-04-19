@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +19,9 @@
 
 <body>
     <main class="container">
-         <jsp:include page="/WEB-INF/views/Member/join-header.jsp"></jsp:include>
-        </div>
+    
+         <jsp:include page="/WEB-INF/views/Member/join-header.jsp" />
+
         <!-- certificate 작업 필요 -->
         <div class=" mast-body">
             <div class="main-container">
@@ -65,7 +68,7 @@
                                         <button type="button" class="general-agreement-checkbox"><img
                                                 src="/static/images/radio_button_img.png" alt=""></button>
                                         <label for="ui-check" class="ui-check-label">개인정보의 필수적인 사항에 대한 수집 이용 동의
-                                            <span>(필수)</span></span></label>
+                                            <span>(필수)</span></label>
                                     </div>
                                     <div class="detail">
                                         <button type="button">자세히</button>
@@ -172,7 +175,9 @@
         <button type="button">취소</button>
         <button type="button">인증 요청</button>
     </div>
-    <jsp:include page="/WEB-INF/views/Member/join-footer.jsp"></jsp:include>
+    
+    <jsp:include page="/WEB-INF/views/Member/join-footer.jsp" />
+    
     <script src="/static/js/Member/join/emailcertificate.js"></script>
 </body>
 
