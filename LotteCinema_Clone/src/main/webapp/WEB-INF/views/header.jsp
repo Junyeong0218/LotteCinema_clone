@@ -83,7 +83,7 @@
                                         </li>
                                         <li><a href="/membership/mateclub">짝꿍클럽</a></li>
                                         <li><a href="/membership/teenteenclub">틴틴클럽</a></li>
-                                        <li><a href="/membeship/bravoclub">브라보클럽</a></li>
+                                        <li><a href="/membership/bravoclub">브라보클럽</a></li>
                                     </ul>
                                 </td>
                             </tr>
@@ -539,7 +539,7 @@
                                 <a href="/event/discount" title="제휴할인">제휴할인</a>
                             </li>
                             <li>
-                                <a href="/event/nearCinema" title="우리동네영화관">우리동네영화관</a>
+                                <a href="/event/nearcinema" title="우리동네영화관">우리동네영화관</a>
                             </li>
                         </ul>
                     </div>
