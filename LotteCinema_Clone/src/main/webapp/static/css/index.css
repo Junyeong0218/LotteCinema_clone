@@ -32,7 +32,7 @@
     width: 20px;
     height: 20px;
     border: none;
-    background: url(/images/close_19_wht.png) no-repeat;
+    background: url(/static/images/close_19_wht.png) no-repeat;
     z-index: 1;
 }
 
@@ -99,15 +99,15 @@
 }
 
 .facebook :first-child {
-    background-image: url(../images/gnb_facebook_wht.png);
+    background-image: url(/static/images/gnb_facebook_wht.png);
 }
 
 .youtube :first-child {
-    background-image: url(../images/gnb_youtube_wht.png);
+    background-image: url(/static/images/gnb_youtube_wht.png);
 }
 
 .instagram :first-child {
-    background-image: url(../images/gnb_follow_wht.png);
+    background-image: url(/static/images/gnb_follow_wht.png);
     margin-right: 0;
 }
 
@@ -176,30 +176,30 @@
 }
 
 .btn-my :first-child {
-    background-image: url(../images/nav_side_my_wht.png);
+    background-image: url(/static/images/nav_side_my_wht.png);
 }
 
 .btn-reverse :first-child {
-    background-image: url(../images/nav_side_reserve_wht.png);
+    background-image: url(/static/images/nav_side_reserve_wht.png);
 }
 
 .g-menu-button {
     width: 100%;
     height: 100%;
     border: none;
-    background: url("/images/nav_side_all_wht.png") no-repeat;
+    background: url("/static/images/nav_side_all_wht.png") no-repeat;
 }
 
 .fixed .btn-my :first-child {
-    background-image: url(../images/nav_side_my_black.png);
+    background-image: url(/static/images/nav_side_my_black.png);
 }
 
 .fixed .btn-reverse :first-child {
-    background-image: url(../images/nav_side_reserve_black.png);
+    background-image: url(/static/images/nav_side_reserve_black.png);
 }
 
 .fixed .g-menu-button {
-    background: url("/images/nav_side_all_black.png") no-repeat;
+    background: url("/static/images/nav_side_all_black.png") no-repeat;
 }
 
 #nav {
@@ -438,7 +438,7 @@
     height: 60px;
     margin-top: -15px;
     background-size: auto;
-    background-image: url(../images/arr_lf_31_wht.png);
+    background-image: url(/static/images/arr_lf_31_wht.png);
     opacity: 0.6;
     border: none;
     background-color: transparent;
@@ -453,7 +453,7 @@
     position: absolute;
     margin-top: -15px;
     background-size: auto;
-    background-image: url(../images/arr_rg_31_wht.png);
+    background-image: url(/static/images/arr_rg_31_wht.png);
     top: 0;
     right: 30px;
     width: 31px;
@@ -647,7 +647,7 @@
     top: -2px;
     margin-left: 15px;
     padding-left: 15px;
-    background-image: url(/images/heart_rnd_16_off.png);
+    background-image: url(/static/images/heart_rnd_16_off.png);
     width: 16px;
     height: 16px;
     border: none;
@@ -656,7 +656,7 @@
 }
 
 .star{
-    background-image: url(/images/ic_star.png);
+    background-image: url(/static/images/ic_star.png);
     color: white;
     position: relative;
     margin-left: 15px;
@@ -896,7 +896,7 @@
 
 .banner-02 {
     background-color: rgb(0, 92, 185);
-    background-image: url(/images/background-img.jpg);
+    background-image: url(/static/images/background-img.jpg);
     background-repeat: repeat-x;
     background-position: 0px 0px;
     text-align: center;

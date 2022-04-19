@@ -1,11 +1,17 @@
-body {
-    width: 1416px;
+.container {
+    display: flex;
+    justify-content: center;
 }
 
 .mast-body,
 .main-container,
 .main-toparea {
     height: auto;
+}
+
+.mast-head,
+.mast-body {
+    width: auto;
 }
 
 .main-headline {
@@ -131,6 +137,9 @@ body {
 }
 
 .ui-check-label {
+    position: relative;
+    top: 4px;
+    margin-left: 5px;
     font-size: 14px;
     font-weight: 400;
 }
