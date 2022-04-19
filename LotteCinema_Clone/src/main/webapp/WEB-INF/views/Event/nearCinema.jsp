@@ -334,8 +334,8 @@
                 <img src="" alt="">
                 <span class="side-banner-closer"></span>
             </div>
-           <jsp:include page="/WEB-INF/views/banner_section.jsp" flush="false"/>
-           <jsp:include page="/WEB-INF/views/footer.jsp" flush="false"/>
+            <jsp:include page="/WEB-INF/views/banner_section.jsp" flush="false" />
+            <jsp:include page="/WEB-INF/views/footer.jsp" flush="false" />
         </div>
 
         <script src="/static/js/CinemaMall/scroll_control.js"></script>

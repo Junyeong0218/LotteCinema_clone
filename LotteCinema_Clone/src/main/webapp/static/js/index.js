@@ -136,6 +136,7 @@ function alignImageCenter() {
     }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -152,6 +153,29 @@ function randomFooterBannerImg() {
     footer_banner_img.src = `/static/images/${f_random_img}.jpg`;
     footer_banner.style.backgroundImage = `url("/static/images/background-img.jpg")`;
     footer_banner.style.backgroundColor = `rgb(${background_color_array[index]})`;
+=======
+function randomImg() {
+    const img_array = ['top_banner_01.jpg','top_banner_02.jpg','top_banner_03.jpg','top_banner_04.jpg'];
+    const index = Math.floor(Math.random()*img_array.length);
+    const random_img = img_array[index];
+    const background_color_array = [
+        "242, 191, 181", "191, 226, 245", "0, 0, 0", "0, 0, 0"];
+    let banner_img = document.createElement('div');
+    banner_img.innerHTML = 
+    `
+    <a href="">
+        <img src="/static/images/${random_img}" class="top-banner-img" alt="">
+    </a>`;
+        
+       top_banner.style.backgroundColor= `rgb(${background_color_array[index]})`;
+    
+    banner_img_wrap.appendChild(banner_img);
+}
+
+function randomMidBannerImg() {
+    const index = Math.floor(Math.random()*5);
+    mid_banner.src=`/static/images/under_main_banner_0${index+1}.jpg`;
+>>>>>>> main
 }
 
 function overAction() {

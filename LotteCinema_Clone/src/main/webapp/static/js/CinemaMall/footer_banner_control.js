@@ -17,7 +17,12 @@ function setUnderMainBanner() {
 function setFooterBanner() {
     const index = getRandomNumber(2);
     const imageTag = footer_banner.querySelector("img");
+<<<<<<< HEAD
     imageTag.src = `/static/images/footer_banner_0${index + 1}.jpg`;
+=======
+    const extension = index == 0 ? 'jpg' : 'png';
+    imageTag.src = `/static/images/footer_banner_0${index + 1}.` + extension;
+>>>>>>> main
     if (index == 0) {
         imageTag.alt = "현대카드 푸터 배너";
         footer_flexer.style.backgroundColor = `rgb(0, 92, 185)`;

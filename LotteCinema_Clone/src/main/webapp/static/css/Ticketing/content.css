@@ -1,0 +1,49 @@
+#contents {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin: 0 auto;
+    width: 100%;
+    height: 990px;
+
+    background-color: #444;
+}
+
+.reserve-wrap {
+    overflow: hidden;
+    position: relative;
+    width: 1280px;
+    height: 870px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.section-step-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 78px;
+    height: 100%;
+}
+
+.step01,
+.step02,
+.step03,
+.step04 {
+    display: block;
+    height: 100%;
+    position: relative;
+    height: 25%;
+    border: 1px solid #666;
+    border-top: none;
+    background-color: #fff;
+    z-index: 10;
+}
+
+
+
+.active {
+    background-color: red;
+    color: #fff;
+    border: none;
+}
