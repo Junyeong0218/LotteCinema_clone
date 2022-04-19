@@ -25,7 +25,7 @@ footer {
 .footer-logo>span {
     width: 203px;
     height: 36px;
-    background: url("/images/logo_footer.gif") no-repeat;
+    background: url("/static/images/logo_footer.gif") no-repeat;
 }
 
 .footer-links {

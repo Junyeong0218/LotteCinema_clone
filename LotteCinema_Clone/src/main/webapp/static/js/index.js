@@ -148,7 +148,7 @@ function randomImg() {
     banner_img.innerHTML = 
     `
     <a href="">
-        <img src="/images/${random_img}" class="top-banner-img" alt="">
+        <img src="/static/images/${random_img}" class="top-banner-img" alt="">
     </a>`;
         
        top_banner.style.backgroundColor= `rgb(${background_color_array[index]})`;
@@ -158,7 +158,7 @@ function randomImg() {
 
 function randomMidBannerImg() {
     const index = Math.floor(Math.random()*5);
-    mid_banner.src=`/images/under_main_banner_0${index+1}.jpg`;
+    mid_banner.src=`/static/images/under_main_banner_0${index+1}.jpg`;
 }
 
 function overAction() {

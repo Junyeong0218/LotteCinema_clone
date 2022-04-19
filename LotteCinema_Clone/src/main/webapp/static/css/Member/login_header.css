@@ -149,17 +149,17 @@
     text-indent: -9999em;
 }
 
-#nav {
+.nav {
     width: 980px;
     margin: 3px auto 0px;
     text-align: center;
 }
 
-#nav ul>li {
+.nav ul>li {
     display: inline-block;
 }
 
-#nav ul>li>a {
+.nav ul>li>a {
     display: block;
     position: relative;
     height: 40px;
@@ -172,7 +172,7 @@
     text-decoration: none;
 }
 
-#nav ul>li>div {
+.nav ul>li>div {
     position: absolute;
     z-index: 2px;
     left: 0px;
@@ -183,7 +183,7 @@
     background-color: #f8f8f8;
 }
 
-#nav ul>li:not(:first-child)>a::before {
+.nav ul>li:not(:first-child)>a::before {
     content: '';
     opacity: 0.2;
     position: absolute;

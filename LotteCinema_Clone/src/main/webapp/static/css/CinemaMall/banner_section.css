@@ -17,7 +17,7 @@
     right: 0;
     width: 13px;
     height: 13px;
-    background: url("/images/side_banner_closer.png") no-repeat;
+    background: url("/static/images/side_banner_closer.png") no-repeat;
     cursor: pointer;
 }
 

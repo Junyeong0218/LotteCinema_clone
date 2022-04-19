@@ -48,7 +48,7 @@
     width: 19px;
     height: 19px;
     border: none;
-    background: url("/images/usable_theater_closer.png") no-repeat 0 0;
+    background: url("/static/images/usable_theater_closer.png") no-repeat 0 0;
 }
 
 .usable-theater-contents,

@@ -136,11 +136,11 @@ main {
 }
 
 .reduce-button {
-    background: url("/images/minus_quantity.png") no-repeat;
+    background: url("/static/images/minus_quantity.png") no-repeat;
 }
 
 .increase-button {
-    background: url("/images/plus_quantity.png") no-repeat;
+    background: url("/static/images/plus_quantity.png") no-repeat;
 }
 
 .total-price {

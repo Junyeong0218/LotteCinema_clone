@@ -51,11 +51,11 @@
                     </li>
                 </ul>
             </div>
-            <div id="nav">
+            <div id="nav" class="nav">
                 <ul>
                     <li>
                         <a href="#">예매</a>
-                        <div style="display: none;">
+                        <div style="display: none;" class="nav-sub-list-hidden">
                             <ul style="opacity: 0;">
                                 <li>
                                     <a href="#" title="예매하기">예매하기</a>
@@ -71,7 +71,7 @@
                     </li>
                     <li>
                         <a href="#">영화</a>
-                        <div style="display: none;">
+                        <div style="display: none;" class="nav-sub-list-hidden">
                             <ul style="opacity: 0;">
                                 <li>
                                     <a href="#" title="홈">홈</a>
@@ -93,7 +93,7 @@
                     </li>
                     <li>
                         <a href="#">영화관</a>
-                        <div style="display: none;">
+                        <div style="display: none;" class="nav-sub-list-hidden">
                             <ul style="opacity: 0;">
                                 <li>
                                     <a href="#" title="스페셜관">스페셜관</a>
@@ -317,7 +317,7 @@
                     </li>
                     <li>
                         <a href="#">이벤트</a>
-                        <div style="display: none;">
+                        <div style="display: none;" class="nav-sub-list-hidden">
                             <ul style="opacity: 0;">
                                 <li><a href="#" title="홈">홈</a></li>
                                 <li><a href="#" title="영화">영화</a></li>
@@ -330,7 +330,7 @@
                     </li>
                     <li>
                         <a href="#">스토어</a>
-                        <div style="display: none;">
+                        <div style="display: none;" class="nav-sub-list-hidden">
                             <ul style="opacity: 0;">
                                 <li><a href="#" title="베스트">베스트</a></li>
                                 <li><a href="#" title="관람권">관람권</a></li>
@@ -356,17 +356,17 @@
         <div class="contents">
             <div class="select-button">
                 <div>
-                    <button type="button" class="member-btn">회원</button>
+                    <button type="button" class="member-btn current" data-tab="tab-section-1">회원</button>
                 </div>
                 <div>
-                    <button type="button" class="not-member-btn">비회원</button>
+                    <button type="button" class="member-btn " data-tab="tab-section-2">비회원</button>
                 </div>
                 <div>
-                    <button type="button" class="social-login-btn">소셜 로그인</button>
+                    <button type="button" class="member-btn " data-tab="tab-section-3">소셜 로그인</button>
                 </div>
             </div>
             <div class="select-contents">
-                <div class="member-box">
+                <section class="select-box current" id="tab-section-1">
                     <div class="member">
                         <div class="login-box">
                             <p class="tip">L.POINT, 롯데시네마 ID로 별도의 회원가입 없이 이용 가능 합니다.</p>
@@ -393,8 +393,8 @@
                             <a href="#"><img src="/static/images/login_banner.png"></a>
                         </div>
                     </div>
-                </div>
-                <div class="not-member">
+                </section>
+                <section class="select-box " id="tab-section-2">
                     <div class="not-member-login">
                         <div class="not-member-select-btn">
                             <button>비회원 로그인</button>
@@ -691,8 +691,8 @@
                             <a href="#" class="btn-signin">비회원 예매확인</a>
                         </div>
                     </div>
-                </div>
-                <div class="login-social">
+                </section>
+                <section class="select-box " id="tab-section-3">
                     <div class="login-box-social">
                         <div class="login-items-social">
                             <div class="a-box-social">
@@ -709,7 +709,7 @@
                             <img src="/static/images/n_login_banner.jpg" alt="">
                         </div>
                     </div>
-                </div>
+                </section>
                 <div class="banner-side">
                     <a href="#"><img src="/static/images/side_banner_01.png"></a>
                     <button class="btn-close"></button>
@@ -769,6 +769,7 @@
                     </div>
                 </div>
             </div>
+            <script src="/static/js/Member/login.js"></script>
 </body>
 
 </html>

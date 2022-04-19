@@ -8,7 +8,7 @@ let top_banner_height;
 function setSideBanner() {
     const index = getRandomNumber(5);
     const imageTag = side_banner.querySelector("img");
-    imageTag.src = `/images/side_banner_0${index + 1}.png`;
+    imageTag.src = `/static/images/side_banner_0${index + 1}.png`;
     if (index == 0) imageTag.alt = "신비한 동물들과 덤블도어의 비밀";
     else if (index == 1) imageTag.alt = "로스트 시티";
     else if (index == 2) imageTag.alt = "수퍼 소닉 2";
