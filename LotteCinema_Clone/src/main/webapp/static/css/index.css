@@ -176,11 +176,19 @@
 }
 
 .btn-my :first-child {
+<<<<<<< HEAD
     background-image: url(../static/images/nav_side_my_wht.png);
 }
 
 .btn-reverse :first-child {
     background-image: url(../static/images/nav_side_reserve_wht.png);
+=======
+    background-image: url(/static/images/nav_side_my_wht.png);
+}
+
+.btn-reverse :first-child {
+    background-image: url(/static/images/nav_side_reserve_wht.png);
+>>>>>>> main
 }
 
 .g-menu-button {
@@ -191,11 +199,19 @@
 }
 
 .fixed .btn-my :first-child {
+<<<<<<< HEAD
     background-image: url(../static/images/nav_side_my_black.png);
 }
 
 .fixed .btn-reverse :first-child {
     background-image: url(../static/images/nav_side_reserve_black.png);
+=======
+    background-image: url(/static/images/nav_side_my_black.png);
+}
+
+.fixed .btn-reverse :first-child {
+    background-image: url(/static/images/nav_side_reserve_black.png);
+>>>>>>> main
 }
 
 .fixed .g-menu-button {
@@ -438,7 +454,11 @@
     height: 60px;
     margin-top: -15px;
     background-size: auto;
+<<<<<<< HEAD
     background-image: url(../static/images/arr_lf_31_wht.png);
+=======
+    background-image: url(/static/images/arr_lf_31_wht.png);
+>>>>>>> main
     opacity: 0.6;
     border: none;
     background-color: transparent;
@@ -453,7 +473,11 @@
     position: absolute;
     margin-top: -15px;
     background-size: auto;
+<<<<<<< HEAD
     background-image: url(../static/images/arr_rg_31_wht.png);
+=======
+    background-image: url(/static/images/arr_rg_31_wht.png);
+>>>>>>> main
     top: 0;
     right: 30px;
     width: 31px;

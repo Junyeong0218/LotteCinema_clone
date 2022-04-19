@@ -1,0 +1,202 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.mast-body,
+.main-container,
+.main-toparea {
+    height: auto;
+}
+
+.mast-head,
+.mast-body {
+    width: auto;
+}
+
+.main-headline {
+    margin: 0;
+    padding-top: 16px;
+    height: 132.48px;
+}
+
+.main-headline span {
+    position: relative;
+    top: -5px;
+}
+
+.main-title {
+    margin-bottom: 48px;
+}
+
+.step-image {
+    height: 7px;
+    overflow: hidden;
+}
+
+.step-image img {
+    width: 50px;
+}
+
+.main-contents {
+    margin-bottom: 80px;
+    width: 1100px;
+    height: auto;
+}
+
+.main-terms {
+    padding-bottom: 5px;
+    width: 100%;
+    height: 31.6px;
+    border-bottom: 1px solid #000;
+}
+
+.main-terms span {
+    font-size: 17px;
+    font-weight: 400;
+    color: #000;
+}
+
+.general-agreement {
+    margin-top: 29px;
+    padding-bottom: 23px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 46.4px;
+}
+
+.general-agreement-checkbox {
+    position: relative;
+    overflow: hidden;
+    width: 20px;
+    height: 18px;
+    border: none;
+    background-color: white;
+}
+
+.general-agreement-checkbox img {
+    position: absolute;
+    top: 0px;
+    left: -22px;
+    height: 18px;
+}
+
+.general-agreement label {
+    position: relative;
+    bottom: 1px;
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+}
+
+.lpoint-checkbox {
+    margin-bottom: 60px;
+    width: 100%;
+    height: 409.4px;
+    border-top: 1px solid #d0d0d0;
+}
+
+.text-lpoint {
+    margin: 20px 0 0;
+    width: 160px;
+    height: 22.4px;
+    font-size: 15px;
+}
+
+.form-wrap-agreement {
+    width: 100%;
+    height: 367px;
+}
+
+.inner {
+    margin-top: 10px;
+    width: 100%;
+    height: 65.4px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.form-wrap-agreement :first-child {
+    margin: 0px;
+}
+
+.ui-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 0 23px 0;
+    width: 100%;
+    height: 65.4px;
+}
+
+.ui-check {
+    margin: 0 20px 0 0;
+    width: 339.03px;
+    height: 22.4px;
+}
+
+.ui-check-label {
+    position: relative;
+    top: 4px;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.ui-check-label span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.choice-checkbox {
+    color: #ee1c25;
+}
+
+.detail {
+    width: 43.4px;
+    height: 22.4px;
+}
+
+.detail button {
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    min-width: 40px;
+    line-height: 20px;
+    height: 20px;
+    text-decoration: underline;
+    background-color: white;
+    text-decoration-thickness: 1px;
+}
+
+.lotte-cultureworks {
+    margin-bottom: 40px;
+    width: 100%;
+    height: 258.6px;
+}
+
+.description {
+    margin-bottom: 70px;
+    padding-top: 10px;
+    width: 100%;
+    height: 111px;
+    border-top: 1px solid #d0d0d0;
+}
+
+.description p {
+    font-size: 15px;
+
+}
+
+.description :first-child {
+    color: #ee1c25;
+}
+
+.description-text {
+    margin-left: 7px;
+}
+
+.btn-center {
+    margin-bottom: 100px;
+}
