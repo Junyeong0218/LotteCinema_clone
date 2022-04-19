@@ -525,22 +525,22 @@
                         <div class="nav-sub-list hidden">
                             <ul>
                                 <li>
-                                    <a href="#" title="홈">홈</a>
+                                    <a href="/event" title="홈">홈</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="영화">영화</a>
+                                    <a href="/event/movie" title="영화">영화</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="시사회/무대인사">시사회/무대인사</a>
+                                    <a href="/event/premiere" title="시사회/무대인사">시사회/무대인사</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="HOT">HOT</a>
+                                    <a href="/event/hot" title="HOT">HOT</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="제휴할인">제휴할인</a>
+                                    <a href="/event/discount" title="제휴할인">제휴할인</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="우리동네영화관">우리동네영화관</a>
+                                    <a href="/event/nearCinema" title="우리동네영화관">우리동네영화관</a>
                                 </li>
                             </ul>
                         </div>
