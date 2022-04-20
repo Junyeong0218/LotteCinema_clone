@@ -1,0 +1,383 @@
+* {
+    color: #8a8a8a;
+}
+
+img {
+    pointer-events: none;
+}
+
+.mast-body {
+    width: 1312px;
+    height: 1094px;
+}
+
+.main-container {
+    margin: 0 auto;
+    padding: 40px 0 100px;
+    max-width: 1100px;
+    height: 1000px;
+}
+
+.main-toparea {
+    margin-bottom: 65px;
+    width: 1100px;
+    height: 194px;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 38px;
+    padding: 8px 0;
+    width: 1100px;
+    width: 48px;
+}
+
+.main-title span {
+    width: 100.05px;
+    height: 41px;
+    font-weight: 100;
+    font-size: 28px;
+    line-height: 32px;
+    color: black;
+    word-break: break-all;
+
+}
+
+.main-headline {
+    margin-bottom: 10px;
+    width: 1100px;
+    height: 108px;
+}
+
+.main-headline span {
+    font-weight: 100;
+    font-size: 42px;
+    line-height: 54px;
+    color: black;
+    letter-spacing: -0.05em;
+    word-break: break-all;
+}
+
+.main-contents {
+    width: 1100px;
+    height: 695px;
+}
+
+.consent {
+    margin-bottom: 70px;
+    padding-top: 5px;
+    width: 1100px;
+    height: 231px;
+    border-top: 1px solid black;
+}
+
+.phone-check {
+    margin-top: 29px;
+    padding-bottom: 23px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 46px;
+    width: 1100px;
+    height: 46px;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.phone-check button {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.phone-check img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 23px씩 이동 */
+    height: 100%;
+}
+
+.phone-check label {
+    margin-left: 7px;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 18px;
+    vertical-align: top;
+    cursor: pointer;
+    color: black;
+}
+
+.use-check {
+    margin-bottom: 40px;
+    width: 1100px;
+    height: 150px;
+    color: #8a8a8a;
+    border: none;
+}
+
+.compulsory-consent {
+    margin-top: 29px;
+    padding-bottom: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 46px;
+    width: 1100px;
+    height: 46px;
+    border-bottom: 1px solid #d0d0d0;
+    color: #8a8a8a;
+}
+
+.check-box {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.compulsory-consent>button {
+    border: none;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #8a8a8a;
+    text-decoration: underline;
+}
+
+.compulsory-consent img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 23px씩 이동 */
+    height: 100%;
+}
+
+.compulsory-consent label {
+    margin-left: 7px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #8a8a8a;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.check-box-wrapper {
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.input-box {
+    margin-bottom: 70px;
+    width: 1100px;
+    height: 284px;
+}
+
+.input-underline {
+    padding-bottom: 5px;
+    font-size: 17px;
+    font-weight: 400;
+    border-bottom: 1px solid black;
+
+}
+
+.personal-data {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+    padding: 20px 0;
+    width: 1100px;
+    height: 75px;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.name {
+    width: 160px;
+    height: 34px;
+}
+
+.name label {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #8a8a8a;
+}
+
+.name input {
+    width: 160px;
+    height: 34px;
+}
+
+.input-name {
+    position: relative;
+    padding: 0px 10px;
+    width: 462px;
+    height: 34px;
+    border-radius: 1px;
+    background-color: rgb(239, 239, 239);
+}
+
+.input-name input {
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.birth-date {
+    width: 160px;
+    height: 34px;
+
+}
+
+.input-date-ft {
+    width: 226px;
+    height: 34px;
+}
+
+.input-date-ft input {
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1px;
+    background-color: rgb(239, 239, 239);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.hyphen {
+    margin: 0 3px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.input-date-bk input {
+    padding: 0px 10px;
+    width: 40px;
+    height: 34px;
+    border: none;
+    border-radius: 1px;
+    background-color: rgb(239, 239, 239);
+}
+
+.registration-number span {
+    margin-left: 7px;
+    font-size: 15px;
+    line-height: 34px;
+}
+
+.input-nb {
+    display: flex;
+}
+
+.input-nb>select {
+    position: relative;
+    padding-left: 10px;
+    width: 108px;
+    height: 100%;
+    appearance: none;
+    border: none;
+    background: url("/static/images/select_arrow.png") no-repeat top 2px right -2px rgb(239, 239, 239);
+    background-size: 30px 30px;
+    font-size: 13.905px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+    outline: none;
+}
+
+.input-nb>select:nth-child(2) {
+    margin: 0 7px;
+}
+
+.input-nb>select>option {
+    font-size: 13.905px;
+    line-height: 32px;
+    color: black;
+}
+
+.input-nb button,
+.input-nb>input {
+    padding-left: 10px;
+    width: 108px;
+    height: 34px;
+    font-size: 13.905px;
+    font-weight: 400;
+    text-align: left;
+    border: none;
+    color: black;
+}
+
+.input-nb>input {
+    padding: 0;
+    text-align: center;
+    background-color: rgb(239, 239, 239);
+}
+
+.input-nb>input:focus,
+.input-nb>select:focus {
+    outline: 1px solid #ee1c25;
+    background-color: white;
+}
+
+.input-nb :first-child {
+    margin: 0%;
+}
+
+.terms {
+    padding-top: 10px;
+}
+
+.terms span {
+    font-size: 15px;
+    line-height: 1.2;
+    color: #8a8a8a;
+    word-break: break-all;
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-center button {
+    padding: 0px 10px;
+    width: 143px;
+    height: 40px;
+
+}
+
+.btn-center :first-child {
+    margin-right: 2px;
+    background-color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+.btn-center :last-child {
+    background-color: #ee1c25;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
