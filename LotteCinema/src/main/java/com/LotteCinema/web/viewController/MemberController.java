@@ -11,6 +11,7 @@ public class MemberController {
 	private final String CARD_CERTIFICATE = "/member/join/card_certificate";
 	private final String EMAIL_CERTIFICATE = "/member/join/email_certificate";
 	private final String PHONE_CERTIFICATE = "/member/join/phone_certificate";
+	private final String SIGNUP = "/member/join/signup";
 	private final String LOGIN = "/member/login";
 	
 	@RequestMapping(value = JOIN, method = RequestMethod.GET)
@@ -31,6 +32,11 @@ public class MemberController {
 	@RequestMapping(value = PHONE_CERTIFICATE, method = RequestMethod.GET)
 	public String phoneCertificate() {
 		return PHONE_CERTIFICATE;
+	}
+	
+	@RequestMapping(value = SIGNUP, method = RequestMethod.GET)
+	public String signup() {
+		return SIGNUP;
 	}
 	
 	@RequestMapping(value = LOGIN, method = RequestMethod.GET)
