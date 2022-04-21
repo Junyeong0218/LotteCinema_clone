@@ -32,7 +32,7 @@
                         <span>마지막 단계에요!</span>
                     </div>
                 </div>
-                <form action="" method="post">
+                <form action="/member/join/signup" method="post">
                     <span class="form-title">회원정보입력</span>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">아이디</span></span>

@@ -39,6 +39,9 @@ public class MemberController {
 		return SIGNUP;
 	}
 	
+	
+	
+	
 	@RequestMapping(value = LOGIN, method = RequestMethod.GET)
 	public String login() {
 		return LOGIN;
