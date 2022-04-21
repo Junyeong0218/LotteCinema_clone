@@ -7,11 +7,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>휴대폰인증 &lt; 회원가입 &lt; L.POINT</title>
     <link rel="stylesheet" href="/static/css/container.css">
     <link rel="stylesheet" href="/static/css/member/join/join_header.css">
     <link rel="stylesheet" href="/static/css/member/join/join_footer.css">
     <link rel="stylesheet" href="/static/css/member/join/phone_certificate.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                                 <label for="name">이름</label>
                             </div>
                             <div class="input-name">
-                                <input name="name" placeholder="한글 또는 영문으로 입력해주세요.">
+                                <input type="text" name="name" placeholder="한글 또는 영문으로 입력해주세요." maxlength="30">
                             </div>
                         </div>
                         <div class="personal-data">
@@ -86,11 +87,11 @@
                                 <label for="text">생년월일/성별</label>
                             </div>
                             <div class="input-date-ft">
-                                <input type="text" placeholder="생년월일을 입력해주세요.">
+                                <input type="number" name="birthday" placeholder="생년월일을 입력해주세요." min="0" max="999999">
                             </div>
                             <span class="hyphen">-</span>
-                            <div class="input-date-bk">
-                                <input type="text">
+                            <div class="input-date-bk" >
+                                <input type="number" name="gender" min="0" max="5">
                             </div>
                             <div class="registration-number">
                                 <span>●●●●●●</span>
@@ -117,9 +118,9 @@
                                     <option value="018">018</option>
                                     <option value="019">019</option>
                                 </select>
-                                <input type="text" name="middle-number">
+                                <input type="number" name="middleNumber" min="0" max="9999">
                                 <span class="hyphen">-</span>
-                                <input type="text" name="last-number">
+                                <input type="number" name="lastNumber" min="0" max="9999">
                             </div>
                         </div>
                         <div class="terms">

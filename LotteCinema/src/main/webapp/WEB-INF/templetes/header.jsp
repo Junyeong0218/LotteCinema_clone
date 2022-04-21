@@ -64,19 +64,18 @@
                             </td>
                             <td class="menu-items">
                                 <ul>
-                                    <li><a href="#">베스트</a></li>
-                                    <li><a href="#">포토카드</a></li>
-                                    <li><a href="#">관람권</a></li>
-                                    <li><a href="#">스낵음료</a></li>
+                                    <li><a href="/store/goods_list#best">베스트</a></li>
+                                    <li><a href="/store/goods_list#photo-card">포토카드</a></li>
+                                    <li><a href="/store/goods_list#tickects">관람권</a></li>
+                                    <li><a href="/store/goods_list#snacks">스낵음료</a></li>
                                 </ul>
                             </td>
                             <td class="menu-items">
                                 <ul>
-                                    <li><a href="#">VIP/Friend</a>
-                                    </li>
-                                    <li><a href="#">짝꿍클럽</a></li>
-                                    <li><a href="#">틴틴클럽</a></li>
-                                    <li><a href="#">브라보클럽</a></li>
+                                    <li><a href="/membership/vip-zone">VIP/Friend</a></li>
+                                    <li><a href="/membership/mate_club">짝꿍클럽</a></li>
+                                    <li><a href="/membership/teenteen_club">틴틴클럽</a></li>
+                                    <li><a href="/membership/bravo_club">브라보클럽</a></li>
                                 </ul>
                             </td>
                         </tr>
@@ -113,8 +112,8 @@
                             </td>
                             <td class="menu-items">
                                 <ul>
-                                    <li><a href="#">로그인</a></li>
-                                    <li><a href="#">회원가입</a></li>
+                                    <li><a href="/member/login">로그인</a></li>
+                                    <li><a href="/member/join">회원가입</a></li>
                                     <li><a href="#">아이디/비밀번호찾기</a>
                                     </li>
                                     <li><a href="#">회원약관</a></li>
@@ -130,12 +129,12 @@
                             </td>
                             <td class="menu-items">
                                 <ul>
-                                    <li><a href="#">영화</a></li>
-                                    <li><a href="#">시사회/무대인사</a>
+                                    <li><a href="/event/movie">영화</a></li>
+                                    <li><a href="/event/premiere">시사회/무대인사</a>
                                     </li>
-                                    <li><a href="#">HOT</a></li>
-                                    <li><a href="#">제휴할인</a></li>
-                                    <li><a href="#">우리동네영화관</a></li>
+                                    <li><a href="/event/hot">HOT</a></li>
+                                    <li><a href="/event/discount">제휴할인</a></li>
+                                    <li><a href="/event/near_cinema">우리동네영화관</a></li>
                                 </ul>
                             </td>
                             <td class="menu-items">
@@ -160,12 +159,12 @@
                 <div class="user-wrapper">
                     <div class="user-info">
                         <div class="login-button">
-                            <a href="#">로그인</a>
+                            <a href="/member/login">로그인</a>
                         </div>
                         <div class="nomember-box">
                             <span>로그인하시고</span>
                             <span>다양한 혜택을 확인하세요.</span>
-                            <a href="#" title="회원가입 페이지 이동">회원가입</a>
+                            <a href="/member/join" title="회원가입 페이지 이동">회원가입</a>
                         </div>
                     </div>
                     <div class="modal-small-banner">
@@ -183,7 +182,7 @@
             <button class="whole-menu-closer"></button>
         </div>
     </div>
-    <h1 class="logo"><a href="/index.html">LOTTE CINEMA</a></h1>
+    <h1 class="logo"><a href="/index">LOTTE CINEMA</a></h1>
     <div class="sns-and-links">
         <ul class="sns">
             <li class="facebook">
@@ -206,14 +205,14 @@
             </li>
         </ul>
         <ul class="links">
-            <li><a href="#">멤버십</a></li>
+            <li><a href="/membership/vip-zone">멤버십</a></li>
             <li><a href="#">고객센터</a></li>
             <li><a href="#">단체관람/대관문의</a></li>
-            <li><a href="#">로그인</a></li>
+            <li><a href="/member/login">로그인</a></li>
         </ul>
         <ul class="links2">
             <li class="to-signup">
-                <a href="#">
+                <a href="/member/join">
                     <span></span>
                     <span>회원가입</span>
                 </a>
@@ -517,22 +516,22 @@
                 <div class="nav-sub-list hidden">
                     <ul>
                         <li>
-                            <a href="#" title="홈">홈</a>
+                            <a href="/event/home" title="홈">홈</a>
                         </li>
                         <li>
-                            <a href="#" title="영화">영화</a>
+                            <a href="/event/movie" title="영화">영화</a>
                         </li>
                         <li>
-                            <a href="#" title="시사회/무대인사">시사회/무대인사</a>
+                            <a href="/event/premiere" title="시사회/무대인사">시사회/무대인사</a>
                         </li>
                         <li>
-                            <a href="#" title="HOT">HOT</a>
+                            <a href="/event/hot" title="HOT">HOT</a>
                         </li>
                         <li>
-                            <a href="#" title="제휴할인">제휴할인</a>
+                            <a href="/event/discount" title="제휴할인">제휴할인</a>
                         </li>
                         <li>
-                            <a href="#" title="우리동네영화관">우리동네영화관</a>
+                            <a href="/event/near_cinema" title="우리동네영화관">우리동네영화관</a>
                         </li>
                     </ul>
                 </div>
@@ -542,16 +541,16 @@
                 <div class="nav-sub-list hidden">
                     <ul>
                         <li>
-                            <a href="#" title="베스트">베스트</a>
+                            <a href="/store/goods_list#best" title="베스트">베스트</a>
                         </li>
                         <li>
-                            <a href="#" title="관람권">관람권</a>
+                            <a href="/store/goods_list#tickets" title="관람권">관람권</a>
                         </li>
                         <li>
-                            <a href="#" title="스낵음료">스낵음료</a>
+                            <a href="/store/goods_list#snacks" title="스낵음료">스낵음료</a>
                         </li>
                         <li>
-                            <a href="#" title="포토카드">포토카드</a>
+                            <a href="/store/goods_list#photo-card" title="포토카드">포토카드</a>
                         </li>
                     </ul>
                 </div>

@@ -78,11 +78,11 @@
                     </div>
                 </div>
                 <div class="top-certified">
-                    <a href="#"><img src="/static/images/phone_logo.png"><span>휴대폰 인증</span></a>
-                    <a href="#"><img src="/static/images/credit_card_logo.jpg"><span>카드 인증</span></a>
+                    <a href="/member/join/phone_certificate"><img src="/static/images/phone_logo.png"><span>휴대폰 인증</span></a>
+                    <a href="/member/join/card_certificate"><img src="/static/images/credit_card_logo.jpg"><span>카드 인증</span></a>
                 </div>
                 <div class="bottom-certified">
-                    <a href="#"><img src="/static/images/email_logo.jpg" alt="이메일로고"><span>이메일
+                    <a href="/member/join/email_certificate"><img src="/static/images/email_logo.jpg" alt="이메일로고"><span>이메일
                             인증</span></a>
                     <p>이메일 인증을 통해 간편회원으로 가입 시 회원혜택이 제한됩니다.</p>
                 </div>

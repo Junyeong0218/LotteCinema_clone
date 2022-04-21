@@ -13,6 +13,14 @@
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 	</properties>
 	<dependencies>
+	
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+			<scope>provided</scope>
+		</dependency>
+		
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
