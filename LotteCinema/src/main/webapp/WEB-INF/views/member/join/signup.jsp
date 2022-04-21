@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="/static/css/member/join/join_header.css">
     <link rel="stylesheet" href="/static/css/member/join/join_footer.css">
     <link rel="stylesheet" href="/static/css/member/join/signup.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
@@ -39,19 +41,44 @@
                         <input type="text" name="username">
                     </div>
                     <div class="form-row">
+                        <span class="asterisk">*<span class="row-title">비밀번호</span></span>
+                        <input type="password" name="password">
+                    </div>
+                    <div class="form-row">
+                        <span class="asterisk">*<span class="row-title">비밀번호 확인</span></span>
+                        <input type="password" name="password_confirm">
+                    </div>
+                    <div class="form-row">
                         <span class="asterisk">*<span class="row-title">이름</span></span>
-                        <input type="text" name="name">
+                        
+                        <c:if test="${sessionScope.category == 'phone_signup'}">
+	                        <input type="text" readonly value="${sessionScope.signupRequestDto.name}">
+                        </c:if>
+                        <c:if test="${sessionScope.category != 'phone_signup'}">
+                        	<input type="text" name="name">
+                        </c:if>
                     </div>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">휴대폰 번호</span></span>
                         <div class="input-and-message">
-                            <input type="text" name="phone">
+                        
+                        	<c:if test="${sessionScope.category == 'phone_signup'}">
+                        		<input type="text" readonly value="${sessionScope.signupRequestDto.first_number}-${sessionScope.signupRequestDto.middle_number}-${sessionScope.signupRequestDto.last_number}">
+                        	</c:if>
+                        	<c:if test="${sessionScope.category != 'phone_signup'}">
+                            	<input type="text" name="phone">
+                        	</c:if>
+                            	
                             <span class="form-message">*휴대폰 번호를 정확하게 입력하지 않을 경우 회원 혜택이 제한될 수 있습니다.</span>
                         </div>
                     </div>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">이메일 주소</span></span>
                         <input type="text" name="email">
+                    </div>
+                    <div class="form-row">
+                        <span class="asterisk">*<span class="row-title">주소</span></span>
+                        <input type="text" name="address">
                     </div>
                 </form>
                 <div class="agree-marketing">
@@ -88,6 +115,7 @@
 	<jsp:include page="/WEB-INF/templetes/member/footer.jsp" />
 	
 	<script src="/static/js/member/join/footer_insite.js"></script>
+	<script src="/static/js/member/join/signup.js"></script>
 </body>
 
 </html>

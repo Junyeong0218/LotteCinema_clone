@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.LotteCinema.web.repository.AuthRepository">
+	<select id="checkUsername" parameterType="String" resultType="Integer">
+		select
+			count(username)
+		from
+			user_mst
+		where
+			username = #{username};
+	</select>
+	
+	<select id="checkPhone" parameterType="String" resultType="Integer">
+		select
+			count(phone)
+		from
+			user_detail
+		where
+			phone = #{phone};
+	</select>
+	
+	<select id="checkEmail" parameterType="String" resultType="Integer">
+		select
+			count(email)
+		from
+			user_detail
+		where
+			email = #{email};
+	</select>
+	
+	<select id="checkCardNumber" parameterType="String" resultType="Integer">
+		select
+			count(card_number)
+		from
+			user_detail
+		where
+			card_number = #{cardNumber};
+	</select>
+	
+	<insert id="signupPhone" parameterType="com.LotteCinema.web.requestDto.SignupRequestDto">
+		insert into
+			user_detail
+		values(
+			0,
+			#{dto.username},
+			#{dto.password},
+			#{dto.name},
+			#{dto.email},
+			#{dto.phone},
+			null,
+			#{dto.gender},
+			#{dto.address},
+			now(),
+			now(),
+			0,
+			null
+		);
+		
+		set @insertedId := (select id from user_detail where username = #{dto.username});
+		<bind name="phoneTerms" value="(com.LotteCinema.web.entity.terms.PhoneTerms) dto.terms"/>
+		
+		insert into 
+			phone_terms
+		values(
+			0,
+			@insertedId,
+			1,
+			#{dto.telecom},
+			#{dto.phone};
+			#{phoneTerms.privacy_flag},
+			#{phoneTerms.unique_flag},
+			#{phoneTerms.service_flag},
+			#{phoneTerms.agency_flag},
+			now(),
+			now()
+		);
+		
+		insert into
+			marketing_receive_flags_mst
+		values(
+			0,
+			@insertedId,
+			#{email_flag},
+			#{sms_flag},
+			now(),
+			now()
+		);
+	</insert>
+	
+</mapper>

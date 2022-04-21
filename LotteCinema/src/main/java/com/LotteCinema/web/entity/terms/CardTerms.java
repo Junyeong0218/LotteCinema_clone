@@ -1,7 +1,9 @@
 package com.LotteCinema.web.entity.terms;
 
+import lombok.Getter;
 import lombok.ToString;
 
+@Getter
 @ToString
 public class CardTerms extends Terms {
 	

@@ -1,8 +1,12 @@
 package com.LotteCinema.web.viewController;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.LotteCinema.web.requestDto.SignupRequestDto;
 
 @Controller
 public class MemberController {
@@ -35,7 +39,9 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value = SIGNUP, method = RequestMethod.GET)
-	public String signup() {
+	public String signup(HttpServletRequest request) {
+		System.out.println("get");
+		System.out.println((SignupRequestDto) request.getSession().getAttribute("signupRequestDto"));
 		return SIGNUP;
 	}
 	

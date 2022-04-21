@@ -14,6 +14,26 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/static/**" location="/static/" />
+	
+	<beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+		<beans:property name="url" value="jdbc:mariadb://127.0.0.1:3306/lottecinema; useUnicode=true; allowMultiQueries=true; serverTimezone=Asia/Seoul" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="toor" />
+	</beans:bean>
+	
+	<beans:bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	 	<beans:property name="basePackage" value="com.LotteCinema.web" />
+	</beans:bean>
+	
+	<beans:bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg ref="sqlSessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="mapperLocations" value="classpath:mapper/*.xml" />
+	</beans:bean>
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

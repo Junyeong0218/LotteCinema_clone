@@ -147,12 +147,12 @@ submit_button.onclick = () => {
 						  "unique_flag": flags.unique_flag,
 						  "service_flag": flags.service_flag,
 						  "agency_flag": flags.agency_flag },
-			dataType: "text",
+			dataType: "json",
 			success: function(data) {
 				console.log(data);
-				/*if(data == "true") {
+				if(data == true) {
 					location.href = "/member/join/signup";
-				}*/
+				}
 			},
 			error: function (xhr, status, error) {
 				console.log(xhr);
