@@ -78,7 +78,7 @@
                 </div>
                 <div class="submit-buttons">
                     <button type="button" class="cancel-button">취소</button>
-                    <button type="button" class="submit-button">다음</button>
+                    <button type="submit" class="submit-button">다음</button>
                 </div>
             </div>
         </main>
