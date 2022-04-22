@@ -20,8 +20,8 @@ public class Terms {
 		return new PhoneTerms(1, telecom, phone, privacy_flag, unique_flag, service_flag, agency_flag);
 	}
 	
-	public static CardTerms asCard(String card_company, int certificate_flag) {
-		return new CardTerms(2, card_company, certificate_flag);
+	public static CardTerms asCard(String card_company, String card_number, int certificate_flag) {
+		return new CardTerms(2, card_company, card_number, certificate_flag);
 	}
 	
 	public static EmailTerms asEmail(boolean l_point_flag,

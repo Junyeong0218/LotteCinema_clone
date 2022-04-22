@@ -43,13 +43,31 @@ public class VerifyFlags {
 															 request.getParameter("third_party_necessary").equals("true") ? true : false,
 															 request.getParameter("third_party_optional").equals("true") ? true : false,
 															 request.getParameter("subsidiary_flag").equals("true") ? true : false,
-															 request.getParameter("l_poinculture_necessary_flag").equals("true") ? true : false,
+															 request.getParameter("culture_necessary").equals("true") ? true : false,
 															 request.getParameter("culture_optional").equals("true") ? true : false));
 		System.out.println(dto);
 		if(dto.isValid()) {
 			HttpSession session = request.getSession(); 
 			session.setAttribute("signupRequestDto", dto);
-			session.setAttribute("category", "phone_signup");
+			session.setAttribute("category", "email_signup");
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	@RequestMapping(value = "/member/join/card_certificate", method = RequestMethod.POST)
+	@ResponseBody
+	public boolean getCardCertificate(SignupRequestDto dto, HttpServletRequest request) {
+		dto.setTerms(Terms.asCard(request.getParameter("card_company"),
+															 request.getParameter("card_number"),
+															 Integer.parseInt(request.getParameter("certificate_flag"))));
+		
+		System.out.println(dto);
+		if(dto.isValid()) {
+			HttpSession session = request.getSession(); 
+			session.setAttribute("signupRequestDto", dto);
+			session.setAttribute("category", "card_signup");
 			return true;
 		} else {
 			return false;

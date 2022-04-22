@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.LotteCinema.web.entity.terms.CardTerms;
+import com.LotteCinema.web.entity.terms.EmailTerms;
 import com.LotteCinema.web.entity.terms.PhoneTerms;
 import com.LotteCinema.web.repository.AuthRepository;
 import com.LotteCinema.web.requestDto.SignupRequestDto;
@@ -36,18 +37,29 @@ public class AuthServiceImpl implements AuthService {
 	
 	@Override
 	public boolean signup(SignupRequestDto signupRequestDto) {
+		int result = 0;
 		if(signupRequestDto.getTerms() instanceof PhoneTerms) {
-			int result = authRepository.signupPhone(signupRequestDto);
+			result = authRepository.signupPhone(signupRequestDto);
 			PhoneTerms terms = ((PhoneTerms)signupRequestDto.getTerms());
 			terms.setUser_id(signupRequestDto.getId());
 			result += authRepository.insertPhoneTerms(terms);
-			result += authRepository.insertMarketingFlags(signupRequestDto);
 			System.out.println(signupRequestDto);
-			return result > 0 ? true : false;
+			
 		} else if(signupRequestDto.getTerms() instanceof CardTerms) {
-			return authRepository.signupCard(signupRequestDto) > 0 ? true : false;
+			result = authRepository.signupCard(signupRequestDto);
+			CardTerms terms = (CardTerms) signupRequestDto.getTerms();
+			terms.setUser_id(signupRequestDto.getId());
+			result += authRepository.insertCardTerms(terms);
+			
 		} else {
-			return authRepository.signupEmail(signupRequestDto) > 0 ? true : false;
+			result = authRepository.signupEmail(signupRequestDto);
+			EmailTerms terms = (EmailTerms) signupRequestDto.getTerms();
+			terms.setEmail(signupRequestDto.getEmail());
+			terms.setUser_id(signupRequestDto.getId());
+			result += authRepository.insertEmailTerms(terms);
 		}
+		
+		result += authRepository.insertMarketingFlags(signupRequestDto);
+		return result > 0 ? true : false;
 	}
 }

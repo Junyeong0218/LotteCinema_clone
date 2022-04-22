@@ -59,26 +59,30 @@
                     </div>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">이름</span></span>
+                        <div class="input-and-message">
                         
-                        <c:if test="${sessionScope.category == 'phone_signup'}">
-	                        <input type="text" readonly value="${sessionScope.signupRequestDto.name}">
-                        </c:if>
-                        <c:if test="${sessionScope.category == 'email_signup'}">
-                        	<input type="text" name="name">
-                        </c:if>
-                        
+	                        <c:if test="${sessionScope.category == 'phone_signup'}">
+		                        <input type="text" name="name" readonly value="${sessionScope.signupRequestDto.name}">
+	                        </c:if>
+	                        <c:if test="${sessionScope.category != 'phone_signup'}">
+	                        	<input type="text" name="name">
+	                        </c:if>
+	                        
+                        	<span class="form-message"></span>
+                        </div>
                     </div>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">휴대폰 번호</span></span>
                         <div class="input-and-message">
                         
                         	<c:if test="${sessionScope.category == 'phone_signup'}">
-                        		<input type="text" readonly value="${sessionScope.signupRequestDto.phone}">
+                        		<input type="text" name="phone" readonly value="${sessionScope.signupRequestDto.phone}">
                         	</c:if>
-                        	<c:if test="${sessionScope.category == 'email_signup'}">
-                            	<input type="text" name="phone">
+                        	<c:if test="${sessionScope.category != 'phone_signup'}">
+                            	<input type="text" name="phone" placeholder="ex) 010-1234-5678">
                         	</c:if>
                             	
+                            <span class="form-message"></span>
                             <span class="form-message red">*휴대폰 번호를 정확하게 입력하지 않을 경우 회원 혜택이 제한될 수 있습니다.</span>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ const lotte_cultureworks = document.querySelectorAll(".lotte-cultureworks .gener
 const lpoint_flags = [false, false, false, false, false];
 const lotte_flags = [false, false, false];
 const cancel_button = document.querySelector(".btn-center").children[0];
-const submit_button = document.querySelector(".btn-center").children[0];
+const submit_button = document.querySelector(".btn-center").children[1];
 
 // ----------------------------------------------------
 // EventListeners
@@ -57,16 +57,6 @@ submit_button.onclick = () => {
 		alert("필수 약관을 체크해주세요.");
 		return;
 	}
-	flags = {
-	"l_point_flag": false,
-	"private_necessary": false,
-	"private_optional": false,
-	"third_party_necessary": false,
-	"third_party_optional": false,
-	"subsidiary_flag": false,
-	"culture_necessary": false,
-	"culture_optional": false
-};
 	$.ajax({
 		type: "post",
 		url: "/member/join/email_certificate",

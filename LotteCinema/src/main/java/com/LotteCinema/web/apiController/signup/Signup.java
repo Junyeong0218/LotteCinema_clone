@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.LotteCinema.web.entity.terms.EmailTerms;
+import com.LotteCinema.web.entity.terms.PhoneTerms;
 import com.LotteCinema.web.requestDto.SignupRequestDto;
 import com.LotteCinema.web.service.AuthService;
 
@@ -24,6 +26,12 @@ public class Signup {
 	public boolean signup(SignupRequestDto dto, HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		SignupRequestDto signupRequestDto = (SignupRequestDto) session.getAttribute("signupRequestDto");
+		if(signupRequestDto.getTerms() instanceof PhoneTerms) {
+			signupRequestDto.setBirthday(dto.getBirthday());
+		} else {
+			signupRequestDto.setPhone(dto.getPhone());
+			signupRequestDto.setName(dto.getName());
+		}
 		signupRequestDto.setUsername(dto.getUsername());
 		signupRequestDto.setPassword(dto.getPassword());
 		signupRequestDto.setEmail(dto.getEmail());
@@ -32,6 +40,7 @@ public class Signup {
 		signupRequestDto.setSms_flag(dto.isSms_flag());
 		signupRequestDto.setPassword(BCrypt.hashpw(signupRequestDto.getPassword(), BCrypt.gensalt()));
 		System.out.println(signupRequestDto.getPassword());
+		
 		boolean result = authService.signup(signupRequestDto);
 		
 		if(result == true) {

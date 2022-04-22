@@ -37,7 +37,7 @@
 		from
 			user_detail
 		where
-			card_number = #{cardNumber};
+			card_number = #{card_number};
 	</select>
 	
 	<insert id="signupPhone" parameterType="com.LotteCinema.web.requestDto.SignupRequestDto" >
@@ -52,6 +52,53 @@
 			#{phone},
 			null,
 			#{gender},
+			#{birthday},
+			#{address},
+			now(),
+			now(),
+			0,
+			null
+		);
+		
+		<selectKey keyProperty="id"  resultType="Integer"  order="AFTER">
+			select id from user_detail where username = #{username};
+		</selectKey>
+	</insert>
+	
+	<insert id="signupCard" parameterType="com.LotteCinema.web.requestDto.SignupRequestDto">
+		insert into
+			user_detail
+		values(
+			0,
+			#{username},
+			#{password},
+			#{name},
+			#{email},
+			#{phone},
+			#{card_number},
+			5,
+			null,
+			#{address},
+			now(),
+			now(),
+			0,
+			null
+		);
+	</insert>
+	
+	<insert id="signupEmail" parameterType="com.LotteCinema.web.requestDto.SignupRequestDto">
+		insert into
+			user_detail
+		values(
+			0,
+			#{username},
+			#{password},
+			#{name},
+			#{email},
+			#{phone},
+			null,
+			5,
+			null,
 			#{address},
 			now(),
 			now(),
@@ -77,6 +124,42 @@
 			#{unique_flag},
 			#{service_flag},
 			#{agency_flag},
+			now(),
+			now()
+		);
+	</insert>
+	
+	<insert id="insertCardTerms" parameterType="com.LotteCinema.web.entity.terms.CardTerms">
+		insert into
+			card_terms_mst
+		values(
+			0,
+			#{user_id},
+			2,
+			#{card_number},
+			#{card_company},
+			#{certificate_flag},
+			now(),
+			now()
+		);
+	</insert>
+	
+	<insert id="insertEmailTerms" parameterType="com.LotteCinema.web.entity.terms.EmailTerms">
+		insert into 
+			email_terms_mst
+		values(
+			0,
+			#{user_id},
+			3,
+			#{email},
+			#{l_point_flag},
+			#{privacy_necessary_flag},
+			#{privacy_optional_flag},
+			#{third_party_necessary_flag},
+			#{third_party_optional_flag},
+			#{subsidiary_flag},
+			#{culture_necessary_flag},
+			#{culture_optional_flag},
 			now(),
 			now()
 		);

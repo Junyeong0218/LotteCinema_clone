@@ -5,12 +5,16 @@ const submit_button = document.querySelector(".submit-button");
 const username_input = document.querySelector("input[name='username']");
 const password_input = document.querySelector("input[name='password']");
 const password_confirm_input = document.querySelector("input[name='password_confirm']");
+const name_input = document.querySelector("input[name='name']");
+const phone_input = document.querySelector("input[name='phone']");
 const email_input = document.querySelector("input[name='email']");
 const address_input = document.querySelector("input[name='address']");
 
 let username_check_flag = false;
 let password_check_flag = false;
-let password_confirm_flag = false;;
+let password_confirm_flag = false;
+let name_check_flag = name_input.readOnly == true ? true : false;
+let phone_check_flag = phone_input.readOnly == true ? true : false;
 let email_check_flag = false;
 let address_input_flag = false;
 
@@ -70,7 +74,6 @@ password_input.onblur = () => {
 	const span = password_input.nextElementSibling;
 	const symbol_regex = /[!@#$%^&*`~=+_]{1,16}/;
 	const symbol_result = password_input.value.match(symbol_regex);
-	console.log(symbol_result);
 	if(symbol_result == null) {
 		span.innerText = "특수문자 (\"!@#$%^&*`~=+_\") 중 1개 이상을 포함해야합니다.";
 		span.classList.remove("green");
@@ -87,7 +90,6 @@ password_input.onblur = () => {
 	}
 	const regex = /^[A-za-z0-9!@#$%^&*`~=+_]{8,16}$/;
 	const result = password_input.value.match(regex);
-	console.log(result);
 	if(result != null && result[0] == result.input) {
 		span.innerText = "사용가능한 비밀번호입니다.";
 		span.classList.add("green");
@@ -111,6 +113,72 @@ password_confirm_input.onblur = () => {
 		span.innerText = "비밀번호가 다릅니다.";
 		span.classList.remove("green");
 		span.classList.add("red");
+	}
+}
+
+if(name_input.readOnly == false) {
+	name_input.onfocus = () => name_check_flag = false;
+	name_input.onblur = () => {
+		const span = name_input.nextElementSibling;
+		const regex = /^[A-Za-z가-힣]{2,30}/;
+		const result = name_input.value.match(regex);
+		if(result != null && result[0] == result.input) {
+			span.innerText = "가입가능한 이름입니다.";
+			span.classList.remove("red");
+			span.classList.add("green");
+			name_check_flag = true;
+		} else {
+			span.innerText = "이름을 입력해주세요.";
+			span.classList.add("red");
+			span.classList.remove("green");
+		}
+	}
+}
+
+if(phone_input.readOnly == false) {
+	phone_input.onfocus = () => phone_check_flag = false;
+	phone_input.onblur = () => {
+		const span = phone_input.nextElementSibling;
+		const dash_regex = /[\-]/;
+		const dash_result = phone_input.value.match(dash_regex);
+		if(dash_result == null) {
+			span.innerText = "전화번호 사이에 - 를 입력해주세요.";
+			span.classList.add("red");
+			span.classList.remove("green");
+			return;
+		}
+		const regex = /^(010|011|016|017|018|019)[\-][0-9]{3,4}[\-][0-9]{4,4}$/;
+		const result = phone_input.value.match(regex);
+		if(result == null) {
+			span.innerText = "전화번호를 정확하게 입력해주세요.";
+			span.classList.add("red");
+			span.classList.remove("green");
+			return;
+		} else if(result[0] == result.input) {
+			$.ajax({
+				type: "post",
+				url: "/member/join/check-phone",
+				data: { "phone": result[0] },
+				dataType: "json",
+				success: function (data) {
+					if(data == true) {
+						span.innerText = "이미 가입된 전화번호입니다.";
+						span.classList.add("red");
+						span.classList.remove("green");
+					} else {
+						span.innerText = "가입가능한 전화번호입니다.";
+						span.classList.remove("red");
+						span.classList.add("green");
+						phone_check_flag = true;
+					}
+				},
+				error: function (xhr, status, error) {
+					console.log(xhr);
+					console.log(status);
+					console.log(error);
+				}
+			});
+		}
 	}
 }
 
@@ -174,19 +242,38 @@ submit_button.onclick = () => {
 	console.log(password_check_flag);
 	console.log(password_confirm_flag);
 	console.log(username_check_flag);
+	console.log(name_check_flag);
+	console.log(phone_check_flag);
 	if(checkFlags() == false) {
 		alert("회원 정보를 정확히 입력해주세요.");
 		return;
 	}
+	let data;
+	if(name_input.readOnly && phone_input.readOnly) {
+		data = {
+			"username": username_input.value,
+		  	"password": password_input.value,
+		  	"email": email_input.value,
+		  	"address": address_input.value,
+		  	"email_flag": flags.email_flag,
+		  	"sms_flag": flags.sms_flag
+		};
+	} else {
+		data = {
+			"username": username_input.value,
+		  	"password": password_input.value,
+		  	"name": name_input.value,
+		  	"phone": phone_input.value,
+		  	"email": email_input.value,
+		  	"address": address_input.value,
+		  	"email_flag": flags.email_flag,
+		  	"sms_flag": flags.sms_flag
+		};
+	}
 	$.ajax({
 		type: "post",
 		url: "/member/join/signup",
-		data: { "username": username_input.value,
-					  "password": password_input.value,
-					  "email": email_input.value,
-					  "address": address_input.value,
-					  "email_flag": flags.email_flag,
-					  "sms_flag": flags.sms_flag },
+		data: data,
 		dataType: "json",
 		success: function (data) {
 			console.log(data);
@@ -208,7 +295,8 @@ submit_button.onclick = () => {
 // Functions
 
 function checkFlags() {
-	return username_check_flag && password_check_flag && password_confirm_flag && email_check_flag && address_input_flag;
+	return username_check_flag && password_check_flag && password_confirm_flag && 
+				 name_check_flag && phone_check_flag && email_check_flag && address_input_flag;
 }
 
 function toggleEachFlag(event) {
