@@ -1,10 +1,7 @@
 package com.LotteCinema.web.service;
 
-import org.springframework.stereotype.Service;
-
 import com.LotteCinema.web.requestDto.SignupRequestDto;
 
-@Service
 public interface AuthService {
 
 	public boolean checkUsername(String username);

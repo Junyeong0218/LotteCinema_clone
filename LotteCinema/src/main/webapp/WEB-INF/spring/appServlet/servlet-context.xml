@@ -17,13 +17,15 @@
 	
 	<beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="org.mariadb.jdbc.Driver" />
-		<beans:property name="url" value="jdbc:mariadb://127.0.0.1:3306/lottecinema; useUnicode=true; allowMultiQueries=true; serverTimezone=Asia/Seoul" />
+		<beans:property name="url" value="jdbc:mariadb://127.0.0.1:3306/lottecinema?useUnicode=true;allowMultiQueries=true;serverTimezone=Asia/Seoul" />
 		<beans:property name="username" value="root" />
 		<beans:property name="password" value="toor" />
 	</beans:bean>
 	
-	<beans:bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<beans:bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 	 	<beans:property name="basePackage" value="com.LotteCinema.web" />
+	 	<beans:property name="annotationClass" value="org.apache.ibatis.annotations.Mapper" />
+	 	<beans:property name="sqlSessionTemplateBeanName" value="sqlSessionTemplate" />
 	</beans:bean>
 	
 	<beans:bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">

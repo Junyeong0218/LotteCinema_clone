@@ -115,9 +115,25 @@ form,
 
 .form-message {
     margin-top: 5px;
+    display: none;
     font-size: 13px;
     font-weight: 500;
+    color: black;
+}
+
+.form-message.black {
+	display: inline-block;
+	color: black;
+}
+
+.form-message.red {
+	display: inline-block;
     color: #EE1C25;
+}
+
+.form-message.green {
+	display: inline-block;
+	color: #0C8448;
 }
 
 .check-all {
@@ -130,7 +146,7 @@ form,
     border-bottom: 1px solid #D0D0D0;
 }
 
-.radiobox {
+.checkbox {
     display: none;
 }
 
@@ -164,11 +180,13 @@ label[for='smsAccept']+span {
     color: #8a8a8a;
 }
 
-.radiobox:checked+label[for='checkAll']>img {
+.checkbox:checked+label[for='checkAll']>img,
+.checkbox:checked+label[for='emailAccept']>img,
+.checkbox:checked+label[for='smsAccept']>img {
     left: -69px;
 }
 
-.radio-button-wrapper {
+.checkbox-wrapper {
     padding: 27px 0 25px;
     display: flex;
     width: 100%;
@@ -176,13 +194,13 @@ label[for='smsAccept']+span {
     border-bottom: 1px solid #D0D0D0;
 }
 
-.radio-button-wrapper>.row-title {
+.checkbox-wrapper>.row-title {
     margin: 0;
     width: 160px;
     line-height: 22px;
 }
 
-.radio-buttons {
+.check-boxes {
     display: flex;
     align-items: center;
     height: 22px;

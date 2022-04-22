@@ -37,7 +37,13 @@ public class AuthServiceImpl implements AuthService {
 	@Override
 	public boolean signup(SignupRequestDto signupRequestDto) {
 		if(signupRequestDto.getTerms() instanceof PhoneTerms) {
-			return authRepository.signupPhone(signupRequestDto) > 0 ? true : false;
+			int result = authRepository.signupPhone(signupRequestDto);
+			PhoneTerms terms = ((PhoneTerms)signupRequestDto.getTerms());
+			terms.setUser_id(signupRequestDto.getId());
+			result += authRepository.insertPhoneTerms(terms);
+			result += authRepository.insertMarketingFlags(signupRequestDto);
+			System.out.println(signupRequestDto);
+			return result > 0 ? true : false;
 		} else if(signupRequestDto.getTerms() instanceof CardTerms) {
 			return authRepository.signupCard(signupRequestDto) > 0 ? true : false;
 		} else {

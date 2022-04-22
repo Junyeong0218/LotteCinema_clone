@@ -11,11 +11,13 @@ public class Terms {
 		this.id = id;
 	}
 	
-	public static PhoneTerms asPhone(boolean privacy_flag,
+	public static PhoneTerms asPhone(String telecom,
+																	String phone,
+																	boolean privacy_flag,
 															 	    boolean unique_flag,
 																    boolean service_flag,
 																    boolean agency_flag) {
-		return new PhoneTerms(1, privacy_flag, unique_flag, service_flag, agency_flag);
+		return new PhoneTerms(1, telecom, phone, privacy_flag, unique_flag, service_flag, agency_flag);
 	}
 	
 	public static CardTerms asCard(String card_company, int certificate_flag) {

@@ -17,11 +17,34 @@ public class VerifyFlags {
 	@RequestMapping(value = "/member/join/phone_certificate", method = RequestMethod.POST)
 	@ResponseBody
 	public boolean getPhoneCertificate(SignupRequestDto dto, HttpServletRequest request) {
-		dto.setTerms(Terms.asPhone(request.getParameter("privacy_flag").equals("true") ? true : false,
+		dto.setTerms(Terms.asPhone(dto.getTelecom(),
+																dto.getPhone(),
+																request.getParameter("privacy_flag").equals("true") ? true : false,
 																request.getParameter("unique_flag").equals("true") ? true : false,
 																request.getParameter("service_flag").equals("true") ? true : false,
 																request.getParameter("agency_flag").equals("true") ? true : false));
-		
+		System.out.println(dto);
+		if(dto.isValid()) {
+			HttpSession session = request.getSession(); 
+			session.setAttribute("signupRequestDto", dto);
+			session.setAttribute("category", "phone_signup");
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	@RequestMapping(value = "/member/join/email_certificate", method = RequestMethod.POST)
+	@ResponseBody
+	public boolean getEmailCertificate(SignupRequestDto dto, HttpServletRequest request) {
+		dto.setTerms(Terms.asEmail(request.getParameter("l_point_flag").equals("true") ? true : false,
+															 request.getParameter("private_necessary").equals("true") ? true : false,
+															 request.getParameter("private_optional").equals("true") ? true : false,
+															 request.getParameter("third_party_necessary").equals("true") ? true : false,
+															 request.getParameter("third_party_optional").equals("true") ? true : false,
+															 request.getParameter("subsidiary_flag").equals("true") ? true : false,
+															 request.getParameter("l_poinculture_necessary_flag").equals("true") ? true : false,
+															 request.getParameter("culture_optional").equals("true") ? true : false));
 		System.out.println(dto);
 		if(dto.isValid()) {
 			HttpSession session = request.getSession(); 

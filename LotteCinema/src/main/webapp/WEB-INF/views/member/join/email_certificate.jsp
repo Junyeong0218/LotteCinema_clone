@@ -42,8 +42,9 @@
                         <span>약관</span>
                     </div>
                     <div class="general-agreement">
-                        <button type="button" class="general-agreement-checkbox"><img
-                                src="/static/images/radio_button_img.png" alt="전체동의 체크 박스"></button>
+                        <button type="button" class="general-agreement-checkbox">
+                        	<img class="checkbox" src="/static/images/radio_button_img.png" alt="전체동의 체크 박스">
+                        </button>
                         <label for="general-agreement">전체동의</label>
                     </div>
                     <div class="lpoint-checkbox">
@@ -52,10 +53,12 @@
                             <div class="inner">
                                 <div class="ui-wrap">
                                     <div class="ui-check">
-                                        <button type="button" class="general-agreement-checkbox"><img
-                                                src="/static/images/radio_button_img.png" alt=""></button>
-                                        <label for="ui-check" class="ui-check-label">L.POINT 회원약관
-                                            <span>(필수)</span></label>
+                                        <button type="button" class="general-agreement-checkbox">
+                                        	<img class="checkbox" src="/static/images/radio_button_img.png" alt="">
+                                        </button>
+                                        <label for="ui-check" class="ui-check-label">L.POINT 회원약관 
+                                            <span>(필수)</span>
+                                        </label>
                                     </div>
                                     <div class="detail">
                                         <button type="button">자세히</button>
@@ -65,10 +68,12 @@
                             <div class="inner">
                                 <div class="ui-wrap">
                                     <div class="ui-check">
-                                        <button type="button" class="general-agreement-checkbox"><img
-                                                src="/static/images/radio_button_img.png" alt=""></button>
-                                        <label for="ui-check" class="ui-check-label">개인정보의 필수적인 사항에 대한 수집 이용 동의
-                                            <span>(필수)</span></label>
+                                        <button type="button" class="general-agreement-checkbox">
+                                        	<img class="checkbox" src="/static/images/radio_button_img.png" alt="">
+                                        </button>
+                                        <label for="ui-check" class="ui-check-label">개인정보의 필수적인 사항에 대한 수집 이용 동의 
+                                            <span>(필수)</span>
+                                        </label>
                                     </div>
                                     <div class="detail">
                                         <button type="button">자세히</button>
@@ -78,10 +83,12 @@
                             <div class="inner">
                                 <div class="ui-wrap">
                                     <div class="ui-check">
-                                        <button type="button" class="general-agreement-checkbox"><img
-                                                src="/static/images/radio_button_img.png" alt=""></button>
-                                        <label for="ui-check" class="ui-check-label">개인정보의 선택적인 사항에 대한 수집 이용 동의
-                                            <span class="choice-checkbox">(선택)</span></label>
+                                        <button type="button" class="general-agreement-checkbox">
+                                        	<img class="checkbox" src="/static/images/radio_button_img.png" alt="">
+                                        </button>
+                                        <label for="ui-check" class="ui-check-label">개인정보의 선택적인 사항에 대한 수집 이용 동의 
+                                            <span class="choice-checkbox">(선택)</span>
+                                        </label>
                                     </div>
                                     <div class="detail">
                                         <button type="button">자세히</button>
@@ -91,10 +98,12 @@
                             <div class="inner">
                                 <div class="ui-wrap">
                                     <div class="ui-check">
-                                        <button type="button" class="general-agreement-checkbox"><img
-                                                src="/static/images/radio_button_img.png" alt=""></button>
-                                        <label for="ui-check" class="ui-check-label">개인정보의 필수적인 제3자 제공에 대한
-                                            동의<span>(필수)</span></label>
+                                        <button type="button" class="general-agreement-checkbox">
+                                        	<img class="checkbox" src="/static/images/radio_button_img.png" alt="">
+                                        </button>
+                                        <label for="ui-check" class="ui-check-label">개인정보의 필수적인 제3자 제공에 대한 동의 
+                                        	<span>(필수)</span>
+                                        </label>
                                     </div>
                                     <div class="detail">
                                         <button type="button">자세히</button>
@@ -104,10 +113,12 @@
                             <div class="inner">
                                 <div class="ui-wrap">
                                     <div class="ui-check">
-                                        <button type="button" class="general-agreement-checkbox"><img
-                                                src="/static/images/radio_button_img.png" alt=""></button>
-                                        <label for="ui-check" class="ui-check-label">개인정보의 선택적인 제3자 제공에 대한 동의 <span
-                                                class="choice-checkbox">(선택)</span></label>
+                                        <button type="button" class="general-agreement-checkbox">
+                                        	<img class="checkbox" src="/static/images/radio_button_img.png" alt="">
+                                        </button>
+                                        <label for="ui-check" class="ui-check-label">개인정보의 선택적인 제3자 제공에 대한 동의 
+                                        	<span class="choice-checkbox">(선택)</span>
+                                        </label>
                                     </div>
                                     <div class="detail">
                                         <button type="button">자세히</button>
@@ -121,9 +132,12 @@
                         <div class="inner">
                             <div class="ui-wrap">
                                 <div class="ui-check">
-                                    <button type="button" class="general-agreement-checkbox"><img
-                                            src="/static/images/radio_button_img.png" alt=""></button>
-                                    <label for="ui-check" class="ui-check-label">롯데컬처웍스 회원사 약관 <span>(필수)</span></label>
+                                    <button type="button" class="general-agreement-checkbox">
+                                    	<img class="checkbox" src="/static/images/radio_button_img.png" alt="">
+                                    </button>
+                                    <label for="ui-check" class="ui-check-label">롯데컬처웍스 회원사 약관 
+                                    	<span>(필수)</span>
+                                    </label>
                                 </div>
                                 <div class="detail">
                                     <button type="button">자세히</button>
@@ -133,9 +147,12 @@
                         <div class="inner">
                             <div class="ui-wrap">
                                 <div class="ui-check">
-                                    <button type="button" class="general-agreement-checkbox"><img
-                                            src="/static/images/radio_button_img.png" alt=""></button>
-                                    <label for="ui-check" class="ui-check-label">필수입력정보 수집동의서 <span>(필수)</span></label>
+                                    <button type="button" class="general-agreement-checkbox">
+                                    	<img class="checkbox" src="/static/images/radio_button_img.png" alt="">
+                                    </button>
+                                    <label for="ui-check" class="ui-check-label">필수입력정보 수집동의서 
+                                    	<span>(필수)</span>
+                                    </label>
                                 </div>
                                 <div class="detail">
                                     <button type="button">자세히</button>
@@ -145,8 +162,9 @@
                         <div class="inner">
                             <div class="ui-wrap">
                                 <div class="ui-check">
-                                    <button type="button" class="general-agreement-checkbox"><img
-                                            src="/static/images/radio_button_img.png" alt=""></button>
+                                    <button type="button" class="general-agreement-checkbox">
+                                    	<img class="checkbox" src="/static/images/radio_button_img.png" alt="">
+                                    </button>
                                     <label for="ui-check" class="ui-check-label">선택입력정보 수집동의서 <span
                                             class="choice-checkbox">(선택)</span></label>
                                 </div>
@@ -173,7 +191,7 @@
     </main>
     <div class="btn-center">
         <button type="button">취소</button>
-        <button type="button">인증 요청</button>
+        <button type="button">다음으로</button>
     </div>
     
     <!-- footer -->

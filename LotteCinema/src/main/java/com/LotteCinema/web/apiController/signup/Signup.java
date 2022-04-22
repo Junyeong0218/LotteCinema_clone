@@ -3,6 +3,7 @@ package com.LotteCinema.web.apiController.signup;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,9 +30,14 @@ public class Signup {
 		signupRequestDto.setAddress(dto.getAddress());
 		signupRequestDto.setEmail_flag(dto.isEmail_flag());
 		signupRequestDto.setSms_flag(dto.isSms_flag());
-		System.out.println(signupRequestDto);
+		signupRequestDto.setPassword(BCrypt.hashpw(signupRequestDto.getPassword(), BCrypt.gensalt()));
+		System.out.println(signupRequestDto.getPassword());
 		boolean result = authService.signup(signupRequestDto);
 		
+		if(result == true) {
+			session.setAttribute("signupRequestDto", null);
+			session.setAttribute("name", signupRequestDto.getName());
+		}
 		return result;
 	}
 }

@@ -50,7 +50,7 @@
                             <div class="check-box-wrapper">
                                 <button type="button" class="check-box"><img
                                         src="/static/images/radio_button_img.png"></button>
-                                <label for="compulsory-consent">고유식별 정보 처리 동의</label>
+                                <label for="compulsory-consent">고유식별 정보 처리 동의(필수)</label>
 
                             </div>
                             <button type="button">자세히</button>
@@ -130,7 +130,7 @@
                     </div>
                     <div class="btn-center">
                         <button type="button">취소</button>
-                        <button type="button">인증 요청</button>
+                        <button type="button">다음으로</button>
                     </div>
                 </div>
             </div>

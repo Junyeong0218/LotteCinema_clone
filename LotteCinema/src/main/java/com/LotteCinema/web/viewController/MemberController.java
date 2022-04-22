@@ -17,6 +17,7 @@ public class MemberController {
 	private final String PHONE_CERTIFICATE = "/member/join/phone_certificate";
 	private final String SIGNUP = "/member/join/signup";
 	private final String LOGIN = "/member/login";
+	private final String COMPLETE = "/member/join/complete";
 	
 	@RequestMapping(value = JOIN, method = RequestMethod.GET)
 	public String join() {
@@ -48,5 +49,10 @@ public class MemberController {
 	@RequestMapping(value = LOGIN, method = RequestMethod.GET)
 	public String login() {
 		return LOGIN;
+	}
+	
+	@RequestMapping(value = COMPLETE, method = RequestMethod.GET)
+	public String complete() {
+		return COMPLETE;
 	}
 }

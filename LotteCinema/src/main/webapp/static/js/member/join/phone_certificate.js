@@ -116,42 +116,52 @@ submit_button.onclick = () => {
 	const flag = checkFlags();
 	const input_flag = checkInputTags();
 	if(flag && input_flag) {
-		const name = input_name.value.match(regex_name)[0];
-		const birthday = input_birthday.value.match(regex_birthday)[0];
-		const gender = input_gender.value.match(regex_gender)[0];
-		const telecom_tag = document.querySelector("select[name='telecom']");
-		const telecom = telecom_tag.options[telecom_tag.selectedIndex].value;
 		const first_number_tag = document.querySelector("select[name='first-number']");
 		const first_number = first_number_tag.options[first_number_tag.selectedIndex].value;
 		const middle_number = input_middleNumber.value.match(regex_phone)[0];
 		const last_number = input_lastNumber.value.match(regex_phone)[0];
-		console.log(name);
-		console.log(birthday);
-		console.log(gender);
-		console.log(telecom);
-		console.log(first_number);
-		console.log(middle_number);
-		console.log(last_number);
-		console.log(flags);
+		const phone = `${first_number}-${middle_number}-${last_number}`;
 		$.ajax({
 			type: "post",
-			url: "/member/join/phone_certificate",
-			data: { "name": name,
-						  "birthday": birthday,
-						  "gender": gender,
-						  "telecom": telecom,
-						  "first_number": first_number,
-						  "middle_number": middle_number,
-						  "last_number":last_number,
-						  "privacy_flag": flags.privacy_flag,
-						  "unique_flag": flags.unique_flag,
-						  "service_flag": flags.service_flag,
-						  "agency_flag": flags.agency_flag },
+			url: "/member/join/check-phone",
+			data: { "phone": phone },
 			dataType: "json",
-			success: function(data) {
-				console.log(data);
+			success: function (data) {
 				if(data == true) {
-					location.href = "/member/join/signup";
+					alert("이미 가입된 휴대폰 번호입니다.\n다시 입력해주세요.");
+				} else {
+					const name = input_name.value.match(regex_name)[0];
+					const birthday = input_birthday.value.match(regex_birthday)[0];
+					const gender = input_gender.value.match(regex_gender)[0];
+					const telecom_tag = document.querySelector("select[name='telecom']");
+					const telecom = telecom_tag.options[telecom_tag.selectedIndex].value;
+					$.ajax({
+						type: "post",
+						url: "/member/join/phone_certificate",
+						data: { "name": name,
+									  "birthday": birthday,
+									  "gender": gender,
+									  "telecom": telecom,
+									  "phone": phone,
+									  "privacy_flag": flags.privacy_flag,
+									  "unique_flag": flags.unique_flag,
+									  "service_flag": flags.service_flag,
+									  "agency_flag": flags.agency_flag },
+						dataType: "json",
+						success: function(data) {
+							console.log(data);
+							if(data == true) {
+								location.href = "/member/join/signup";
+							} else {
+								alert("dto is not verified!");
+							}
+						},
+						error: function (xhr, status, error) {
+							console.log(xhr);
+							console.log(status);
+							console.log(error);
+						}
+					});
 				}
 			},
 			error: function (xhr, status, error) {
@@ -161,7 +171,7 @@ submit_button.onclick = () => {
 			}
 		});
 	} else {
-		alert("false");
+		alert("약관 동의 및 정보 입력을 완료해주세요.");
 	}
 }
 
@@ -169,18 +179,15 @@ submit_button.onclick = () => {
 // Functions
 
 function checkFlags() {
-	if(flags.agency_flag == false) return false;
-	else if(flags.privacy_flag == false) return false;
-	else if(flags.service_flag == false) return false;
-	else return true;
+	return flags.privacy_flag && flags.unique_flag && flags.service_flag && flags.agency_flag;
 }
 
 function checkInputTags() {
-	if(input_name.value.match(regex_name) == null) return false;
-	else if(input_birthday.value.match(regex_birthday) == null) return false;
-	else if(input_gender.value.match(regex_gender) == null) return false;
-	else if(input_middleNumber.value.match(regex_phone) == null) return false;
-	else if(input_lastNumber.value.match(regex_phone) == null) return false;
+	if(input_name.value.match(regex_name) == null)						 		return false;
+	else if(input_birthday.value.match(regex_birthday) == null) 		return false;
+	else if(input_gender.value.match(regex_gender) == null) 				return false;
+	else if(input_middleNumber.value.match(regex_phone) == null) 	return false;
+	else if(input_lastNumber.value.match(regex_phone) == null) 		return false;
 	else return true;	
 }
 

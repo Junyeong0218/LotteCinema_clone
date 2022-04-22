@@ -75,11 +75,15 @@
     background-color: white;
 }
 
-.general-agreement-checkbox img {
+.checkbox {
     position: absolute;
     top: 0px;
     left: -22px;
     height: 18px;
+}
+
+.checked {
+	left: -69px;
 }
 
 .general-agreement label {

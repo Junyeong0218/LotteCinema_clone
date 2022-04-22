@@ -1,8 +1,8 @@
 package com.LotteCinema.web.repository;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
+import com.LotteCinema.web.entity.terms.PhoneTerms;
 import com.LotteCinema.web.requestDto.SignupRequestDto;
 
 @Mapper
@@ -13,7 +13,11 @@ public interface AuthRepository {
 	public int checkEmail(String email);
 	public int checkCardNumber(String cardNumber);
 	
-	public int signupPhone(@Param("dto") SignupRequestDto signupRequestDto);
-	public int signupCard(@Param("dto") SignupRequestDto signupRequestDto);
-	public int signupEmail(@Param("dto") SignupRequestDto signupRequestDto);
+	public int signupPhone(SignupRequestDto signupRequestDto);
+	public int signupCard(SignupRequestDto signupRequestDto);
+	public int signupEmail(SignupRequestDto signupRequestDto);
+	
+	public int insertPhoneTerms(PhoneTerms phoneTerms);
+	
+	public int insertMarketingFlags(SignupRequestDto signupRequestDto);
 }

@@ -40,49 +40,54 @@
 			card_number = #{cardNumber};
 	</select>
 	
-	<insert id="signupPhone" parameterType="com.LotteCinema.web.requestDto.SignupRequestDto">
+	<insert id="signupPhone" parameterType="com.LotteCinema.web.requestDto.SignupRequestDto" >
 		insert into
 			user_detail
 		values(
 			0,
-			#{dto.username},
-			#{dto.password},
-			#{dto.name},
-			#{dto.email},
-			#{dto.phone},
+			#{username},
+			#{password},
+			#{name},
+			#{email},
+			#{phone},
 			null,
-			#{dto.gender},
-			#{dto.address},
+			#{gender},
+			#{address},
 			now(),
 			now(),
 			0,
 			null
 		);
 		
-		set @insertedId := (select id from user_detail where username = #{dto.username});
-		<bind name="phoneTerms" value="(com.LotteCinema.web.entity.terms.PhoneTerms) dto.terms"/>
-		
+		<selectKey keyProperty="id"  resultType="Integer"  order="AFTER">
+			select id from user_detail where username = #{username};
+		</selectKey>
+	</insert>
+	
+	<insert id="insertPhoneTerms" parameterType="com.LotteCinema.web.entity.terms.PhoneTerms" >
 		insert into 
-			phone_terms
+			phone_terms_mst
 		values(
 			0,
-			@insertedId,
+			#{user_id},
 			1,
-			#{dto.telecom},
-			#{dto.phone};
-			#{phoneTerms.privacy_flag},
-			#{phoneTerms.unique_flag},
-			#{phoneTerms.service_flag},
-			#{phoneTerms.agency_flag},
+			#{telecom},
+			#{phone},
+			#{privacy_flag},
+			#{unique_flag},
+			#{service_flag},
+			#{agency_flag},
 			now(),
 			now()
 		);
-		
+	</insert>
+	
+	<insert id="insertMarketingFlags" parameterType="com.LotteCinema.web.requestDto.SignupRequestDto">
 		insert into
 			marketing_receive_flags_mst
 		values(
 			0,
-			@insertedId,
+			#{id},
 			#{email_flag},
 			#{sms_flag},
 			now(),

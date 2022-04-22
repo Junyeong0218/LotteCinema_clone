@@ -1,5 +1,6 @@
 package com.LotteCinema.web.requestDto;
 
+import com.LotteCinema.web.entity.terms.EmailTerms;
 import com.LotteCinema.web.entity.terms.PhoneTerms;
 import com.LotteCinema.web.entity.terms.Terms;
 
@@ -18,15 +19,14 @@ import lombok.ToString;
 @Builder
 public class SignupRequestDto {
 
+	private int id;
 	private String username;
 	private String password;
 	private String name;
 	private String birthday;
 	private int gender;
 	private String telecom;
-	private String first_number;
-	private String middle_number;
-	private String last_number;
+	private String phone;
 	private String email;
 	private String card_number;
 	private String card_company;
@@ -42,13 +42,12 @@ public class SignupRequestDto {
 						 !birthday.isEmpty() && birthday.length() == 6 &&
 						 gender > 0 && gender < 5 && 
 						 !telecom.isEmpty() &&
-						 !first_number.isEmpty() &&
-						 !middle_number.isEmpty() && middle_number.length() > 2 &&
-						 !last_number.isEmpty() && last_number.length() == 4 &&
+						 !phone.isEmpty() && phone.length() > 11 &&
 						 phoneTerms.isPrivacy_flag() && 
+						 phoneTerms.isUnique_flag() &&
 						 phoneTerms.isService_flag() && 
 						 phoneTerms.isAgency_flag();
-		}
+		} else if(terms instanceof EmailTerms)
 		return false;
 	}
 	
