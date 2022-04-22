@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>정보입력 &lt; 회원가입 &lt; L.POINT</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/container.css">
     <link rel="stylesheet" href="/static/css/member/join/join_header.css">
     <link rel="stylesheet" href="/static/css/member/join/join_footer.css">
@@ -36,7 +37,7 @@
                     <span class="form-title">회원정보입력</span>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">아이디</span></span>
-                        <input type="text" name="username">
+                        <input type="text" class="username-input" name="username">
                     </div>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">이름</span></span>
@@ -78,7 +79,7 @@
                 </div>
                 <div class="submit-buttons">
                     <button type="button" class="cancel-button">취소</button>
-                    <button type="button" class="submit-button">다음</button>
+                    <button type="submit" class="submit-button">다음</button>
                 </div>
             </div>
         </main>
@@ -87,6 +88,7 @@
     <!-- footer -->
 	<jsp:include page="/WEB-INF/templetes/member/footer.jsp" />
 	
+	<script src="/static/js/member/join/signup.js"></script>
 	<script src="/static/js/member/join/footer_insite.js"></script>
 </body>
 

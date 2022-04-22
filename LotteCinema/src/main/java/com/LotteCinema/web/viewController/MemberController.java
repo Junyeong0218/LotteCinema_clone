@@ -1,8 +1,13 @@
 package com.LotteCinema.web.viewController;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.LotteCinema.web.Service.AuthService;
+import com.LotteCinema.web.dto.auth.SignupRequestDto;
 
 @Controller
 public class MemberController {
@@ -13,6 +18,10 @@ public class MemberController {
 	private final String PHONE_CERTIFICATE = "/member/join/phone_certificate";
 	private final String SIGNUP = "/member/join/signup";
 	private final String LOGIN = "/member/login";
+	
+	@Autowired
+	private AuthService authService;
+	
 	
 	@RequestMapping(value = JOIN, method = RequestMethod.GET)
 	public String join() {
@@ -38,8 +47,6 @@ public class MemberController {
 	public String signup() {
 		return SIGNUP;
 	}
-	
-	
 	
 	
 	@RequestMapping(value = LOGIN, method = RequestMethod.GET)
