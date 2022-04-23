@@ -31,6 +31,17 @@
 	</servlet-mapping>
 	
 	<filter>
+		<filter-name>afterSigninNotToGoJoin</filter-name>
+		<filter-class>com.LotteCinema.web.filter.SessionFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>afterSigninNotToGoJoin</filter-name>
+		<url-pattern>/member/join/*</url-pattern>
+		<url-pattern>/member/login</url-pattern>
+	</filter-mapping>
+	
+	<filter>
 		<filter-name>charsetEncoding</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
 		<init-param>

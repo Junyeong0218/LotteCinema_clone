@@ -7,7 +7,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LotteCinema</title>
+<title>롯데시네마</title>
+<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="/static/css/index.css">
 <link rel="stylesheet" href="/static/css/container.css">
 <link rel="stylesheet" href="/static/css/store/header.css">
@@ -183,10 +184,10 @@
 
 	</div>
 
-	<script src="/static/js/index.js"></script>
 	<script src="/static/js/store/scroll_control.js"></script>
 	<script src="/static/js/store/nav_control.js"></script>
 	<script src="/static/js/store/footer_banner_control.js"></script>
+	<script src="/static/js/index.js"></script>
 </body>
 
 </html>

@@ -12,9 +12,9 @@ function moveTab(event) {
     let fixed_height = document.querySelector("header").offsetHeight + document.querySelector(".tab-wrapper").offsetHeight;
     const selected_tab = document.querySelector(`#${id}`);
     if (window.scrollY < 400) {
-        window.scrollTo(0, selected_tab.offsetTop - 20);
+        window.scrollTo(0, selected_tab.offsetTop - 20 + top_banner_height);
     } else {
-        window.scrollTo(0, selected_tab.offsetTop - fixed_height);
+        window.scrollTo(0, selected_tab.offsetTop - fixed_height + top_banner_height);
     }
     moveTabUnderline();
 }

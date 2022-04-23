@@ -39,7 +39,7 @@ body {
 #index header {
 	background: linear-gradient(to bottom, rgba(29, 29, 31, 1) 0%, rgba(0, 0, 0, 0) 100%);
 	border: none;
-	z-index: 2;
+	z-index: 11;
 }
 
 #index header.fixed {
@@ -278,9 +278,8 @@ header.fixed {
 }
 
 .pop-up {
-    display: none;
     position: absolute;
-    top: 0;
+    top: -80px;
     left: 0;
     display: none;
     justify-content: center;
@@ -297,7 +296,6 @@ header.fixed {
 
 .whole-menu-wrapper {
     position: relative;
-    top: -70px;
     padding-top: 28px;
     display: flex;
     flex-direction: column;
@@ -427,6 +425,164 @@ header th {
     color: black;
     text-align: center;
     line-height: 31px;
+}
+
+.user-grade > span {
+	margin-left: 5px;
+	padding:0 10px;
+	display: inline-block;
+	min-width: 48px; 
+	height: 22px;
+	border-radius: 11px;
+	font-family: 'Roboto';
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	line-height: 22px;
+}
+
+.user-grade-common {
+	background-color: #AFAFAF;
+}
+
+.user-grade-vip {
+    background-color: #675448;
+}
+
+.user-grade-vvip {
+    background-color: #969697;
+}
+
+.user-grade-gold {
+    background-color: #756023;
+}
+
+.user-grade-platinum {
+    background-color: black;
+}
+
+.welcome-message {
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+.welcome-message > span {
+	margin-right: 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.lpoint-info {
+	margin: 25px 0 35px;
+	display: flex;
+	align-items: flex-end;
+	height: 18px;
+}
+
+.lpoint-info > img {
+	margin-right: 10px;
+	display: inline-block;
+	height: 50%;
+	font-size: 12px;
+}
+
+.lpoint-info > span {
+	position: relative;
+	margin: 0 10px;
+	padding-left: 10px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.lpoint-info > span::before {
+    position: absolute;
+    top: 1px;
+    left: 0;
+	content: "";
+    height: 15px;
+    border-left: 1px solid #DDD;
+    opacity: .6;
+}
+
+.point-value {
+	border:none;
+	background: none;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+	cursor: pointer;
+}
+
+.coupon-value {
+	border: none;
+	background: none;
+	font-size: 14px;
+	color: black;
+	line-height: 18px;
+	cursor: pointer;
+}
+
+.my-cinema {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.my-cinema-title {
+	margin-bottom: 6px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.my-cinema-title > span {
+	font-size: 14px;
+}
+
+.to-my-cinema {
+	width: 16px;
+	height: 16px;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.to-my-cinema > img {
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.my-cinema-rank {
+	margin-bottom: 20px;
+	display: flex;
+	width: 100%;
+	height: 60px;
+}
+
+.set-my-cinema-rank {
+	margin-right: 7px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 78px;
+	height: 100%;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+}
+
+.set-my-cinema-rank > .plus {
+	margin: 18px 0 9px;
+	width: 11px;
+	height: 11px;
+}
+
+.set-my-cinema-rank > .rank {
+	font-family: 'Roboto';
+	font-size: 11px;
+	color: #666;
 }
 
 .modal-small-banner {

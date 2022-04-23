@@ -25,14 +25,17 @@ top_banner_closer.onclick = hideTopBanner;
 
 function showWholeMenu() {
     pop_up.classList.add("to-show");
+    document.querySelector("body").style = "margin-right: 17px; overflow: hidden;";
 }
 
 function hideWholeMenu() {
     pop_up.classList.remove("to-show");
+    document.querySelector("body").style = "";
 }
 
 function hideTopBanner() {
     top_banner.classList.add("hidden");
+    top_banner_height = 0;
     readjustAsideTop();
 }
 

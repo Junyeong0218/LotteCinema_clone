@@ -97,8 +97,7 @@
                                     <li><a href="#">MY 이벤트</a></li>
                                     <li><a href="#">MY 클럽</a></li>
                                     <li><a href="#">MY 무비로그</a></li>
-                                    <li><a href="#">MY 정보 관리</a>
-                                    </li>
+                                    <li><a href="#">MY 정보 관리</a></li>
                                 </ul>
                             </td>
                             <td class="menu-items">
@@ -106,40 +105,26 @@
                                     <li><a href="#">FAQ</a></li>
                                     <li><a href="#">공지사항</a></li>
                                     <li><a href="#">1:1 문의</a></li>
-                                    <li><a href="#">단체관람/대관문의</a>
-                                    </li>
+                                    <li><a href="#">단체관람/대관문의</a></li>
                                     <li><a href="#">분실물문의</a></li>
                                 </ul>
                             </td>
                             <td class="menu-items">
                                 <ul>
-                                
-                               		<c:if test="${sessionScope.user == null }">
-	                                    <li><a href="/member/login">로그인</a></li>
-                                	</c:if>
-                                	<c:if test="${sessionScope.user != null }">
-	                                    <li><a href="/member/logout">로그아웃</a></li>
-                                	</c:if>
-                                	
+                                    <li><a href="/member/login">로그인</a></li>
                                     <li><a href="/member/join">회원가입</a></li>
-                                    <li><a href="#">아이디/비밀번호찾기</a>
-                                    </li>
+                                    <li><a href="#">아이디/비밀번호찾기</a></li>
                                     <li><a href="#">회원약관</a></li>
-                                    <li><a href="#">개인정보처리방침</a>
-                                    </li>
-                                    <li><a href="#">이메일무단수집거부</a>
-                                    </li>
-                                    <li><a href="#">영상정보처리기기 운영 및
-                                            관리방침</a></li>
-                                    <li><a href="#">L.POINT회원안내</a>
-                                    </li>
+                                    <li><a href="#">개인정보처리방침</a></li>
+                                    <li><a href="#">이메일무단수집거부</a></li>
+                                    <li><a href="#">영상정보처리기기 운영 및 관리방침</a></li>
+                                    <li><a href="#">L.POINT회원안내</a></li>
                                 </ul>
                             </td>
                             <td class="menu-items">
                                 <ul>
                                     <li><a href="/event/movie">영화</a></li>
-                                    <li><a href="/event/premiere">시사회/무대인사</a>
-                                    </li>
+                                    <li><a href="/event/premiere">시사회/무대인사</a></li>
                                     <li><a href="/event/hot">HOT</a></li>
                                     <li><a href="/event/discount">제휴할인</a></li>
                                     <li><a href="/event/near_cinema">우리동네영화관</a></li>
@@ -177,36 +162,37 @@
 	                            <a href="/member/join" title="회원가입 페이지 이동">회원가입</a>
 	                        </div>
                     	</c:if>
+                    	
                     	<c:if test="${sessionScope.user != null}">
 	                        <div class="user-grade">
-	                        	<span>일반</span>
+	                        	<span class="user-grade-common">일반</span>
 	                        </div>
 	                        <div class="welcome-message">
-	                        	<span>${sessionScope.user.name}님 </span><span>반가워요!</span>
+	                        	<span>${sessionScope.user.name}님 </span>반가워요!
 	                        </div>
 	                        <div class="lpoint-info">
 	                        	<img src="/static/images/whole_menu_logined_L_point.png" alt="">
 	                        	<button type="button" class="point-value">0P</button>
 	                        	<span>쿠폰함</span>
-	                        	<button type="button" class="coupon-value"></button>
+	                        	<button type="button" class="coupon-value">0</button>
 	                        </div>
 	                        <div class="my-cinema">
 	                        	<div class="my-cinema-title">
 	                        		<span>MY 영화관</span>
-	                        		<button type="button"><img src="/static/images/whole_menu_logined_set_my_cinema.png" alt=""></button>
+	                        		<button type="button" class="to-my-cinema"><img src="/static/images/whole_menu_logined_set_my_cinema.png" alt=""></button>
 	                        	</div>
 	                        	<div class="my-cinema-rank">
-	                        		<a href="" class="">
-	                        			<span>+</span>
-	                        			<span>1st</span>
+	                        		<a href="#" class="set-my-cinema-rank">
+	                        			<img class="plus" src="/static/images/whole_menu_logined_plus.png" alt="">
+	                        			<span class="rank">1st</span>
 	                        		</a>
-	                        		<a href="" class="">
-	                        			<span>+</span>
-	                        			<span>2nd</span>
+	                        		<a href="#" class="set-my-cinema-rank">
+	                        			<img class="plus" src="/static/images/whole_menu_logined_plus.png" alt="">
+	                        			<span class="rank">2nd</span>
 	                        		</a>
-	                        		<a href="" class="">
-	                        			<span>+</span>
-	                        			<span>3rd</span>
+	                        		<a href="#" class="set-my-cinema-rank">
+	                        			<img class="plus" src="/static/images/whole_menu_logined_plus.png" alt="">
+	                        			<span class="rank">3rd</span>
 	                        		</a>
 	                        	</div>
 	                        </div>

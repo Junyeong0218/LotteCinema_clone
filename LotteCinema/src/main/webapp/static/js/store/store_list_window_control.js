@@ -3,6 +3,7 @@ window.onscroll = (event) => {
     fixControlForTab(event);
     fixControlForAside(event);
     fixControlForsideBanner(event);
+    moveTabUnderline();
 }
 
 window.onload = () => {
@@ -12,4 +13,5 @@ window.onload = () => {
     setFooterBanner();
     setWholeMenuBanner();
     readjustAsideTop();
+    detectTopBannerHeight();
 }
