@@ -13,6 +13,8 @@
   		#{name},
   		#{phone},
   		#{email},
+  		#{email_assent},
+  		#{sms_assent},
   		now(),
   		now()
   	);

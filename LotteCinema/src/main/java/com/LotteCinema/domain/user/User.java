@@ -18,6 +18,8 @@ public class User {
 	private String name;
 	private String phone;
 	private String email;
+	private boolean email_assent;
+	private boolean sms_assent;
 	private LocalDateTime create_date;
 	private LocalDateTime update_date;
 }

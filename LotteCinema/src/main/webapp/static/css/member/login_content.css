@@ -61,7 +61,7 @@
 
 .member {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     width: 980px;
     height: 363.5px;

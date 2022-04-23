@@ -1,5 +1,9 @@
 const select_box = document.querySelectorAll(".select-box");
 const member_btn = document.querySelectorAll(".member-btn");
+const login_btn = document.querySelector(".login");
+const usernameInput = document.querySelector(".username");
+const passwordInput = document.querySelector(".password");
+
 
 window.onload = () => {
 	setTopBanner();
@@ -31,3 +35,30 @@ function addClassCurrent(event) {
         }
     }
 }
+
+
+login_btn.onclick = () => {
+	$.ajax({
+		url:"/member/login",
+		type:"post",
+		data:{
+			"username":usernameInput.value,
+			"password":passwordInput.value
+		},
+		dataType:JSON.parse,
+		success: function(data){
+			if(data == true){
+				alert("로그인 성공");
+			}else {
+				alert("잘못된 접근입니다.")
+			}
+		},
+		error: function() {
+			alert("비동기 처리 오류");
+		}
+	});
+}
+
+
+
+

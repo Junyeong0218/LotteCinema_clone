@@ -5,6 +5,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,14 +28,15 @@ public class RestController {
 	
 	@ResponseBody
 	@RequestMapping(value = SIGNUP, method = RequestMethod.POST)
-	public void signupSubmit(SignupRequestDto signupRequestDto, HttpServletResponse response) throws IOException {
+	public String signupSubmit(SignupRequestDto signupRequestDto, HttpServletResponse response) throws IOException {
 		String nullResult = valueIsNull(signupRequestDto);
 		if(nullResult.equals("/member/login")) {
 			boolean result = authService.signup(signupRequestDto);
+			
 			if(!result) nullResult = "/member/join/signup/error";
-			response.sendRedirect(nullResult);
+			return nullResult;
 		}else {
-			response.sendRedirect(nullResult);
+			return nullResult;
 		}
 	}
 	

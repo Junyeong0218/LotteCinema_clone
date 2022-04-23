@@ -18,6 +18,8 @@ public class SignupRequestDto {
 	private String name;
 	private String phone;
 	private String email;
+	private boolean email_assent;
+	private boolean sms_assent;
 	
 	
 	public User toEntity() {
@@ -26,6 +28,8 @@ public class SignupRequestDto {
 				.name(name)
 				.phone(phone)
 				.email(email)
+				.email_assent(email_assent)
+				.sms_assent(sms_assent)
 				.build();
 	}
 }

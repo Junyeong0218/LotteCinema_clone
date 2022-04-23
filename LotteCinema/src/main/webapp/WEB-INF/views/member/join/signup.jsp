@@ -58,17 +58,17 @@
                 <div class="agree-marketing">
                     <span class="form-title">마케팅 정보 수신동의</span>
                     <div class="check-all">
-                        <input type="radio" id="checkAll" name="check-all" class="radiobox" checked>
+                        <input type="checkbox" id="checkAll" name="check-all" class="radiobox" onclick="selectAll(this)">
                         <label for="checkAll"><img src="/static/images/radio_button_img.png" alt=""></label>
                         <span>전체동의</span>
                     </div>
                     <div class="radio-button-wrapper">
                         <span class="row-title">롯데컬처웍스</span>
                         <div class="radio-buttons">
-                            <input type="radio" id="emailAccept" name="email-accept" class="radiobox">
+                            <input type="checkbox" id="emailAccept" name="accept" class="radiobox" onclick="checkSelectAll(this)">
                             <label for="emailAccept"><img src="/static/images/radio_button_img.png" alt=""></label>
                             <span>E-mail</span>
-                            <input type="radio" id="smsAccept" name="sms-accept" class="radiobox">
+                            <input type="checkbox" id="smsAccept" name="accept" class="radiobox" onclick="checkSelectAll(this)">
                             <label for="smsAccept"><img src="/static/images/radio_button_img.png" alt=""></label>
                             <span>SMS</span>
                         </div>
