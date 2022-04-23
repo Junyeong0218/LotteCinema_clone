@@ -59,11 +59,12 @@ public class VerifyFlags {
 	@RequestMapping(value = "/member/join/card_certificate", method = RequestMethod.POST)
 	@ResponseBody
 	public boolean getCardCertificate(SignupRequestDto dto, HttpServletRequest request) {
-		dto.setTerms(Terms.asCard(request.getParameter("card_company"),
-															 request.getParameter("card_number"),
+		dto.setTerms(Terms.asCard(dto.getCard_company(),
+															 dto.getCard_number(),
 															 Integer.parseInt(request.getParameter("certificate_flag"))));
 		
 		System.out.println(dto);
+		System.out.println(dto.isValid());
 		if(dto.isValid()) {
 			HttpSession session = request.getSession(); 
 			session.setAttribute("signupRequestDto", dto);

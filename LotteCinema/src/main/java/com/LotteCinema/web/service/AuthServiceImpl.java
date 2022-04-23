@@ -1,12 +1,15 @@
 package com.LotteCinema.web.service;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.LotteCinema.web.entity.terms.CardTerms;
 import com.LotteCinema.web.entity.terms.EmailTerms;
 import com.LotteCinema.web.entity.terms.PhoneTerms;
+import com.LotteCinema.web.entity.user.User;
 import com.LotteCinema.web.repository.AuthRepository;
+import com.LotteCinema.web.requestDto.SigninRequestDto;
 import com.LotteCinema.web.requestDto.SignupRequestDto;
 
 @Service
@@ -31,8 +34,8 @@ public class AuthServiceImpl implements AuthService {
 	}
 	
 	@Override
-	public boolean checkCardNumber(String cardNumber) {
-		return authRepository.checkCardNumber(cardNumber) > 0 ? true : false;
+	public boolean checkCardNumber(String card_number) {
+		return authRepository.checkCardNumber(card_number) > 0 ? true : false;
 	}
 	
 	@Override
@@ -61,5 +64,20 @@ public class AuthServiceImpl implements AuthService {
 		
 		result += authRepository.insertMarketingFlags(signupRequestDto);
 		return result > 0 ? true : false;
+	}
+	
+	@Override
+	public User signin(SigninRequestDto signinRequestDto) {
+		String db_password = authRepository.selectPassword(signinRequestDto);
+		if(db_password == null || db_password == "") return null;
+		
+		boolean isSame = BCrypt.checkpw(signinRequestDto.getPassword(), db_password);
+		
+		if(isSame) {
+			User user = authRepository.selectUserByUsername(signinRequestDto.getUsername());
+			return user;
+		} else {
+			return null;
+		}
 	}
 }

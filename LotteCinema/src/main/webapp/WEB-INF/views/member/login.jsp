@@ -5,14 +5,15 @@
 
 <head>
 
-    <title>Document</title>
+    <title>Login - 롯데시네마</title>
+	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/container.css">
     <link rel="stylesheet" href="/static/css/store/header.css">
     <link rel="stylesheet" href="/static/css/store/aside_bar.css">
     <link rel="stylesheet" href="/static/css/store/banner_section.css">
     <link rel="stylesheet" href="/static/css/store/footer.css">
     <link rel="stylesheet" href="/static/css/member/login_content.css">
-
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
@@ -51,7 +52,7 @@
 	                                    <input type="text" class="username" placeholder="아이디 또는 이메일을 입력해 주세요.">
 	                                    <input type="password" class="password" placeholder="비밀번호를 입력해 주세요.">
 	                                </div>
-	                                <button>로그인</button>
+	                                <button type="button" class="member-login">로그인</button>
 	                            </div>
 	                            <div class="login-assist">
 	                                <div class="login-check">
@@ -59,7 +60,7 @@
 	                                    <label for="checkSavedID">아이디 저장</label>
 	                                </div>
 	                                <div class="login-menu">
-	                                    <a href="#">회원가입</a>
+	                                    <a href="/member/join">회원가입</a>
 	                                    <a href="#">아이디 찾기</a>
 	                                    <a href="#">비밀번호 찾기</a>
 	                                </div>
@@ -416,6 +417,7 @@
 	<script src="/static/js/store/nav_control.js"></script>
     <script src="/static/js/store/scroll_control.js"></script>
     <script src="/static/js/store/footer_banner_control.js"></script>
+    <script src="/static/js/member/login_tab_control.js"></script>
     <script src="/static/js/member/login.js"></script>
 </body>
 

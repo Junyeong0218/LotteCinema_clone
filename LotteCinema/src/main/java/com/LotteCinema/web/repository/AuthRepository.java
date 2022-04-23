@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Mapper;
 import com.LotteCinema.web.entity.terms.CardTerms;
 import com.LotteCinema.web.entity.terms.EmailTerms;
 import com.LotteCinema.web.entity.terms.PhoneTerms;
+import com.LotteCinema.web.entity.user.User;
+import com.LotteCinema.web.requestDto.SigninRequestDto;
 import com.LotteCinema.web.requestDto.SignupRequestDto;
 
 @Mapper
@@ -24,4 +26,8 @@ public interface AuthRepository {
 	public int insertEmailTerms(EmailTerms emailTerms);
 	
 	public int insertMarketingFlags(SignupRequestDto signupRequestDto);
+	
+	public String selectPassword(SigninRequestDto singinRequestDto);
+	
+	public User selectUserByUsername(String username);
 }

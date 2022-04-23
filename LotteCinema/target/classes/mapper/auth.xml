@@ -84,6 +84,10 @@
 			0,
 			null
 		);
+		
+		<selectKey keyProperty="id"  resultType="Integer"  order="AFTER">
+			select id from user_detail where username = #{username};
+		</selectKey>
 	</insert>
 	
 	<insert id="signupEmail" parameterType="com.LotteCinema.web.requestDto.SignupRequestDto">
@@ -177,5 +181,23 @@
 			now()
 		);
 	</insert>
+	
+	<select id="selectPassword" parameterType="com.LotteCinema.web.requestDto.SigninRequestDto" resultType="String">
+		select 
+			password	
+		from	
+			user_mst
+		where 
+			username = #{username};
+	</select>
+	
+	<select id="selectUserByUsername" parameterType="String" resultType="com.LotteCinema.web.entity.user.User">
+		select 
+			*
+		from
+			user_detail
+		where 
+			username = #{username};
+	</select>
 	
 </mapper>

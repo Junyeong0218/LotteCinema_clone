@@ -34,7 +34,7 @@ public class CheckUserinfo {
 	
 	@RequestMapping(value = "/member/join/check-card-number", method = RequestMethod.POST)
 	@ResponseBody
-	public boolean checkCardNumber(String cardNumber) {
-		return authService.checkCardNumber(cardNumber);
+	public boolean checkCardNumber(String card_number) {
+		return authService.checkCardNumber(card_number);
 	}
 }

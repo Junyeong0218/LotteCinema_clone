@@ -1,5 +1,7 @@
 package com.LotteCinema.web.service;
 
+import com.LotteCinema.web.entity.user.User;
+import com.LotteCinema.web.requestDto.SigninRequestDto;
 import com.LotteCinema.web.requestDto.SignupRequestDto;
 
 public interface AuthService {
@@ -10,4 +12,6 @@ public interface AuthService {
 	public boolean checkCardNumber(String cardNumber);
 	
 	public boolean signup(SignupRequestDto signupRequestDto);
+	
+	public User signin(SigninRequestDto signinRequestDto);
 }

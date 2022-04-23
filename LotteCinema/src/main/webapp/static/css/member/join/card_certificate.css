@@ -4,14 +4,12 @@
 
 .mast-body {
     width: 1312px;
-    height: 1094px;
 }
 
 .main-container {
     margin: 0 auto;
     padding: 40px 0 100px;
     max-width: 1100px;
-    height: 1000px;
 }
 
 .main-headline span {
@@ -21,13 +19,11 @@
 
 .main-contents {
     width: 1100px;
-    height: 623.22px;
 }
 
 .card-section {
     margin-bottom: 70px;
     width: 100%;
-    height: 222.22px;
 }
 
 .select-card {
@@ -50,15 +46,24 @@
     flex-wrap: wrap;
     padding: 20px 0;
     width: 100%;
-    height: 165.23px;
 }
 
-.card-list li {
-    margin-right: 8px;
+.logo-img {
+    margin: 0 8px 8px 0;
     padding: 5px 10px;
-    width: 176.66px;
-    height: 54.81px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.06%;
     border: 2px solid #c0c0c0;
+    border-radius: 2px;
+    background: none;
+    transition: 200ms ease-in-out;
+}
+
+.logo-img.checked {
+	border: 2px solid #009BFA;
+	border-radius: 4px;
 }
 
 .card-list :nth-child(6) {
@@ -68,6 +73,7 @@
 .logo-img img {
     width: 152.66px;
     height: 40.81px;
+    pointer-events: none;
 }
 
 .card-desceiption {
@@ -92,6 +98,84 @@
     color: #000;
 }
 
+.card-number-section {
+	margin-bottom: 70px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.card-number-section .title {
+	padding-bottom: 5px;
+	width: 100%;
+	height: 31px;
+	border-bottom: 1px solid black;
+	font-size: 17px;
+	color: black;
+}
+
+.card-inputs {
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-bottom: 1px solid #d0d0d0;
+}
+
+.card-inputs > input {
+	width: 108px;
+	height: 34px;
+	border: none;
+	background-color: rgb(239, 239, 239);
+	font-size: 15px;
+	color: black;
+	text-align: center;
+	line-height: 34px;
+}
+
+.card-inputs > input:focus {
+	outline: 1px solid #ee1c25;
+	background-color: white;
+}
+
+.card-inputs > input::-webkit-outer-spin-button,
+.card-inputs > input::-webkit-inner-spin-button {
+	appearance: none;
+	-webkit-apperance: none;
+	margin: 0;
+}
+
+.separator {
+	margin: 0 3px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.form-message {
+    margin-top: 5px;
+    display: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: black;
+    transition: 200ms ease-in-out;
+}
+
+.form-message.black {
+	display: inline-block;
+	color: black;
+}
+
+.form-message.red {
+	display: inline-block;
+    color: #EE1C25;
+}
+
+.form-message.green {
+	display: inline-block;
+	color: #0C8448;
+}
 
 .type-section {
     margin-bottom: 70px;
@@ -112,17 +196,27 @@
     flex-wrap: wrap;
     padding: 20px 0;
     width: 100%;
-    height: 190px;
-
 }
 
 .checking-box {
-    position: relative;
-    padding: 19px 120px 23px 0;
+	position: relative;
+	margin-top: 10px;
+    padding: 19px 105px 23px 0;
+    display: flex;
+    justify-content: space-between;
     width: 550px;
     height: 65px;
     border: none;
     border-bottom: 1px solid #ebebeb;
+}
+
+.checking-box:nth-child(2) {
+	padding: 19px 0 23px 105px;
+}
+
+.checking-box > div {
+	display: flex;
+	align-items: center;
 }
 
 .app-cert {
@@ -130,31 +224,34 @@
     height: 18px;
 }
 
-.checking-box input {
+.checking-box > div > input {
     color: #8a8a8a;
+    appearance: none;
+    background: url("/static/images/radio_button_img.png") no-repeat;
+    background-position: top 0 left 0;
+    background-size: auto 18px;
+    cursor: pointer;
 }
 
-.checking-box label {
-    position: absolute;
-    top: 17px;
-    left: 23px;
+.checking-box > div > input:checked {
+	background-position: top 0 left -46px;
+}
+
+.checking-box > div > label {
     margin-left: 3px;
-    height: 18px;
     font-size: 15px;
     line-height: 20px;
     color: #8a8a8a;
 }
 
-.checking-box button {
-    position: absolute;
-    top: 17px;
-    right: 100px;
+.checking-box > button {
     font-size: 15px;
     color: #8a8a8a;
     border: none;
+    background: none;
     text-decoration: underline;
 }
 
 .btn-center {
-    margin-top: 160px;
+    margin-top: 70px;
 }

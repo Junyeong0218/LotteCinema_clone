@@ -45,6 +45,7 @@ public class Signup {
 		
 		if(result == true) {
 			session.setAttribute("signupRequestDto", null);
+			session.setAttribute("category", null);
 			session.setAttribute("name", signupRequestDto.getName());
 		}
 		return result;

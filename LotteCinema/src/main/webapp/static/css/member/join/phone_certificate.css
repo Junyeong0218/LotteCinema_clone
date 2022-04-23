@@ -6,9 +6,10 @@ img {
 	pointer-events: none;
 }
 
-input[type='number']::-webkit-outer-spin-button, input[type='number']::-webkit-inner-spin-button
-	{
-	-webkit-appearance: none;
+input[type='number']::-webkit-outer-spin-button, 
+input[type='number']::-webkit-inner-spin-button {
+	appearance: none;
+	-webkit-apperance: none;
 	margin: 0;
 }
 
@@ -342,8 +343,9 @@ input[type='number']::-webkit-outer-spin-button, input[type='number']::-webkit-i
 	background-color: rgb(239, 239, 239);
 }
 
-input[type='number']:focus, .input-nb>select:focus, input[type='text']:focus
-	{
+input[type='number']:focus,  
+input[type='text']:focus,
+.input-nb>select:focus {
 	outline: 1px solid #ee1c25;
 	background-color: white;
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header>
     <div class="pop-up">
         <div class="whole-menu-wrapper">
@@ -112,7 +113,14 @@
                             </td>
                             <td class="menu-items">
                                 <ul>
-                                    <li><a href="/member/login">로그인</a></li>
+                                
+                               		<c:if test="${sessionScope.user == null }">
+	                                    <li><a href="/member/login">로그인</a></li>
+                                	</c:if>
+                                	<c:if test="${sessionScope.user != null }">
+	                                    <li><a href="/member/logout">로그아웃</a></li>
+                                	</c:if>
+                                	
                                     <li><a href="/member/join">회원가입</a></li>
                                     <li><a href="#">아이디/비밀번호찾기</a>
                                     </li>
@@ -158,14 +166,52 @@
                 </div>
                 <div class="user-wrapper">
                     <div class="user-info">
-                        <div class="login-button">
-                            <a href="/member/login">로그인</a>
-                        </div>
-                        <div class="nomember-box">
-                            <span>로그인하시고</span>
-                            <span>다양한 혜택을 확인하세요.</span>
-                            <a href="/member/join" title="회원가입 페이지 이동">회원가입</a>
-                        </div>
+                    
+                    	<c:if test="${sessionScope.user == null}">
+	                        <div class="login-button">
+	                            <a href="/member/login">로그인</a>
+	                        </div>
+	                        <div class="nomember-box">
+	                            <span>로그인하시고</span>
+	                            <span>다양한 혜택을 확인하세요.</span>
+	                            <a href="/member/join" title="회원가입 페이지 이동">회원가입</a>
+	                        </div>
+                    	</c:if>
+                    	<c:if test="${sessionScope.user != null}">
+	                        <div class="user-grade">
+	                        	<span>일반</span>
+	                        </div>
+	                        <div class="welcome-message">
+	                        	<span>${sessionScope.user.name}님 </span><span>반가워요!</span>
+	                        </div>
+	                        <div class="lpoint-info">
+	                        	<img src="/static/images/whole_menu_logined_L_point.png" alt="">
+	                        	<button type="button" class="point-value">0P</button>
+	                        	<span>쿠폰함</span>
+	                        	<button type="button" class="coupon-value"></button>
+	                        </div>
+	                        <div class="my-cinema">
+	                        	<div class="my-cinema-title">
+	                        		<span>MY 영화관</span>
+	                        		<button type="button"><img src="/static/images/whole_menu_logined_set_my_cinema.png" alt=""></button>
+	                        	</div>
+	                        	<div class="my-cinema-rank">
+	                        		<a href="" class="">
+	                        			<span>+</span>
+	                        			<span>1st</span>
+	                        		</a>
+	                        		<a href="" class="">
+	                        			<span>+</span>
+	                        			<span>2nd</span>
+	                        		</a>
+	                        		<a href="" class="">
+	                        			<span>+</span>
+	                        			<span>3rd</span>
+	                        		</a>
+	                        	</div>
+	                        </div>
+                    	</c:if>
+                    	
                     </div>
                     <div class="modal-small-banner">
                         <a href="#">
@@ -208,7 +254,12 @@
             <li><a href="/membership/vip-zone">멤버십</a></li>
             <li><a href="#">고객센터</a></li>
             <li><a href="#">단체관람/대관문의</a></li>
-            <li><a href="/member/login">로그인</a></li>
+            <c:if test="${sessionScope.user == null }">
+                <li><a href="/member/login">로그인</a></li>
+           	</c:if>
+           	<c:if test="${sessionScope.user != null }">
+                <li><a href="/member/logout">로그아웃</a></li>
+           	</c:if>
         </ul>
         <ul class="links2">
             <li class="to-signup">

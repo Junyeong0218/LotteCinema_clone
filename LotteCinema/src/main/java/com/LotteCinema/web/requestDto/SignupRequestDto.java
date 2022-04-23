@@ -49,7 +49,8 @@ public class SignupRequestDto {
 						 phoneTerms.isAgency_flag();
 		} else if(terms instanceof CardTerms) {
 			CardTerms cardTerms = (CardTerms) terms;
-			return !cardTerms.getCard_company().isEmpty() &&
+			return !cardTerms.getCard_company().isEmpty() && 
+						 cardTerms.getCard_company().split("_")[1].equals("card") &&
 						 !cardTerms.getCard_number().isEmpty() &&
 						 cardTerms.getCard_number().length() == 19 &&
 						 cardTerms.getCertificate_flag() > -1 &&
