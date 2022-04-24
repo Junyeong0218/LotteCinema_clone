@@ -1,6 +1,7 @@
 package com.LotteCinema.web.service;
 
 import com.LotteCinema.web.entity.user.User;
+import com.LotteCinema.web.requestDto.FindIdRequestDto;
 import com.LotteCinema.web.requestDto.SigninRequestDto;
 import com.LotteCinema.web.requestDto.SignupRequestDto;
 
@@ -14,4 +15,7 @@ public interface AuthService {
 	public boolean signup(SignupRequestDto signupRequestDto);
 	
 	public User signin(SigninRequestDto signinRequestDto);
+	
+	public String selectUsernameByDto(FindIdRequestDto findIdRequestDto);
+	
 }

@@ -152,7 +152,7 @@ main {
     line-height: 32px;
 }
 
-find-way:first-child input[name='middle_number'] {
+#phone ~ .input-form input[name='middle_number'] {
     margin-left: 7px;
 }
 

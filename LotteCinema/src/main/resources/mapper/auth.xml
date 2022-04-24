@@ -200,4 +200,22 @@
 			username = #{username};
 	</select>
 	
+	<select id="selectUsernameByPhone" parameterType="com.LotteCinema.web.requestDto.FindIdRequestDto" resultType="String">
+		select
+			username
+		from 
+			user_detail
+		where
+			name = #{name} and phone = #{phone};
+	</select>
+	
+	<select id="selectUsernameByEmail" parameterType="com.LotteCinema.web.requestDto.FindIdRequestDto" resultType="String">
+		select
+			username
+		from 
+			user_detail
+		where
+			name = #{name} and email = #{email};
+	</select>
+	
 </mapper>

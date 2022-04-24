@@ -546,11 +546,19 @@ main {
 }
 
 .not-member-reservation {
-    display: flex;
+    display: none;
     flex-direction: column;
     margin: 0px auto;
     padding: 30px 0px 60px;
     width: 980px;
+}
+
+.not-member-reservation.current {
+	display: flex;
+}
+
+.not-member-login.current {
+	display: flex;
 }
 
 .n-reservation-input {

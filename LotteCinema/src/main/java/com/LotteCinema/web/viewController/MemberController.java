@@ -20,6 +20,9 @@ public class MemberController {
 	private final String LOGIN = "/member/login";
 	private final String COMPLETE = "/member/join/complete";
 	private final String LOGOUT = "/member/logout";
+	private final String FIND_ID = "/member/join/find_id";
+	private final String FIND_ID_RESULT = "/member/join/find_id_result";
+	private final String FIND_PASSWORD = "/member/join/find_password";
 	
 	@RequestMapping(value = JOIN, method = RequestMethod.GET)
 	public String join() {
@@ -62,5 +65,20 @@ public class MemberController {
 	public String logout(HttpServletRequest request) {
 		request.getSession().invalidate();
 		return INDEX;
+	}
+	
+	@RequestMapping(value = FIND_ID, method = RequestMethod.GET)
+	public String findId() {
+		return FIND_ID;
+	}
+	
+	@RequestMapping(value = FIND_ID_RESULT, method = RequestMethod.GET)
+	public String findIdResult() {
+		return FIND_ID_RESULT;
+	}
+	
+	@RequestMapping(value = FIND_PASSWORD, method = RequestMethod.GET)
+	public String findPassword() {
+		return FIND_PASSWORD;
 	}
 }

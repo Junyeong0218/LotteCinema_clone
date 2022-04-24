@@ -6,6 +6,7 @@ import com.LotteCinema.web.entity.terms.CardTerms;
 import com.LotteCinema.web.entity.terms.EmailTerms;
 import com.LotteCinema.web.entity.terms.PhoneTerms;
 import com.LotteCinema.web.entity.user.User;
+import com.LotteCinema.web.requestDto.FindIdRequestDto;
 import com.LotteCinema.web.requestDto.SigninRequestDto;
 import com.LotteCinema.web.requestDto.SignupRequestDto;
 
@@ -30,4 +31,8 @@ public interface AuthRepository {
 	public String selectPassword(SigninRequestDto singinRequestDto);
 	
 	public User selectUserByUsername(String username);
+	
+	public String selectUsernameByPhone(FindIdRequestDto findIdRequestDto);
+	public String selectUsernameByEmail(FindIdRequestDto findIdRequestDto);
+	
 }

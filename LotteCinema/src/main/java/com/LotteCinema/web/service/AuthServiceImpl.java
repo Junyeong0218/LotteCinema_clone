@@ -9,6 +9,7 @@ import com.LotteCinema.web.entity.terms.EmailTerms;
 import com.LotteCinema.web.entity.terms.PhoneTerms;
 import com.LotteCinema.web.entity.user.User;
 import com.LotteCinema.web.repository.AuthRepository;
+import com.LotteCinema.web.requestDto.FindIdRequestDto;
 import com.LotteCinema.web.requestDto.SigninRequestDto;
 import com.LotteCinema.web.requestDto.SignupRequestDto;
 
@@ -80,4 +81,14 @@ public class AuthServiceImpl implements AuthService {
 			return null;
 		}
 	}
+	
+	@Override
+	public String selectUsernameByDto(FindIdRequestDto findIdRequestDto) {
+		if(findIdRequestDto.getEmail() == null) {
+			return authRepository.selectUsernameByPhone(findIdRequestDto);
+		} else {
+			return authRepository.selectUsernameByEmail(findIdRequestDto);
+		}
+	}
+	
 }

@@ -10,10 +10,38 @@ password_input.onkeydown = (event) => {
 }
 member_login_button.onclick = loginForMember;
 
-
-
 // -----------------------------------------------
 // Functions
+
+function generateBirthYear() {
+	const birthyear = document.querySelector("#birthyear");
+	for(let i = 2022; i > 1899; i--) {
+		const option = document.createElement("option");
+		option.value = i;
+		option.innerText = i;
+		birthyear.appendChild(option);
+	}
+}
+
+function generateBirthMonth() {
+	const birthmonth = document.querySelector("#birthmonth");
+	for(let i = 0 ; i < 12; i++) {
+		const option = document.createElement("option");
+		option.innerText = `${i + 1}`;
+		option.value = String(i + 1).padStart(2, "0");
+		birthmonth.appendChild(option);
+	}
+}
+
+function generateBirthDate() {
+	const birthday = document.querySelector("#birthday");
+	for(let i = 0; i < 31; i++) {
+		const option = document.createElement("option");
+		option.value = String(i + 1).padStart(2, "0");
+		option.innerText = `${i + 1}`;
+		birthday.appendChild(option);
+	}
+}
 
 function loginForMember() {
 	if(validateMemberInput()) {
