@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -42,17 +43,55 @@
                             <img src="/static/images/membership_friends_title.png" alt="Friends 분기마다 쉽고 빠르게 Level-Up!">
                         </div>
                         <div class="top-information">
-                            <div class="nouser-form">
-                                <div class="signup-message">
-                                    <span>회원가입 하시고</span>
-                                    <span>VIP의 풍성한 혜택을 만나보세요.</span>
-                                </div>
-                                <a href="#">회원가입</a>
-                                <div class="to-signin">
-                                    <span>이미 L.POINT 회원이신가요?</span>
-                                    <a href="#">로그인</a>
-                                </div>
-                            </div>
+                        
+                        	<c:if test="${sessionScope.user == null }">
+	                            <div class="nouser-form">
+	                                <div class="signup-message">
+	                                    <span>회원가입 하시고</span>
+	                                    <span>VIP의 풍성한 혜택을 만나보세요.</span>
+	                                </div>
+	                                <a href="/member/join">회원가입</a>
+	                                <div class="to-signin">
+	                                    <span>이미 L.POINT 회원이신가요?</span>
+	                                    <a href="/member/login">로그인</a>
+	                                </div>
+	                            </div>
+                        	</c:if>
+                        
+                        	<c:if test="${sessionScope.user != null }">
+	                            <div class="user-form">
+	                                <div class="about-user-grade">
+	                                	<strong>${sessionScope.user.name}님은</strong>
+	                                	<span class="user-grade"><span class="user-grade-common">일반</span></span>
+	                                	등급입니다.
+	                                	<button type="button" class="show-accumulate">적립내역</button>
+	                                </div>
+	                                <div class="to-next-grade">
+	                                	3분기 Lv.1까지&nbsp;
+	                                	<strong>20,000원 남았어요!</strong>
+	                                </div>
+	                                <div class="grade-graph">
+	                                	<div class="grades">
+	                                		<span class="gray">Friends</span>
+	                                		<span class="black">Lv.1</span>
+	                                		<span class="black">Lv.2</span>
+	                                		<span class="black">Lv.3</span>
+	                                	</div>
+	                                	<hr>
+	                                	<div class="money-amount">
+	                                		<span>0</span>
+	                                		<span>2만원</span>
+	                                		<span>4만원</span>
+	                                		<span>6만원</span>
+	                                	</div>
+	                                </div>
+	                            </div>
+	                            <div class="to-download-coupon">
+		                            <a href="#">나의 쿠폰 다운받기</a>
+	                            </div>
+                        	</c:if>
+                        	
+                        	
                         </div>
                         <div class="benefit-wrapper">
                             <h2 class="benefit-title">Friends 혜택</h2>
@@ -208,17 +247,47 @@
                             <img src="/static/images/membership_vip_title.png" alt="VIP ZONE 롯데시네마 VIP전용 혜택을 만나보세요.">
                         </div>
                         <div class="top-information">
-                            <div class="nouser-form">
-                                <div class="signup-message">
-                                    <span>회원가입 하시고</span>
-                                    <span>VIP의 풍성한 혜택을 만나보세요.</span>
-                                </div>
-                                <a href="#">회원가입</a>
-                                <div class="to-signin">
-                                    <span>이미 L.POINT 회원이신가요?</span>
-                                    <a href="#">로그인</a>
-                                </div>
-                            </div>
+                        
+                        	<c:if test="${sessionScope.user == null}">
+	                            <div class="nouser-form">
+	                                <div class="signup-message">
+	                                    <span>회원가입 하시고</span>
+	                                    <span>VIP의 풍성한 혜택을 만나보세요.</span>
+	                                </div>
+	                                <a href="/member/join">회원가입</a>
+	                                <div class="to-signin">
+	                                    <span>이미 L.POINT 회원이신가요?</span>
+	                                    <a href="/member/login">로그인</a>
+	                                </div>
+	                            </div>
+                        	</c:if>
+                        
+                        	<c:if test="${sessionScope.user != null}">
+	                            <div class="user-form">
+	                                <div class="about-user-grade">
+	                                	<strong>${sessionScope.user.name}님은</strong>
+	                                	<span class="user-grade"><span class="user-grade-common">일반</span></span>
+	                                	등급입니다.
+	                                	<button type="button" class="show-accumulate">적립내역</button>
+	                                </div>
+	                                <div class="to-next-grade">
+	                                	VIP까지 남은 금액&nbsp;
+	                                	<strong>260,000원</strong>
+	                                </div>
+	                                <div class="grade-graph">
+	                                	<div class="grades">
+	                                		<span class="gray">일반</span>
+	                                		<span class="black">VIP</span>
+	                                	</div>
+	                                	<hr>
+	                                	<div class="money-amount">
+	                                		<span>0</span>
+	                                		<span>26만원</span>
+	                                	</div>
+	                                </div>
+	                            </div>
+                        	</c:if>
+                        	
                         </div>
                         <div class="rank-wrapper">
                             <h4 class="benefit-title">VIP 선정 및 유지 기준</h4>

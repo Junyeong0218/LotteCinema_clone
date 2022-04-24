@@ -73,7 +73,7 @@
                             </td>
                             <td class="menu-items">
                                 <ul>
-                                    <li><a href="/membership/vip-zone">VIP/Friend</a></li>
+                                    <li><a href="/membership/vip_zone">VIP/Friend</a></li>
                                     <li><a href="/membership/mate_club">짝꿍클럽</a></li>
                                     <li><a href="/membership/teenteen_club">틴틴클럽</a></li>
                                     <li><a href="/membership/bravo_club">브라보클럽</a></li>
@@ -237,7 +237,7 @@
             </li>
         </ul>
         <ul class="links">
-            <li><a href="/membership/vip-zone">멤버십</a></li>
+            <li><a href="/membership/vip_zone">멤버십</a></li>
             <li><a href="#">고객센터</a></li>
             <li><a href="#">단체관람/대관문의</a></li>
             <c:if test="${sessionScope.user == null }">
@@ -249,10 +249,21 @@
         </ul>
         <ul class="links2">
             <li class="to-signup">
-                <a href="/member/join">
-                    <span></span>
-                    <span>회원가입</span>
-                </a>
+            
+	            <c:if test="${sessionScope.user == null }">
+	                <a href="/member/join">
+	                    <span></span>
+	                    <span>회원가입</span>
+	                </a>
+	            </c:if>
+            
+	            <c:if test="${sessionScope.user != null }">
+	                <a href="/member/mypage">
+	                    <span></span>
+	                    <span>마이</span>
+	                </a>
+	            </c:if>
+	            
             </li>
             <li class="to-reserve">
                 <a href="#">

@@ -126,11 +126,131 @@ body {
 }
 
 .nouser-form,
+.user-form,
 .signup-message {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+
+.user-form {
+	margin-bottom: 40px;
+	padding: 0 162px;
+}
+
+.about-user-grade {
+	position: relative;
+	margin: 37px 0 10px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	font-size: 18px;
+}
+
+.about-user-grade > strong {
+	margin-right: 5px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.about-user-grade > .user-grade {
+	margin-right: 5px;
+}
+
+.show-accumulate {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-right: 9px;
+	border: none;
+	background: url("/static/images/membership_right_arrow.png") no-repeat right center;
+	font-size: 11px;
+	color: black;
+}
+
+.to-next-grade {
+	padding: 10px 0;
+	width: 100%;
+	height: 48px;
+	font-size: 18px;
+	color: black;
+	text-align: center;
+}
+
+.to-next-grade > strong {
+	margin-left: 4px;
+	font-family: 'Roboto';
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.vip .to-next-grade > strong {
+	font-size: 18px;
+}
+
+.grade-graph {
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+	height: 53px;
+}
+
+.grades,
+.money-amount {
+	display: flex;
+	justify-content: space-between;
+}
+
+.grades > span,
+.money-amount > span {
+	width: 40px;
+	font-size: 13px;
+}
+
+.grades > span:not(:first-child),
+.money-amount > span:not(:first-child) {
+	text-align: right;
+}
+
+.grades > .gray {
+	font-family: "Roboto";
+	font-weight: normal;
+	color: #666;
+}
+
+.grades > .black {
+	font-family: "Roboto";
+    font-weight: 600;
+    color: black;
+}
+
+.money-amount {
+    font-family: "Roboto";
+    font-size: 13px;
+    color: black;
+}
+
+.to-download-coupon {
+	margin: 30px 0 25px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 40px;
+}
+
+.to-download-coupon > a {
+	padding: 0 40px;
+	height: 100%;
+	border: 1px solid #707070;
+	border-radius: 20px;
+	background-color: black;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+	line-height: 38px;
 }
 
 .signup-message {
