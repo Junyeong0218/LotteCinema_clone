@@ -6,10 +6,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class UserRepositoryImpl implements UserRepository {
-	private final String NAME_SPACE = "com.LotteCinema.domain.user.UserRepository.";
 	
 	@Autowired
 	private SqlSession session;
+	private final String NAME_SPACE = "com.LotteCinema.domain.user.UserRepository.";
 	
 	@Override
 	public int signup(User user) {
@@ -24,5 +24,16 @@ public class UserRepositoryImpl implements UserRepository {
 	@Override
 	public int emailCheck(String email) {
 		return session.selectOne(NAME_SPACE + "emailCheck", email);
+	}
+	
+	
+	@Override
+	public String selectPassword(String username) {
+		return session.selectOne(NAME_SPACE + "selectPassword", username);
+	}
+	
+	@Override
+	public User loadUserByUsername(String username) {
+		return session.selectOne(NAME_SPACE + "loadUserByUsername", username);
 	}
 }

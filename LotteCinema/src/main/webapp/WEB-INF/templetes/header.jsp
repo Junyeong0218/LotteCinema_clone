@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header>
     <div class="pop-up">
         <div class="whole-menu-wrapper">
@@ -209,7 +210,13 @@
             <li><a href="#">멤버십</a></li>
             <li><a href="#">고객센터</a></li>
             <li><a href="#">단체관람/대관문의</a></li>
-            <li><a href="#">로그인</a></li>
+            <c:if test="${sessionScope.user==null}">
+	            <li><a href="#">로그인</a></li>
+            </c:if>
+            <c:if test="${sessionScope.user!=null}">
+	            <li><a href="#">로그아웃</a></li>
+            </c:if>
+            
         </ul>
         <ul class="links2">
             <li class="to-signup">

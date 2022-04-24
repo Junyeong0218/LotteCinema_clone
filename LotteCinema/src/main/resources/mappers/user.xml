@@ -10,6 +10,7 @@
   	values(
   		0,
   		#{username},
+  		#{password},
   		#{name},
   		#{phone},
   		#{email},
@@ -29,5 +30,22 @@
   		username = #{username};
   </select>
   
+  <select id="selectPassword" parameterType="String" resultType="String">
+  	select
+  		password
+  	from
+  		user_mst
+  	where
+  		username = #{username};
+  </select>
+  
+  <select id="loadUserByUsername" parameterType="String" resultType="com.LotteCinema.domain.user.User">
+  	select
+  		*
+  	from
+  		user_mst
+  	where
+  		username = #{username};
+  </select>
   
   </mapper>

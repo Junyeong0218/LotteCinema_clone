@@ -1,5 +1,7 @@
 package com.LotteCinema.web.dto.auth;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import com.LotteCinema.domain.user.User;
 
 import lombok.AllArgsConstructor;
@@ -15,6 +17,7 @@ import lombok.ToString;
 @NoArgsConstructor
 public class SignupRequestDto {
 	private String username;
+	private String password;
 	private String name;
 	private String phone;
 	private String email;
@@ -25,6 +28,7 @@ public class SignupRequestDto {
 	public User toEntity() {
 		return User.builder()
 				.username(username)
+				.password(BCrypt.hashpw(password, BCrypt.gensalt()))
 				.name(name)
 				.phone(phone)
 				.email(email)

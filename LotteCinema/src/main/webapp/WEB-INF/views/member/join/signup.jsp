@@ -40,6 +40,14 @@
                         <input type="text" class="username-input" name="username">
                     </div>
                     <div class="form-row">
+                        <span class="asterisk">*<span class="row-title">비밀번호</span></span>
+                        <input type="password" class="password-input" name="password">
+                    </div>
+                    <div class="form-row">
+                        <span class="asterisk">*<span class="row-title">비밀번호 확인</span></span>
+                        <input type="password" class="verify-password-input" name="verify_password">
+                    </div>
+                    <div class="form-row">
                         <span class="asterisk">*<span class="row-title">이름</span></span>
                         <input type="text" name="name">
                     </div>

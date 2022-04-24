@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.LotteCinema.domain.user.SigninDto;
+import com.LotteCinema.domain.user.User;
 import com.LotteCinema.web.Service.AuthService;
 import com.LotteCinema.web.dto.auth.SignupRequestDto;
 import com.LotteCinema.web.validation.Auth.AuthValidation;
@@ -25,6 +27,7 @@ public class RestController {
 	private AuthService authService;
 	
 	private final String SIGNUP = "/member/join/signup";
+	private final String LOGIN = "/member/login";
 	
 	@ResponseBody
 	@RequestMapping(value = SIGNUP, method = RequestMethod.POST)
@@ -68,4 +71,19 @@ public class RestController {
 		}
 		return "/member/login";
 	}
+	
+	@ResponseBody
+	@RequestMapping(value=LOGIN, method=RequestMethod.POST)
+	public String signin(SigninDto signinDto, HttpServletRequest request) {
+		User user = authService.loadUserByUsername(signinDto);
+		if(user==null) {
+			return "false";
+		}else {
+			request.getSession().setAttribute("user", user);
+			return "true";
+		}
+		
+	}
+	
+	
 }
