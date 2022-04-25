@@ -1,5 +1,7 @@
 package com.LotteCinema.web.apiController.signup;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +18,12 @@ public class CheckUserinfo {
 
 	@RequestMapping(value = "/member/join/check-username", method = RequestMethod.POST)
 	@ResponseBody
-	public boolean checkUsername(String username) {
-		return authService.checkUsername(username);
+	public boolean checkUsername(String username, HttpServletRequest request) {
+		boolean result = authService.checkUsername(username);
+		if(request.getHeader("Referer").contains("find_password")) {
+			request.getSession().setAttribute("username", username);
+		}
+		return result;
 	}
 	
 	@RequestMapping(value = "/member/join/check-email", method = RequestMethod.POST)

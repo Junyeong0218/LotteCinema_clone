@@ -23,6 +23,7 @@ public class MemberController {
 	private final String FIND_ID = "/member/join/find_id";
 	private final String FIND_ID_RESULT = "/member/join/find_id_result";
 	private final String FIND_PASSWORD = "/member/join/find_password";
+	private final String FIND_PASSWORD_CERTIFICATE = "/member/join/find_password_certificate";
 	
 	@RequestMapping(value = JOIN, method = RequestMethod.GET)
 	public String join() {
@@ -80,5 +81,10 @@ public class MemberController {
 	@RequestMapping(value = FIND_PASSWORD, method = RequestMethod.GET)
 	public String findPassword() {
 		return FIND_PASSWORD;
+	}
+	
+	@RequestMapping(value = FIND_PASSWORD_CERTIFICATE, method = RequestMethod.GET)
+	public String findPasswordCertificate() {
+		return FIND_PASSWORD_CERTIFICATE;
 	}
 }

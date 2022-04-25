@@ -10,7 +10,6 @@ cancel_button.onclick = () => location.href="/member/login";
 
 submit_button.onclick = () => {
 	const result = username_input.value.match(username_regex);
-	console.log(result);
 	if(result != null && result[0] == result.input) {
 		$.ajax({
 			type: "post",
@@ -19,8 +18,7 @@ submit_button.onclick = () => {
 			dataType: "json",
 			success: function (data) {
 				if(data == true) {
-					alert("아이디 찾음");
-					/*location.href = ""; */
+					location.href = "/member/join/find_password_certificate";
 				} else {
 					alert("아이디를 찾을 수 없습니다.");
 				}
