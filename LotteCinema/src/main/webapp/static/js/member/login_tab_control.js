@@ -13,7 +13,6 @@ window.onload = () => {
     readjustAsideTop();
     generateBirthYear();
     generateBirthMonth();
-    generateBirthDate();
 }
 
 window.onscroll = (event) => {

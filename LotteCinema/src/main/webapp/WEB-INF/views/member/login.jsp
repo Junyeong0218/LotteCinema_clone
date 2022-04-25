@@ -8,10 +8,6 @@
     <title>Login - 롯데시네마</title>
 	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/container.css">
-    <link rel="stylesheet" href="/static/css/store/header.css">
-    <link rel="stylesheet" href="/static/css/store/aside_bar.css">
-    <link rel="stylesheet" href="/static/css/store/banner_section.css">
-    <link rel="stylesheet" href="/static/css/store/footer.css">
     <link rel="stylesheet" href="/static/css/member/login_content.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
@@ -20,13 +16,13 @@
 	<div class="container">
 	
 		<!-- top_banner -->
-        <jsp:include page="/WEB-INF/templetes/top_banner.jsp" />
+        <jsp:include page="/WEB-INF/templates/top_banner.jsp" />
         
         <!-- header -->
-        <jsp:include page="/WEB-INF/templetes/header.jsp" />
+        <jsp:include page="/WEB-INF/templates/header.jsp" />
         
         <!-- aside_bar -->
-        <jsp:include page="/WEB-INF/templetes/aside_bar.jsp" />
+        <jsp:include page="/WEB-INF/templates/aside_bar.jsp" />
         
         <main>
         	<div id="contents" class="contents">
@@ -83,12 +79,14 @@
 		                            <div class="n-login-items">
 		                                <div class="n-login-input">
 		                                    <div class="label-box">
-		                                        <label for="username">이름<input type="text"
-		                                                placeholder="이름을 입력해 주세요"></label>
+		                                        <label for="username">이름
+		                                        	<input type="text" placeholder="이름을 입력해 주세요">
+		                                        </label>
 		                                    </div>
 		                                    <div class="label-box">
-		                                        <label for="userphone">휴대폰번호<input type="text"
-		                                                placeholder="휴대폰 번호(- 생략)를 입력해 주세요."></label>
+		                                        <label for="userphone">휴대폰번호
+		                                        	<input type="text" placeholder="휴대폰 번호(- 생략)를 입력해 주세요.">
+		                                        </label>
 		                                    </div>
 		                                    <div class="label-box">
 		                                        <label for="birth" class="birth-year-label">생년월일</label>
@@ -108,12 +106,14 @@
 		                                        </div>
 		                                    </div>
 		                                    <div class="label-box">
-		                                        <label for="passowrd2">예매 비밀번호<input type="text"
-		                                                placeholder="예매 비밀번호 (4자리)를 입력해 주세요."></label>
+		                                        <label for="passowrd2">예매 비밀번호
+		                                        	<input type="text" placeholder="예매 비밀번호 (4자리)를 입력해 주세요.">
+		                                        </label>
 		                                    </div>
 		                                    <div class="label-box">
-		                                        <label for="password3">예매 비밀번호 확인<input type="text"
-		                                                placeholder="예매 비밀번호 (4자리)를 재입력해 주세요."></label>
+		                                        <label for="password3">예매 비밀번호 확인
+		                                        	<input type="text" placeholder="예매 비밀번호 (4자리)를 재입력해 주세요.">
+		                                        </label>
 		                                    </div>
 		                                </div>
 		                                <div class="n-login-banner">
@@ -121,41 +121,37 @@
 		                                </div>
 	                            	</div>
 		                            <div class="n-login-info">
-		                                <p>비회원 로그인 시 예매 및 예매확인/취소 메뉴만 이용 가능하며 관람권, 할인권을 포함한 기타 결제, 할인수단은 정회원 로그인 시 사용 가능
-		                                    합니다.
-		                                </p>
+		                                <p>비회원 로그인 시 예매 및 예매확인/취소 메뉴만 이용 가능하며 관람권, 할인권을 포함한 기타 결제, 할인수단은 정회원 로그인 시 사용 가능합니다.</p>
 		                            </div>
 	                        	</div>
 		                        <div class="txtarea-box">
 		                            <div class="txtarea-box">
 		                                <div class="txtarea">
-		                                    <span class="focus-textarea"> 개인정보의 수집목적 및 항목</span><br>
-		                                    ① 개인정보 수집 목적: 비회원 에매확인 및 이용자 식별<br>
-		                                    ②수집항목: 이름, 휴대폰번호, 생년월일, 고유번호<br><br>
+		                                    <span class="focus-textarea"> 개인정보의 수집목적 및 항목</span>
+		                                    <br>① 개인정보 수집 목적: 비회원 에매확인 및 이용자 식별
+		                                    <br>②수집항목: 이름, 휴대폰번호, 생년월일, 고유번호
+		                                    <br>
+		                                    <br>
 		                                    <span class="color-red">
-		                                        <br>개인정보의 보유 및 이용기간<br>
-		                                        개인정보는 영화 예매 완료 후 동의일로부터 70일까지 위 이용 목적으로 이용 및 보유 합니다. (단, 생년월일은 이용자 식별 목적으로
-		                                        이용되며
-		                                        별도 보관되지 않습니다.)<br>
-		                                        다만, 상법 등 관련법령의 규정에 의하여 거래 관련 관리 의무 관계의 확인 등을 이유로 일정기간 보유하여야 할 필요가 있을 경우 아래와
-		                                        같이
-		                                        보유합니다.<br>
-		                                        대금결제 및 재화 등의 공급에 관한 기록 : 5년
+		                                        <br>개인정보의 보유 및 이용기간
+		                                        <br>개인정보는 영화 예매 완료 후 동의일로부터 70일까지 위 이용 목적으로 이용 및 보유 합니다. (단, 생년월일은 이용자 식별 목적으로 이용되며 별도 보관되지 않습니다.)
+		                                        <br>다만, 상법 등 관련법령의 규정에 의하여 거래 관련 관리 의무 관계의 확인 등을 이유로 일정기간 보유하여야 할 필요가 있을 경우 아래와 같이 보유합니다.
+		                                        <br>대금결제 및 재화 등의 공급에 관한 기록 : 5년
 		                                    </span>
-		                                    <br><br>※ 비회원 예매서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이
-		                                    제한됩니다.
+		                                    <br>
+		                                    <br>※ 비회원 예매서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다.
 		                                </div>
 		                            </div>
 		                            <div class="agreement-check-box">
-		                                <input type="radio" name="agree-check" id="privacy-Ok1">
-		                                <label for="privacy-Ok1">동의</label>
-		                                <input type="radio" name="agree-check" id="privacy-Ok2">
-		                                <label for="privacy-Ok2">동의하지 않음</label>
+		                                <input type="radio" name="agree-check" id="agreeForLogin" checked="checked">
+		                                <label for="agreeForLogin">동의</label>
+		                                <input type="radio" name="agree-check" id="disagreeForLogin">
+		                                <label for="disagreeForLogin">동의하지 않음</label>
 		                            </div>
 		                        </div>
 		                        <div class="signup-signin-button">
-		                            <a href="#" class="btn-signup">회원가입</a>
-		                            <a href="#" class="btn-signin">비회원 로그인</a>
+		                            <a href="/member/join" class="btn-signup">회원가입</a>
+		                            <button type="button" class="btn-signin">비회원 로그인</button>
 		                        </div>
 	                    	</div>
 		                    <div class="not-member-reservation">
@@ -163,16 +159,19 @@
 		                            <div class="n-login-items">
 		                                <div class="n-reservation-input">
 		                                    <div class="label-box">
-		                                        <label for="username">이름<input type="text"
-		                                                placeholder="이름을 입력해 주세요"></label>
+		                                        <label for="username">이름
+		                                        	<input type="text" placeholder="이름을 입력해 주세요">
+		                                        </label>
 		                                    </div>
 		                                    <div class="label-box">
-		                                        <label for="userphone">휴대폰번호<input type="text"
-		                                                placeholder="휴대폰 번호(- 생략)를 입력해 주세요."></label>
+		                                        <label for="userphone">휴대폰번호
+		                                        	<input type="text" placeholder="휴대폰 번호(- 생략)를 입력해 주세요.">
+		                                        </label>
 		                                    </div>
 		                                    <div class="label-box">
-		                                        <label for="passowrd2">예매 비밀번호<input type="text"
-		                                                placeholder="예매 비밀번호 (4자리)를 입력해 주세요."></label>
+		                                        <label for="passowrd2">예매 비밀번호
+		                                        	<input type="text" placeholder="예매 비밀번호 (4자리)를 입력해 주세요.">
+		                                        </label>
 		                                    </div>
 		                                </div>
 		                                <div class="n-login-banner">
@@ -183,33 +182,31 @@
 		                        <div class="txtarea-box">
 		                            <div class="txtarea-box">
 		                                <div class="txtarea">
-		                                    <span class="focus-textarea"> 개인정보의 수집목적 및 항목</span><br>
-		                                    ① 개인정보 수집 목적: 비회원 에매확인 및 이용자 식별<br>
-		                                    ②수집항목: 이름, 휴대폰번호, 생년월일, 고유번호<br><br>
+		                                    <span class="focus-textarea"> 개인정보의 수집목적 및 항목</span>
+		                                    <br>① 개인정보 수집 목적: 비회원 에매확인 및 이용자 식별
+		                                    <br>②수집항목: 이름, 휴대폰번호, 생년월일, 고유번호
+		                                    <br>
+		                                    <br>
 		                                    <span class="color-red">
-		                                        <br>개인정보의 보유 및 이용기간<br>
-		                                        개인정보는 영화 예매 완료 후 동의일로부터 70일까지 위 이용 목적으로 이용 및 보유 합니다. (단, 생년월일은 이용자 식별 목적으로
-		                                        이용되며
-		                                        별도 보관되지 않습니다.)<br>
-		                                        다만, 상법 등 관련법령의 규정에 의하여 거래 관련 관리 의무 관계의 확인 등을 이유로 일정기간 보유하여야 할 필요가 있을 경우 아래와
-		                                        같이
-		                                        보유합니다.<br>
-		                                        대금결제 및 재화 등의 공급에 관한 기록 : 5년
+		                                        <br>개인정보의 보유 및 이용기간
+		                                        <br>개인정보는 영화 예매 완료 후 동의일로부터 70일까지 위 이용 목적으로 이용 및 보유 합니다. (단, 생년월일은 이용자 식별 목적으로 이용되며 별도 보관되지 않습니다.)
+		                                        <br>다만, 상법 등 관련법령의 규정에 의하여 거래 관련 관리 의무 관계의 확인 등을 이유로 일정기간 보유하여야 할 필요가 있을 경우 아래와 같이 보유합니다.
+		                                        <br>대금결제 및 재화 등의 공급에 관한 기록 : 5년
 		                                    </span>
-		                                    <br><br>※ 비회원 예매서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이
-		                                    제한됩니다.
+		                                    <br>
+		                                    <br>※ 비회원 예매서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다.
 		                                </div>
 		                            </div>
 		                            <div class="agreement-check-box">
-		                                <input type="radio" name="agree-check" id="privacyOk1" checked>
-		                                <label for="privacyOk1">동의</label>
-		                                <input type="radio" name="agree-check" id="privacyOk2">
-		                                <label for="privacyOk2">동의하지 않음</label>
+		                                <input type="radio" name="agree-check" id="agreeForReservation" checked="checked">
+		                                <label for="agreeForReservation">동의</label>
+		                                <input type="radio" name="agree-check" id="disagreeForReservation">
+		                                <label for="disagreeForReservation">동의하지 않음</label>
 		                            </div>
 		                        </div>
 		                        <div class="signup-signin-button">
-		                            <a href="#" class="btn-signup">회원가입</a>
-		                            <a href="#" class="btn-signin">비회원 예매확인</a>
+		                            <a href="/member/join" class="btn-signup">회원가입</a>
+		                            <button type="button" class="btn-signin">비회원 예매확인</button>
 		                        </div>
 	                    	</div>
                     	</div>
@@ -222,9 +219,9 @@
 	                                <a href="#" class="btn-naver-social" title="네이버 계정으로 새창열기">네이버 계정으로 로그인</a>
 	                                <a href="#" class="btn-cacao-social" title="카카오 계정으로 새창열기">카카오 계정으로 로그인</a>
 	                                <div class="login-menu-social">
-	                                    <a href="#" title="페이지 이동">회원가입</a>
-	                                    <a href="#" title="페이지 이동">아이디 찾기</a>
-	                                    <a href="#" title="페이지 이동">비밀번호 찾기</a>
+	                                    <a href="/member/join" title="페이지 이동">회원가입</a>
+	                                    <a href="/member/join/find_id" title="페이지 이동">아이디 찾기</a>
+	                                    <a href="/member/join/find_password" title="페이지 이동">비밀번호 찾기</a>
 	                                </div>
 	                            </div>
 	                        </div>
@@ -238,18 +235,18 @@
         </main>
         
         <!-- side_banner -->
-        <jsp:include page="/WEB-INF/templetes/side_banner.jsp" />
+        <jsp:include page="/WEB-INF/templates/side_banner.jsp" />
         
         <!-- banner_section -->
-        <jsp:include page="/WEB-INF/templetes/banner_section.jsp" />
+        <jsp:include page="/WEB-INF/templates/banner_section.jsp" />
         
         <!-- footer -->
-        <jsp:include page="/WEB-INF/templetes/footer.jsp" />
+        <jsp:include page="/WEB-INF/templates/footer.jsp" />
 	</div>
 	
-	<script src="/static/js/store/nav_control.js"></script>
-    <script src="/static/js/store/scroll_control.js"></script>
-    <script src="/static/js/store/footer_banner_control.js"></script>
+	<script src="/static/js/nav_control.js"></script>
+    <script src="/static/js/scroll_control.js"></script>
+    <script src="/static/js/footer_banner_control.js"></script>
     <script src="/static/js/member/login_tab_control.js"></script>
     <script src="/static/js/member/login.js"></script>
 </body>

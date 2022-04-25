@@ -10,10 +10,6 @@
     <title>이벤트 - 롯데시네마</title>
     <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/container.css">
-    <link rel="stylesheet" href="/static/css/store/header.css">
-    <link rel="stylesheet" href="/static/css/store/aside_bar.css">
-    <link rel="stylesheet" href="/static/css/store/banner_section.css">
-    <link rel="stylesheet" href="/static/css/store/footer.css">
     <link rel="stylesheet" href="/static/css/event/movie.css">
 </head>
 
@@ -21,13 +17,13 @@
     <div class="container">
         
         <!-- top_banner -->
-        <jsp:include page="/WEB-INF/templetes/top_banner.jsp" />
+        <jsp:include page="/WEB-INF/templates/top_banner.jsp" />
         
         <!-- header -->
-        <jsp:include page="/WEB-INF/templetes/header.jsp" />
+        <jsp:include page="/WEB-INF/templates/header.jsp" />
         
         <!-- aside_bar -->
-        <jsp:include page="/WEB-INF/templetes/aside_bar.jsp" />
+        <jsp:include page="/WEB-INF/templates/aside_bar.jsp" />
         
         <main>
             <div id="contents">
@@ -85,19 +81,19 @@
         </main>
 
         <!-- side_banner -->
-        <jsp:include page="/WEB-INF/templetes/side_banner.jsp" />
+        <jsp:include page="/WEB-INF/templates/side_banner.jsp" />
         
         <!-- banner_section -->
-        <jsp:include page="/WEB-INF/templetes/banner_section.jsp" />
+        <jsp:include page="/WEB-INF/templates/banner_section.jsp" />
         
         <!-- footer -->
-        <jsp:include page="/WEB-INF/templetes/footer.jsp" />
+        <jsp:include page="/WEB-INF/templates/footer.jsp" />
         
     </div>
 
-    <script src="/static/js/store/scroll_control.js"></script>
-    <script src="/static/js/store/nav_control.js"></script>
-    <script src="/static/js/store/footer_banner_control.js"></script>
+    <script src="/static/js/scroll_control.js"></script>
+    <script src="/static/js/nav_control.js"></script>
+    <script src="/static/js/footer_banner_control.js"></script>
     <script src="/static/js/event/movie.js"></script>
 </body>
 

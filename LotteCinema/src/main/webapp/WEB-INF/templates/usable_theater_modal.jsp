@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<head>
+	<link rel="stylesheet" href="/static/css/store/usable_theater.css">
+</head>
 <div class="usable-theater">
     <div class="theater-wrapper">
         <div class="usable-theater-title">

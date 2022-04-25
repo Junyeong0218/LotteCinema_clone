@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<head>
+	<link rel="stylesheet" href="/static/css/aside_bar.css">
+</head>
 <aside class="aside-wrapper" style="top: 195px;">
     <div class="aside-menu">
         <a href="#">

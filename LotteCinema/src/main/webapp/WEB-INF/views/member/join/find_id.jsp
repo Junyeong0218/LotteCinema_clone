@@ -9,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>아이디찾기 방법선택 &lt; 아이디찾기 &lt; L.POINT</title>
     <link rel="stylesheet" href="/static/css/container.css">
-    <link rel="stylesheet" href="/static/css/member/join/join_header.css">
-    <link rel="stylesheet" href="/static/css/member/join/join_footer.css">
     <link rel="stylesheet" href="/static/css/member/join/find_id.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
@@ -19,7 +17,7 @@
     <div class="container">
     
         <!-- header -->
-		<jsp:include page="/WEB-INF/templetes/member/header.jsp" />
+		<jsp:include page="/WEB-INF/templates/member/header.jsp" />
 
         <main>
             <div class="title">아이디 찾기</div>
@@ -120,7 +118,7 @@
     </div>
 
     <!-- footer -->
-	<jsp:include page="/WEB-INF/templetes/member/footer.jsp" />
+	<jsp:include page="/WEB-INF/templates/member/footer.jsp" />
 	
 	<script src="/static/js/member/join/find_id.js"></script>
 </body>

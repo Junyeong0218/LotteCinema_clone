@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<head>
+	<link rel="stylesheet" href="/static/css/header.css">
+</head>
+
 <header>
     <div class="pop-up">
         <div class="whole-menu-wrapper">
@@ -113,7 +117,7 @@
                                 <ul>
                                     <li><a href="/member/login">로그인</a></li>
                                     <li><a href="/member/join">회원가입</a></li>
-                                    <li><a href="#">아이디/비밀번호찾기</a></li>
+                                    <li><a href="/member/join/find_id">아이디/비밀번호찾기</a></li>
                                     <li><a href="#">회원약관</a></li>
                                     <li><a href="#">개인정보처리방침</a></li>
                                     <li><a href="#">이메일무단수집거부</a></li>

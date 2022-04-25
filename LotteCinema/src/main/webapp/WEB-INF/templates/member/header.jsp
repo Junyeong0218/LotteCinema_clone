@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<head>
+	<link rel="stylesheet" href="/static/css/member/join/join_header.css">
+</head>
 <div class="mast-head">
     <div class="mast-head-container">
         <h1 class="lotte-logo">

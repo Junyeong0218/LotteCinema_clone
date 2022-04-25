@@ -15,7 +15,8 @@ member_login_button.onclick = loginForMember;
 
 function generateBirthYear() {
 	const birthyear = document.querySelector("#birthyear");
-	for(let i = 2022; i > 1899; i--) {
+	const current_year = new Date().getFullYear();
+	for(let i = current_year; i > 1899; i--) {
 		const option = document.createElement("option");
 		option.value = i;
 		option.innerText = i;
@@ -31,11 +32,16 @@ function generateBirthMonth() {
 		option.value = String(i + 1).padStart(2, "0");
 		birthmonth.appendChild(option);
 	}
+	birthmonth.onchange = generateBirthDate;
 }
 
-function generateBirthDate() {
+function generateBirthDate(event) {
 	const birthday = document.querySelector("#birthday");
-	for(let i = 0; i < 31; i++) {
+	const now  = new Date();
+	const month = Number(event.target.options[event.target.selectedIndex].value);
+	const current_month_full_date = new Date(now.getFullYear(), month, 0).getDate();
+	birthday.innerHTML = `<option value="">일</option>`;
+	for(let i = 0; i < current_month_full_date; i++) {
 		const option = document.createElement("option");
 		option.value = String(i + 1).padStart(2, "0");
 		option.innerText = `${i + 1}`;

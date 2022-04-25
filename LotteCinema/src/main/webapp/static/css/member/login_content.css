@@ -143,12 +143,6 @@ main {
 
 }
 
-/* #checkSavedID {
-    width: 20px;
-    height: 20px;
-    border: none;
-} */
-
 #checkSavedID::before {
     position: absolute;
     top: 0;
@@ -444,18 +438,8 @@ main {
     text-align: right;
 }
 
-#privacyOk1 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 0px;
-    height: 0px;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    vertical-align: middle;
-    border: none 0;
+.agreement-check-box > input {
+	display: none;
 }
 
 .agreement-check-box:first-child Label {
@@ -463,20 +447,6 @@ main {
     display: inline-block;
     margin-right: 20px;
     cursor: pointer;
-}
-
-#privacyOk2 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 0px;
-    height: 0px;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    vertical-align: middle;
-    border: none 0;
 }
 
 .agreement-check-box:last-child label {
@@ -513,7 +483,8 @@ main {
     height: 45px;
 }
 
-.signup-signin-button a {
+.signup-signin-button > a,
+.signup-signin-button > button {
     min-width: 160px;
     margin: 0px 3px;
 }
@@ -537,6 +508,7 @@ main {
     padding: 0px 18px;
     text-decoration: none;
     cursor: pointer;
+    border: none;
     border-radius: 4px;
     border: 1px solid #414141;
     font-size: 14px;

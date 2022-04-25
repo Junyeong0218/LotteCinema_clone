@@ -9,10 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카드본인인증 &lt; 회원가입 &lt; L.POINT</title>
     <link rel="stylesheet" href="/static/css/container.css">
-    <link rel="stylesheet" href="/static/css/member/join/join_header.css">
-    <link rel="stylesheet" href="/static/css/member/join/join_footer.css">
-    <link rel="stylesheet" href="/static/css/member/join/certificate_header.css">
-    <link rel="stylesheet" href="/static/css/member/join/certificate_footer.css">
     <link rel="stylesheet" href="/static/css/member/join/card_certificate.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
@@ -21,7 +17,7 @@
     <main class="container">
         
         <!-- header -->
-		<jsp:include page="/WEB-INF/templetes/member/header.jsp" />
+		<jsp:include page="/WEB-INF/templates/member/header.jsp" />
         
         <!-- certificate 작업 필요 -->
         <div class="mast-body">
@@ -125,7 +121,7 @@
     </main>
 
 	<!-- footer -->
-	<jsp:include page="/WEB-INF/templetes/member/footer.jsp" />    
+	<jsp:include page="/WEB-INF/templates/member/footer.jsp" />    
 
     <script src="/static/js/member/join/footer_insite.js"></script>
     <script src="/static/js/member/join/card_certificate.js"></script>

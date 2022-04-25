@@ -8,17 +8,15 @@
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>본인인증 &lt; 회원가입 &lt; L.POINT</title>
-            <link rel="stylesheet" href="/static/css/container.css">
-            <link rel="stylesheet" href="/static/css/member/join/join_header.css">
-            <link rel="stylesheet" href="/static/css/member/join/join_footer.css">
-            <link rel="stylesheet" href="/static/css/member/join/join.css">
+    <link rel="stylesheet" href="/static/css/container.css">
+    <link rel="stylesheet" href="/static/css/member/join/join.css">
 </head>
 
 <body>
     <main class="container">
         
         <!-- header -->
-        <jsp:include page="/WEB-INF/templetes/member/header.jsp" />
+        <jsp:include page="/WEB-INF/templates/member/header.jsp" />
         
         <div class="mast-body">
             <div class="mast-body-container">
@@ -101,10 +99,11 @@
     </main>
 
     <!-- footer -->
-	<jsp:include page="/WEB-INF/templetes/member/footer.jsp" />
+	<jsp:include page="/WEB-INF/templates/member/footer.jsp" />
     
     <script src="/static/js/member/join/pop_up_control.js"></script>
     <script src="/static/js/member/join/footer_insite.js"></script>
+    <script src="/static/js/member/join.js"></script>
 </body>
 
 </html>

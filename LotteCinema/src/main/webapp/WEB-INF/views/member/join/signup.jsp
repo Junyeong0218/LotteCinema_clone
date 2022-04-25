@@ -10,8 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>정보입력 &lt; 회원가입 &lt; L.POINT</title>
     <link rel="stylesheet" href="/static/css/container.css">
-    <link rel="stylesheet" href="/static/css/member/join/join_header.css">
-    <link rel="stylesheet" href="/static/css/member/join/join_footer.css">
     <link rel="stylesheet" href="/static/css/member/join/signup.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
@@ -20,7 +18,7 @@
     <div class="container">
 
         <!-- header -->
-		<jsp:include page="/WEB-INF/templetes/member/header.jsp" />
+		<jsp:include page="/WEB-INF/templates/member/header.jsp" />
 
         <main>
             <div id="contents">
@@ -134,7 +132,7 @@
     </div>
 
     <!-- footer -->
-	<jsp:include page="/WEB-INF/templetes/member/footer.jsp" />
+	<jsp:include page="/WEB-INF/templates/member/footer.jsp" />
 	
 	<script src="/static/js/member/join/footer_insite.js"></script>
 	<script src="/static/js/member/join/signup.js"></script>

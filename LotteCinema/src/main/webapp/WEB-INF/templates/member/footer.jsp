@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<head>
+	<link rel="stylesheet" href="/static/css/member/join/join_footer.css">
+</head>
 <footer>
     <div class="mast-foot">
         <div class="footer-container">
