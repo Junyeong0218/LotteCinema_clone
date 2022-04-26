@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/static/css/member/join/join_header.css">
     <link rel="stylesheet" href="/static/css/member/join/join_footer.css">
     <link rel="stylesheet" href="/static/css/member/join/signup.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
@@ -32,26 +33,26 @@
                         <span>마지막 단계에요!</span>
                     </div>
                 </div>
-                <form action="" method="post">
+                <form action="/member/join/signup" method="post">
                     <span class="form-title">회원정보입력</span>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">아이디</span></span>
-                        <input type="text" name="username">
+                        <input type="text" name="username" id="username">
                     </div>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">이름</span></span>
-                        <input type="text" name="name">
+                        <input type="text" name="name" id="name">
                     </div>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">휴대폰 번호</span></span>
                         <div class="input-and-message">
-                            <input type="text" name="phone">
+                            <input type="text" name="phone" id="phone">
                             <span class="form-message">*휴대폰 번호를 정확하게 입력하지 않을 경우 회원 혜택이 제한될 수 있습니다.</span>
                         </div>
                     </div>
                     <div class="form-row">
                         <span class="asterisk">*<span class="row-title">이메일 주소</span></span>
-                        <input type="text" name="email">
+                        <input type="text" name="email" id="email">
                     </div>
                 </form>
                 <div class="agree-marketing">
@@ -88,6 +89,7 @@
 	<jsp:include page="/WEB-INF/templetes/member/footer.jsp" />
 	
 	<script src="/static/js/member/join/footer_insite.js"></script>
+	<script src="/static/js/member/join/signup.js"></script>
 </body>
 
 </html>
