@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/static/css/member/join/join_header.css">
     <link rel="stylesheet" href="/static/css/member/join/join_footer.css">
     <link rel="stylesheet" href="/static/css/member/join/phone_certificate.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
@@ -101,7 +102,7 @@
                                 <label for="text">휴대폰 번호</label>
                             </div>
                             <div class="input-nb">
-                                <select name="telecom">
+                                <select name="telecom" id="telecom" onchange=this.value>
                                     <option value="SKT">SKT</option>
                                     <option value="KT">KT</option>
                                     <option value="LGU+">LGU+</option>
@@ -109,7 +110,7 @@
                                     <option value="KT알뜰폰">KT알뜰폰</option>
                                     <option value="LGU+알뜰폰">LGU+알뜰폰</option>
                                 </select>
-                                <select name="first-number">
+                                <select name="first-number" id="first-number">
                                     <option value="010">010</option>
                                     <option value="011">011</option>
                                     <option value="016">016</option>
@@ -117,9 +118,9 @@
                                     <option value="018">018</option>
                                     <option value="019">019</option>
                                 </select>
-                                <input type="text" name="middle-number">
+                                <input type="text" class="middle-number" name="middle-number">
                                 <span class="hyphen">-</span>
-                                <input type="text" name="last-number">
+                                <input type="text" class="last-number" name="last-number">
                             </div>
                         </div>
                         <div class="terms">
@@ -129,7 +130,7 @@
                     </div>
                     <div class="btn-center">
                         <button type="button">취소</button>
-                        <button type="button">인증 요청</button>
+                        <button type="button" class="certification">인증 요청</button>
                     </div>
                 </div>
             </div>

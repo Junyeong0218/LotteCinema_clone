@@ -5,7 +5,7 @@ const not_member_select_btn = document.querySelectorAll(".not-member-select-btn 
 const n_login_input_box = document.querySelectorAll(".n-login-input-box");
 const usernameInput = document.querySelector(".username");
 const passwordInput = document.querySelector(".password");
-const birthyear = document.querySelector("#birthyear");
+const birthSelect = document.querySelectorAll(".birth-select select"); 
 
 
 window.onload = () => {
@@ -32,7 +32,21 @@ function createBirthYear() {
 	const year = document.createElement("option");
 		year.value = `${i}`;
 		year.innerText = `${i}`;
-		birthyear.appendChild(year);
+		birthSelect[0].appendChild(year);
+	}
+	
+	for(let i = 1; i < 13; i++) {
+		const month = document.createElement("option");
+		month.value = `${i}`;
+		month.innerText = `${i}`;
+		birthSelect[1].appendChild(month);
+	}
+	
+	for(let i = 1; i < 32; i++) {
+		const day = document.createElement("option");
+		day.value = `${i}`;
+		day.innerText = `${i}`;
+		birthSelect[2].appendChild(day);
 	}
 }
 

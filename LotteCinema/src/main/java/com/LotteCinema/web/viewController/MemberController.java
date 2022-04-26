@@ -19,8 +19,6 @@ public class MemberController {
 	private final String SIGNUP = "/member/join/signup";
 	private final String LOGIN = "/member/login";
 	
-	@Autowired
-	private AuthService authService;
 	
 	
 	@RequestMapping(value = JOIN, method = RequestMethod.GET)

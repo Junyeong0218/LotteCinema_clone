@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.LotteCinema.domain.user.PhoneCertificateRepository">
+  
+  	<insert id="insertPhoneCertificate" parameterType="com.LotteCinema.domain.user.PhoneCertificate">
+  		insert into
+  			user_phone_certificate
+  		values(
+  			0,
+  			#{privacy_agreement},
+  			#{unique_information_agreement},
+  			#{service_agreement},
+  			#{mobile_agreement},
+  			#{name_kor_or_eng},
+  			#{birth_date},
+  			#{gender},
+  			#{telecom},
+  			#{phone_number},
+  			now(),
+  			now()
+  		);
+  	</insert>
+  
+  </mapper>

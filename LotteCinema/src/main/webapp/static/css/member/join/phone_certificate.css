@@ -84,6 +84,10 @@ img {
     border-bottom: 1px solid #d0d0d0;
 }
 
+.active {
+	
+}
+
 .phone-check button {
     position: relative;
     width: 18px;
@@ -142,6 +146,8 @@ img {
     border-radius: 50%;
     overflow: hidden;
 }
+
+
 
 .compulsory-consent>button {
     border: none;
