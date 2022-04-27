@@ -1,4 +1,4 @@
-package com.LotteCinema.domain.user;
+package com.LotteCinema.web.domain.user;
 
 public interface UserRepository {
 	public int signup(User user);

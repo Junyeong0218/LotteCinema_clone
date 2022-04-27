@@ -4,13 +4,11 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.LotteCinema.domain.user.PhoneCertificate;
-import com.LotteCinema.domain.user.PhoneCertificateRepository;
-import com.LotteCinema.domain.user.User;
-import com.LotteCinema.domain.user.UserRepository;
-import com.LotteCinema.web.dto.auth.PhoneCertificateDto;
+import com.LotteCinema.web.domain.user.PhoneCertificate;
+import com.LotteCinema.web.domain.user.PhoneCertificateRepository;
+import com.LotteCinema.web.domain.user.User;
+import com.LotteCinema.web.domain.user.UserRepository;
 import com.LotteCinema.web.dto.auth.SigninDto;
-import com.LotteCinema.web.dto.auth.SignupRequestDto;
 
 @Service
 public class AuthServiceImpl implements AuthService {

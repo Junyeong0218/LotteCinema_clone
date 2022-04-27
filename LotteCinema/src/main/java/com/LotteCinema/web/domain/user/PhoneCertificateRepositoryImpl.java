@@ -1,4 +1,4 @@
-package com.LotteCinema.domain.user;
+package com.LotteCinema.web.domain.user;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;

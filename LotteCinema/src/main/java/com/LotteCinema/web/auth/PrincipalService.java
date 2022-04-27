@@ -1,5 +1,5 @@
-package com.LotteCinema.auth;
+package com.LotteCinema.web.auth;
 
 public interface PrincipalService {
-	
+
 }

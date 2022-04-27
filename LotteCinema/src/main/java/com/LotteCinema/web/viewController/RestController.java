@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.LotteCinema.domain.user.PhoneCertificate;
-import com.LotteCinema.domain.user.User;
 import com.LotteCinema.web.Service.AuthService;
+import com.LotteCinema.web.domain.user.PhoneCertificate;
+import com.LotteCinema.web.domain.user.User;
 import com.LotteCinema.web.dto.auth.PhoneCertificateDto;
 import com.LotteCinema.web.dto.auth.SigninDto;
 import com.LotteCinema.web.dto.auth.SignupRequestDto;

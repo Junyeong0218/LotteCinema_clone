@@ -1,7 +1,7 @@
 package com.LotteCinema.web.dto.auth;
 
-import com.LotteCinema.domain.user.PhoneCertificate;
-import com.LotteCinema.domain.user.User;
+import com.LotteCinema.web.domain.user.PhoneCertificate;
+import com.LotteCinema.web.domain.user.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
