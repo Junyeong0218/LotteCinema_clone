@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: dich2
-=======
-Built-By: kim
->>>>>>> main
 Build-Jdk: 16.0.2
 Created-By: Maven Integration for Eclipse
 

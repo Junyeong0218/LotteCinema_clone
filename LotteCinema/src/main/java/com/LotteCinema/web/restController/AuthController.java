@@ -1,4 +1,4 @@
-package com.LotteCinema.web.viewController;
+package com.LotteCinema.web.restController;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -15,16 +15,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.LotteCinema.web.Service.AuthService;
 import com.LotteCinema.web.domain.user.PhoneCertificate;
 import com.LotteCinema.web.domain.user.User;
 import com.LotteCinema.web.dto.auth.PhoneCertificateDto;
 import com.LotteCinema.web.dto.auth.SigninDto;
 import com.LotteCinema.web.dto.auth.SignupRequestDto;
-import com.LotteCinema.web.validation.Auth.AuthValidation;
+import com.LotteCinema.web.service.AuthService;
+import com.LotteCinema.web.validation.auth.AuthValidation;
 
 @Controller
-public class RestController {
+public class AuthController {
 
 	@Autowired
 	private AuthService authService;
@@ -73,12 +73,12 @@ public class RestController {
 		if (usernameIsNull != null) {
 			return "/member/join/signup/error?msg=" + URLEncoder.encode(usernameIsNull.get(true), "utf-8");
 		}
-		/*
-		 * if (nameIsNull != null) { return "/member/join/signup/error?msg=" +
-		 * URLEncoder.encode(nameIsNull.get(true), "utf-8"); } if (phoneIsNull != null)
-		 * { return "/member/join/signup/error?msg=" +
-		 * URLEncoder.encode(phoneIsNull.get(true), "utf-8"); }
-		 */
+//		if (nameIsNull != null) { 
+//			return "/member/join/signup/error?msg=" + URLEncoder.encode(nameIsNull.get(true), "utf-8"); 
+//		}
+//		if (phoneIsNull != null) { 
+//			return "/member/join/signup/error?msg=" + URLEncoder.encode(phoneIsNull.get(true), "utf-8"); 
+//		}
 		if (emailIsNull != null) {
 			return "/member/join/signup/error?msg=" + URLEncoder.encode(emailIsNull.get(true), "utf-8");
 		}
