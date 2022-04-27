@@ -61,7 +61,7 @@
 
 .member {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     width: 980px;
     height: 363.5px;
@@ -220,7 +220,7 @@
 }
 
 .not-member-login {
-    display: none;
+    display: flex;
     flex-direction: column;
     margin: 0px auto;
     padding: 30px 0px 60px;
@@ -230,6 +230,7 @@
 .not-member-select-btn {
     display: flex;
 }
+
 
 .not-member-select-btn button:first-child {
     position: relative;
@@ -259,9 +260,13 @@
 }
 
 .n-login-input-box {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 980px;
+}
+
+.n-login-input-box.current{
+	display: flex;
 }
 
 .n-login-items {

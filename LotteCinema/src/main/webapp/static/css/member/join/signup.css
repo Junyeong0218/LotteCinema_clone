@@ -164,7 +164,9 @@ label[for='smsAccept']+span {
     color: #8a8a8a;
 }
 
-.radiobox:checked+label[for='checkAll']>img {
+.radiobox:checked+label[for='checkAll']>img,
+.radiobox:checked+label[for='emailAccept']>img,
+.radiobox:checked+label[for='smsAccept']>img{
     left: -69px;
 }
 

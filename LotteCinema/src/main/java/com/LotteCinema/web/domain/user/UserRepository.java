@@ -1,7 +1,9 @@
 package com.LotteCinema.web.domain.user;
 
 public interface UserRepository {
-	public int checkUsername(String username);
 	public int signup(User user);
-	public User getUserByUsername(String username);
+	public int usernameCheck(String username);
+	public int emailCheck(String email);
+	public String selectPassword(String username);
+	public User loadUserByUsername(String username);
 }
