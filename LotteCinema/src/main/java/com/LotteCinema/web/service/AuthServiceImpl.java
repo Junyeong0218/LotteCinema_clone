@@ -1,4 +1,4 @@
-package com.LotteCinema.web.service;
+package com.LotteCinema.web.Service;
 
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
