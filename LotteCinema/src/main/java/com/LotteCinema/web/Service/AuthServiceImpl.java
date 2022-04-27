@@ -4,6 +4,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.LotteCinema.domain.user.PhoneCertificate;
 import com.LotteCinema.domain.user.PhoneCertificateRepository;
 import com.LotteCinema.domain.user.User;
 import com.LotteCinema.domain.user.UserRepository;
@@ -21,10 +22,15 @@ public class AuthServiceImpl implements AuthService {
 	
 	
 	@Override
-	public boolean signup(SignupRequestDto signupRequestDto) {
-		int result = userRepository.signup(signupRequestDto.toEntity());
+	public boolean signup(User user, PhoneCertificate phoneCertificate) {
+		int result = userRepository.signup(user);
+		System.out.println(user);
+		if(result != 0) {
+			phoneCertificate.setUsercode(user.getUsercode());
+			System.out.println(phoneCertificate);
+			result = phoneCertificateRepository.insertPhoneCertificate(phoneCertificate);
+		}
 		 return result != 0;
-		
 	}
 	
 	@Override
@@ -42,9 +48,4 @@ public class AuthServiceImpl implements AuthService {
 		}
 	}
 	
-	@Override
-	public boolean insertPhoneCertificate(PhoneCertificateDto phoneCertificateDto) {
-		int result = phoneCertificateRepository.insertPhoneCertificate(phoneCertificateDto.toEntity()); 
-		return result != 0;
-	}
 }

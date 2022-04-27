@@ -17,8 +17,11 @@ public class User {
 	private String username;
 	private String password;
 	private String name;
+	private String telecom;
 	private String phone;
 	private String email;
+	private String birth_date;
+	private int gender;
 	private boolean email_assent;
 	private boolean sms_assent;
 	private LocalDateTime create_date;

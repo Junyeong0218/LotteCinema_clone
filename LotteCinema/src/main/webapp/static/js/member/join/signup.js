@@ -22,7 +22,7 @@ function selectAll(selectAll) {
 	const checkboxes = document.getElementsByName('accept');
 
 	checkboxes.forEach((checkbox) => {
-		checkbox.checked = selectAll.checked
+		checkbox.checked = selectAll.checked;
 	})
 }
 

@@ -12,13 +12,20 @@
   		#{username},
   		#{password},
   		#{name},
+  		#{telecom},
   		#{phone},
   		#{email},
+  		#{birth_date},
+  		#{gender},
   		#{email_assent},
   		#{sms_assent},
   		now(),
   		now()
   	);
+  	
+  	<selectKey keyProperty="usercode" resultType="Integer" order="AFTER">
+  		select usercode from user_mst where username = #{username};
+  	</selectKey>
   </insert>
   
   <select id="usernameCheck" parameterType="String" resultType="Integer">
