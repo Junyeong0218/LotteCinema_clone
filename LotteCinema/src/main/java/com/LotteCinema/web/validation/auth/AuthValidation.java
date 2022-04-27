@@ -1,4 +1,4 @@
-package com.LotteCinema.web.validation.Auth;
+package com.LotteCinema.web.validation.auth;
 
 import java.util.HashMap;
 import java.util.Map;

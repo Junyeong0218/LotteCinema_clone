@@ -1,4 +1,4 @@
-package com.LotteCinema.web.Service;
+package com.LotteCinema.web.service;
 
 import com.LotteCinema.web.domain.user.PhoneCertificate;
 import com.LotteCinema.web.domain.user.User;
