@@ -173,7 +173,7 @@
     </main>
     <div class="btn-center">
         <button type="button">취소</button>
-        <button type="button">인증 요청</button>
+        <button type="button" class="certification">인증 요청</button>
     </div>
     
     <!-- footer -->

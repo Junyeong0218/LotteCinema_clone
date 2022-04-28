@@ -2,6 +2,12 @@ const general_agreement_checkbox = document.querySelector(".general-agreement-ch
 const lpoint_buttons = document.querySelectorAll(".lpoint-checkbox .general-agreement-checkbox");
 const lotte_cultureworks = document.querySelectorAll(".lotte-cultureworks .general-agreement-checkbox");
 
+
+let certificateChecked = [false, false, false, false, false, false, false, false]
+
+
+
+
 for (let i = 0; i < lpoint_buttons.length; i++) {
     lpoint_buttons[i].onclick = () => {
         const img = lpoint_buttons[i].querySelector("img");
@@ -59,4 +65,17 @@ function toggleAllCultureworks(toggle) {
             img.style = '';
         }
     }
+}
+
+function essentialCertificateCheck(){
+	return certificateChecked[0] &&
+		   certificateChecked[1]
+	
+	
+	
+	
+	
+		
+	
+	
 }

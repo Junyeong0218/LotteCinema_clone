@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.LotteCinema.web.domain.user.PhoneCertificate;
 import com.LotteCinema.web.domain.user.User;
+import com.LotteCinema.web.dto.auth.EmailCertificateDto;
 import com.LotteCinema.web.dto.auth.PhoneCertificateDto;
 import com.LotteCinema.web.dto.auth.SigninDto;
 import com.LotteCinema.web.dto.auth.SignupRequestDto;
@@ -102,6 +103,14 @@ public class AuthController {
 	public String insertPhoneCertificate(PhoneCertificateDto phoneCertificateDto, HttpServletRequest request) {
 		request.getSession().setAttribute("phoneCertificate", phoneCertificateDto.toPhoneEntity());
 		request.getSession().setAttribute("phoneUser", phoneCertificateDto.toUserEntity());
+		return "true";
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping(value = "/member/join/email", method = RequestMethod.POST)
+	public String insertEmailCertificate(EmailCertificateDto emailCertificateDto, HttpServletRequest request) {
+		request.getSession().setAttribute("emailCertificate", emailCertificateDto.toEntity());
 		return "true";
 	}
 }

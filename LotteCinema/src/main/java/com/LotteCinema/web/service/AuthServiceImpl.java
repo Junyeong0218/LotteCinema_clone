@@ -1,4 +1,4 @@
-package com.LotteCinema.web.Service;
+package com.LotteCinema.web.service;
 
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,5 +45,4 @@ public class AuthServiceImpl implements AuthService {
 			return null;
 		}
 	}
-	
 }
