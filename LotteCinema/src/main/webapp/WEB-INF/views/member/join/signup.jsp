@@ -50,12 +50,22 @@
                             </div>
                             <div class="form-row">
                                 <span class="asterisk">*<span class="row-title">이름</span></span>
-                                <input type="text" name="name" id="name">
+                             	<c:if test="${phoneUser.name ne null}">
+                                	<input type="text" name="name" id="name" value="${phoneUser.name}" readonly>
+                                </c:if> 
+                                <c:if test="${phoneUser.name eq null }">
+                                	<input type="text" name="name" id="name">
+                                </c:if>
                             </div>
                             <div class="form-row">
                                 <span class="asterisk">*<span class="row-title">휴대폰 번호</span></span>
                                 <div class="input-and-message">
-                                    <input type="text" name="phone" id="phone">
+                                <c:if test="${phoneUser.phone ne null}">
+                                    <input type="text" name="phone" id="phone" value="${phoneUser.phone}" readonly>
+                                </c:if>
+                                <c:if test="${phoneUser.phone eq null}">
+                                	<input type="text" name="phone" id="phone">
+                                </c:if>
                                     <span class="form-message">*휴대폰 번호를 정확하게 입력하지 않을 경우 회원 혜택이 제한될 수 있습니다.</span>
                                 </div>
                             </div>

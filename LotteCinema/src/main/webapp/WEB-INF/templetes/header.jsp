@@ -114,8 +114,8 @@
                             </td>
                             <td class="menu-items">
                                 <ul>
-                                    <li><a href="#">로그인</a></li>
-                                    <li><a href="#">회원가입</a></li>
+                                    <li><a href="/member/login"></a></li>
+                                    <li><a href="/member/join">회원가입</a></li>
                                     <li><a href="#">아이디/비밀번호찾기</a>
                                     </li>
                                     <li><a href="#">회원약관</a></li>
@@ -166,7 +166,7 @@
                         <div class="nomember-box">
                             <span>로그인하시고</span>
                             <span>다양한 혜택을 확인하세요.</span>
-                            <a href="#" title="회원가입 페이지 이동">회원가입</a>
+                            <a href="/member/join" title="회원가입 페이지 이동">회원가입</a>
                         </div>
                     </div>
                     <div class="modal-small-banner">
@@ -220,7 +220,7 @@
         </ul>
         <ul class="links2">
             <li class="to-signup">
-                <a href="#">
+                <a href="/member/join">
                     <span></span>
                     <span>회원가입</span>
                 </a>

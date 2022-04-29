@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +39,7 @@ public class AuthController {
 		HttpSession session = request.getSession();
 		User user = (User)session.getAttribute("phoneUser");
 		user.setUsername(signupRequestDto.getUsername());
-		user.setPassword(signupRequestDto.getPassword());
+		user.setPassword(BCrypt.hashpw(signupRequestDto.getPassword(), BCrypt.gensalt()));
 		user.setEmail(signupRequestDto.getEmail());
 		user.setEmail_assent(signupRequestDto.isEmail_assent());
 		user.setSms_assent(signupRequestDto.isSms_assent());
@@ -92,7 +93,8 @@ public class AuthController {
 		if (user == null) {
 			return "false";
 		} else {
-			request.getSession().setAttribute("user", user);
+			HttpSession session = request.getSession();
+			session.setAttribute("user", user);
 			return "true";
 		}
 	}
