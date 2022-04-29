@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/static/css/member/join/certificate_header.css">
     <link rel="stylesheet" href="/static/css/member/join/certificate_footer.css">
     <link rel="stylesheet" href="/static/css/member/join/email_certificate.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>

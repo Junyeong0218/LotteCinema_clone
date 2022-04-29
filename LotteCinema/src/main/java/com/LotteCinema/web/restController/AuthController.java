@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.LotteCinema.web.domain.user.EmailCertificate;
 import com.LotteCinema.web.domain.user.PhoneCertificate;
 import com.LotteCinema.web.domain.user.User;
 import com.LotteCinema.web.dto.auth.EmailCertificateDto;
@@ -44,11 +45,12 @@ public class AuthController {
 		user.setEmail_assent(signupRequestDto.isEmail_assent());
 		user.setSms_assent(signupRequestDto.isSms_assent());
 		
+		EmailCertificate emailCertificate = (EmailCertificate)session.getAttribute("emailCertificate");
 		PhoneCertificate phoneCertificate = (PhoneCertificate)session.getAttribute("phoneCertificate");
 		String nullResult = valueIsNull(signupRequestDto);
 		
 		if (nullResult.equals("/member/login")) {
-			boolean result = authService.signup(user, phoneCertificate);
+			boolean result = authService.signup(user, phoneCertificate, emailCertificate);
 
 			if (!result)
 				nullResult = "/member/join/signup/error";
