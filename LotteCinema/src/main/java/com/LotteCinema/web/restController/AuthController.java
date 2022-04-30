@@ -106,4 +106,10 @@ public class AuthController {
 		request.getSession().setAttribute("phoneUser", phoneCertificateDto.toUserEntity());
 		return "true";
 	}
+	
+	@RequestMapping(value = "/member/logout", method=RequestMethod.GET)
+	public String logout(HttpServletRequest request) {
+		request.getSession().invalidate();	
+		return "redirect: /";
+	}
 }

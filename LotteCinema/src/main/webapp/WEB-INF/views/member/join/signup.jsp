@@ -114,7 +114,6 @@
 
             <script src="/static/js/member/join/signup.js"></script>
             <script src="/static/js/member/join/footer_insite.js"></script>
-            <script src="/static/js/member/join/signup.js"></script>
         </body>
 
         </html>

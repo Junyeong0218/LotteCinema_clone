@@ -161,7 +161,7 @@
                 <div class="user-wrapper">
                     <div class="user-info">
                         <div class="login-button">
-                            <a href="#">로그인</a>
+                            <a href="/member/login">로그인</a>
                         </div>
                         <div class="nomember-box">
                             <span>로그인하시고</span>
@@ -211,10 +211,10 @@
             <li><a href="#">고객센터</a></li>
             <li><a href="#">단체관람/대관문의</a></li>
             <c:if test="${sessionScope.user==null}">
-	            <li><a href="#">로그인</a></li>
+	            <li><a href="/member/login">로그인</a></li>
             </c:if>
             <c:if test="${sessionScope.user!=null}">
-	            <li><a href="#">로그아웃</a></li>
+	            <li><a href="#" class="logout-btn">로그아웃</a></li>
             </c:if>
             
         </ul>

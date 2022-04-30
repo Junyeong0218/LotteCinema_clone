@@ -39,9 +39,6 @@ public class AuthServiceImpl implements AuthService {
 	@Override
 	public User loadUserByUsername(SigninDto signinDto) {
 		String password = userRepository.selectPassword(signinDto.getUsername());
-		System.out.println(password);
-		System.out.println(signinDto.getPassword());
-		System.out.println(signinDto.getUsername());
 		if(BCrypt.checkpw(signinDto.getPassword(), password)) {
 			return userRepository.loadUserByUsername(signinDto.getUsername());
 		}else {

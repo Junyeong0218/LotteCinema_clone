@@ -6,6 +6,7 @@ const banner_img_wrap = document.querySelector(".banner-img-wrap");
 const gnb = document.querySelector(".gnb");
 const mid_banner = document.querySelector(".banner-01 img");
 const dot_btns = document.querySelector(".dot-btns");
+
 let toggleSilde;
 
 let height = 80;
@@ -149,4 +150,6 @@ function makeActiveBox() {
     
     return elementBox;
 }
+
+
 
