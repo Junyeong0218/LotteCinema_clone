@@ -538,7 +538,20 @@
     background-color: #ffffff;
 }
 
-.btn-signin {
+.not-member-login-btn {
+    height: 45px;
+    line-height: 43px;
+    padding: 0px 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #414141;
+    font-size: 14px;
+    color: #ffffff !important;
+    background-color: #414141;
+
+}
+.not-member-booking {
     height: 45px;
     line-height: 43px;
     padding: 0px 18px;

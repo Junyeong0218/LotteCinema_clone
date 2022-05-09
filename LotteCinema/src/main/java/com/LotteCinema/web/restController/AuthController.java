@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.LotteCinema.web.domain.user.PhoneCertificate;
 import com.LotteCinema.web.domain.user.User;
+import com.LotteCinema.web.dto.auth.NotMemberLoginDto;
 import com.LotteCinema.web.dto.auth.PhoneCertificateDto;
 import com.LotteCinema.web.dto.auth.SigninDto;
 import com.LotteCinema.web.dto.auth.SignupRequestDto;
@@ -67,19 +68,19 @@ public class AuthController {
 	public String valueIsNull(SignupRequestDto signupRequestDto) throws UnsupportedEncodingException {
 		AuthValidation authValidation = new AuthValidation();
 		Map<Boolean, String> usernameIsNull = authValidation.isNull("username", signupRequestDto.getUsername());
-		//Map<Boolean, String> nameIsNull = authValidation.isNull("name", signupRequestDto.getName());
-		//Map<Boolean, String> phoneIsNull = authValidation.isNull("phone", signupRequestDto.getPhone());
+		Map<Boolean, String> nameIsNull = authValidation.isNull("name", signupRequestDto.getName());
+		Map<Boolean, String> phoneIsNull = authValidation.isNull("phone", signupRequestDto.getPhone());
 		Map<Boolean, String> emailIsNull = authValidation.isNull("email", signupRequestDto.getEmail());
 
 		if (usernameIsNull != null) {
 			return "/member/join/signup/error?msg=" + URLEncoder.encode(usernameIsNull.get(true), "utf-8");
 		}
-//		if (nameIsNull != null) { 
-//			return "/member/join/signup/error?msg=" + URLEncoder.encode(nameIsNull.get(true), "utf-8"); 
-//		}
-//		if (phoneIsNull != null) { 
-//			return "/member/join/signup/error?msg=" + URLEncoder.encode(phoneIsNull.get(true), "utf-8"); 
-//		}
+		if (nameIsNull != null) { 
+			return "/member/join/signup/error?msg=" + URLEncoder.encode(nameIsNull.get(true), "utf-8"); 
+		}
+		if (phoneIsNull != null) { 
+			return "/member/join/signup/error?msg=" + URLEncoder.encode(phoneIsNull.get(true), "utf-8"); 
+		}
 		if (emailIsNull != null) {
 			return "/member/join/signup/error?msg=" + URLEncoder.encode(emailIsNull.get(true), "utf-8");
 		}
@@ -111,5 +112,13 @@ public class AuthController {
 	public String logout(HttpServletRequest request) {
 		request.getSession().invalidate();	
 		return "redirect: /";
+	}
+	
+	@RequestMapping(value = "/member/not_member_login", method=RequestMethod.POST)
+	public String notMemberLogin(NotMemberLoginDto notMemberLoginDto, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		User user = authService.notMemberLogin(notMemberLoginDto);
+		session.setAttribute("not_member", user);
+		return "true";
 	}
 }

@@ -86,12 +86,14 @@
 									<div class="n-login-items">
 										<div class="n-login-input">
 											<div class="label-box">
-												<label for="username">이름<input type="text"
-													placeholder="이름을 입력해 주세요"></label>
+												<label for="name">이름
+													<input type="text" placeholder="이름을 입력해 주세요" name="name">
+												</label>
 											</div>
 											<div class="label-box">
-												<label for="userphone">휴대폰번호<input type="text"
-													placeholder="휴대폰 번호(- 생략)를 입력해 주세요."></label>
+												<label for="phone">휴대폰번호
+													<input type="text" placeholder="휴대폰 번호(- 생략)를 입력해 주세요." name="phone">
+												</label>
 											</div>
 											<div class="label-box">
 												<label for="birth" class="birth-year-label">생년월일</label>
@@ -106,12 +108,14 @@
 												</div>
 											</div>
 											<div class="label-box">
-												<label for="passowrd2">예매 비밀번호<input type="text"
-													placeholder="예매 비밀번호 (4자리)를 입력해 주세요."></label>
+												<label for="passowrd2">예매 비밀번호
+													<input type="text" placeholder="예매 비밀번호 (4자리)를 입력해 주세요.">
+												</label>
 											</div>
 											<div class="label-box">
-												<label for="password3">예매 비밀번호 확인<input type="text"
-													placeholder="예매 비밀번호 (4자리)를 재입력해 주세요."></label>
+												<label for="password3">예매 비밀번호 확인
+													<input type="text" placeholder="예매 비밀번호 (4자리)를 재입력해 주세요.">
+												</label>
 											</div>
 										</div>
 										<div class="n-login-banner">
@@ -139,15 +143,15 @@
 										</div>
 									</div>
 									<div class="agreement-check-box">
-										<input type="radio" name="agree-check" id="privacy-Ok1">
-										<label for="privacy-Ok1">동의</label> <input type="radio"
-											name="agree-check" id="privacy-Ok2"> <label
-											for="privacy-Ok2">동의하지 않음</label>
+										<input type="radio" name="agree-check" id="privacy-Ok1" value=1>
+										<label for="privacy-Ok1">동의</label> 
+										<input type="radio" name="agree-check" id="privacy-Ok2" value=0> 
+										<label for="privacy-Ok2">동의하지 않음</label>
 									</div>
 								</div>
 								<div class="signup-signin-button">
 									<a href="#" class="btn-signup">회원가입</a> <a href="#"
-										class="btn-signin">비회원 로그인</a>
+										class="not-member-login-btn">비회원 로그인</a>
 								</div>
 							</div>
 							<div class="n-login-input-box">
@@ -188,15 +192,15 @@
 										</div>
 									</div>
 									<div class="agreement-check-box">
-										<input type="radio" name="agree-check" id="privacyOk1" checked>
+										<input type="radio" name="agree-check2" id="privacyOk1" checked>
 										<label for="privacyOk1">동의</label> <input type="radio"
-											name="agree-check" id="privacyOk2"> <label
+											name="agree-check2" id="privacyOk2"> <label
 											for="privacyOk2">동의하지 않음</label>
 									</div>
 								</div>
 								<div class="signup-signin-button">
 									<a href="#" class="btn-signup">회원가입</a> <a href="#"
-										class="btn-signin">비회원 예매확인</a>
+										class="not-member-booking">비회원 예매확인</a>
 								</div>
 							</div>
 						</div>

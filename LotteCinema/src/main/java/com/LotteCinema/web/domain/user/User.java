@@ -25,4 +25,7 @@ public class User {
 	private boolean sms_assent;
 	private LocalDateTime create_date;
 	private LocalDateTime update_date;
+	
+	private String role;
+	private String book_password;
 }

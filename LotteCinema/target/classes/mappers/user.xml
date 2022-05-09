@@ -20,7 +20,9 @@
   		#{email_assent},
   		#{sms_assent},
   		now(),
-  		now()
+  		now(),
+  		"MEMBER",
+  		null
   	);
   	
   	<selectKey keyProperty="usercode" resultType="Integer" order="AFTER">
@@ -55,5 +57,48 @@
   		username = #{username};
   </select>
   
+  <insert id="notMemberSignup" parameterType="com.LotteCinema.web.domain.user.User">
+  	insert into
+  		user_mst
+  	values(
+  		0,
+  		#{username},
+  		#{password},
+  		#{name},
+  		#{telecom},
+  		#{phone},
+  		#{email},
+  		#{birth_date},
+  		#{gender},
+  		#{email_assent},
+  		#{sms_assent},
+  		now(),
+  		now(),
+  		#{role},
+  		#{book_password}
+  	);
+  	
+  </insert>
+  
+  <select id="selectPhone" parameterType="String" resultType="Integer">
+  	select
+  		count(phone)
+  	from
+  		user_mst
+  	where
+  		phone = #{phone};
+  </select>
+  
+  <select id="loadUserByPhone" parameterType="String" resultType="com.LotteCinema.web.domain.user.User">
+  	select
+  		name,
+  		phone,
+  		birth_date,
+  		book_password
+  	from
+  		user_mst
+  	where
+  		phone = #{phone};
+  </select>
   
   </mapper>

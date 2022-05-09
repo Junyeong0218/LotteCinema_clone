@@ -8,6 +8,7 @@ import com.LotteCinema.web.domain.user.PhoneCertificate;
 import com.LotteCinema.web.domain.user.PhoneCertificateRepository;
 import com.LotteCinema.web.domain.user.User;
 import com.LotteCinema.web.domain.user.UserRepository;
+import com.LotteCinema.web.dto.auth.NotMemberLoginDto;
 import com.LotteCinema.web.dto.auth.SigninDto;
 
 @Service
@@ -22,10 +23,8 @@ public class AuthServiceImpl implements AuthService {
 	@Override
 	public boolean signup(User user, PhoneCertificate phoneCertificate) {
 		int result = userRepository.signup(user);
-		System.out.println(user);
 		if(result != 0) {
 			phoneCertificate.setUsercode(user.getUsercode());
-			System.out.println(phoneCertificate);
 			result = phoneCertificateRepository.insertPhoneCertificate(phoneCertificate);
 		}
 		 return result != 0;
@@ -46,4 +45,16 @@ public class AuthServiceImpl implements AuthService {
 		}
 	}
 	
+	@Override
+	public User notMemberLogin(NotMemberLoginDto notMemberLoginDto) {
+		userRepository.selectUsername(notMemberLoginDto);
+		if(userRepository.notMemberSignup(notMemberLoginDto.toNotMemberEntity())!=0) {
+			if(userRepository.selectPhone(notMemberLoginDto.getPhone())!=0) {
+				return userRepository.loadUserByPhone(notMemberLoginDto.getPhone());
+			}else {
+				return null;
+			}
+		}
+		return null;
+	}
 }

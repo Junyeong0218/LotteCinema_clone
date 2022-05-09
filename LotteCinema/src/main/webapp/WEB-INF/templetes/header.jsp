@@ -214,7 +214,7 @@
 	            <li><a href="/member/login">로그인</a></li>
             </c:if>
             <c:if test="${sessionScope.user!=null}">
-	            <li><a href="#" class="logout-btn">로그아웃</a></li>
+	            <li><a href="/member/logout" class="logout-btn">로그아웃</a></li>
             </c:if>
             
         </ul>
