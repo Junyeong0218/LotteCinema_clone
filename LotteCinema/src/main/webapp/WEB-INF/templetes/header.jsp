@@ -210,12 +210,17 @@
             <li><a href="#">멤버십</a></li>
             <li><a href="#">고객센터</a></li>
             <li><a href="#">단체관람/대관문의</a></li>
-            <c:if test="${sessionScope.user==null}">
-	            <li><a href="/member/login">로그인</a></li>
-            </c:if>
-            <c:if test="${sessionScope.user!=null}">
+            <c:choose>
+            <c:when test="${sessionScope.user!=null}">
 	            <li><a href="/member/logout" class="logout-btn">로그아웃</a></li>
-            </c:if>
+            </c:when>
+            <c:when test="${sessionScope.not_member!=null}">
+	            <li><a href="/member/logout" class="logout-btn">로그아웃</a></li>
+            </c:when>
+            <c:otherwise>
+	            <li><a href="/member/login">로그인</a></li>
+	        </c:otherwise>
+            </c:choose>
             
         </ul>
         <ul class="links2">

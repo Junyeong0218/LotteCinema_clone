@@ -9,5 +9,6 @@ public interface UserRepository {
 	public int notMemberSignup(User user);
 	public int selectPhone(String phone);
 	public User loadUserByPhone(String phone);
-	public String selectUsername(int usercode);
+	public int isUsername(String role);
+	public String selectUsername(String role);
 }

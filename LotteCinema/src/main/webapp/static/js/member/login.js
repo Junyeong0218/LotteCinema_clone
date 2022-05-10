@@ -10,7 +10,12 @@ const notMemberLoginBtn = document.querySelector(".not-member-login-btn");
 const notLoginInput = document.querySelectorAll(".n-login-input input");
 const bookPassword = notLoginInput[2];
 const checkBookPassword = notLoginInput[3];
-const birthday = document.querySelector("#birthday")
+const birthday = document.querySelector("#birthday");
+const checkBtn = document.querySelector(".check-btn");
+const closeBtn = document.querySelector(".close-btn");
+const dim = document.querySelector(".dim");
+const notMemberLoginLayer = document.querySelector(".not-member-login-layer");
+
 
 let passwordIsEmptyFlag = false
 let checkPasswordIsEmptyFlag = false;
@@ -177,18 +182,34 @@ function password_check() {
 	}
 }
 
+
 function agree_check() {
 	let agreeCheck = document.querySelector("input[name=agree-check]").checked;
-	if(!agreeCheck){
+	if (!agreeCheck) {
 		alert("약관 동의를 클릭해주세요.");
+	} else {
+		$.ajax({
+			type:"post",
+			url: "/member/check-phone",
+			dataType: "text",
+			data: {
+				"phone" :notLoginInput[1].value
+			},
+			success: function(data) {
+				if(data=="true"){
+					alert("이미 있는 핸드폰 번호입니다.");
+				}
+			},
+			error: function(data){
+				alert("비동기 처리 오류");
+			}
+		})
+		
+		
 	}
 }
 
-
-notMemberLoginBtn.onclick = () => {
-	birth_date();
-	agree_check();
-	
+function loginAsNotMember() {
 	$.ajax({
 		type: "post",
 		url: "/member/not_member_login",
@@ -199,13 +220,39 @@ notMemberLoginBtn.onclick = () => {
 			"birth_date": birth_date(),
 			"password": notLoginInput[2].value
 		},
-		success(data) {
-			location.replace("/index");
+		success: function(data) {
+			if (data == "true") {
+				location.replace("/index");
+			} 
 		},
-		error(){
-		
+		error: function(data) {
+			alert("비동기 통신 오류");
 		}
-	})
+	});
+}
+
+function activeModal() {
+	dim.classList.add("active");
+	notMemberLoginLayer.classList.add("active");
+}
+
+function closeModal() {
+	dim.classList.remove("active");
+	notMemberLoginLayer.classList.remove("active");
+}
+
+notMemberLoginBtn.onclick = () => {
+	birth_date();
+	agree_check();
+	activeModal();
+}
+
+closeBtn.onclick = () => {
+	closeModal();
+}
+
+checkBtn.onclick = () => {
+	loginAsNotMember();
 }
 
 

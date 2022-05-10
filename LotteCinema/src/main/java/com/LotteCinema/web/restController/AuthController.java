@@ -114,11 +114,24 @@ public class AuthController {
 		return "redirect: /";
 	}
 	
+	@ResponseBody
+	@RequestMapping(value="/member/check-phone", method=RequestMethod.POST)
+	public String checkPhone(String phone) {
+		if(authService.checkPhone(phone)) {
+			return "true";
+		}
+		return null;
+	}
+	
+	@ResponseBody
 	@RequestMapping(value = "/member/not_member_login", method=RequestMethod.POST)
 	public String notMemberLogin(NotMemberLoginDto notMemberLoginDto, HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		User user = authService.notMemberLogin(notMemberLoginDto);
-		session.setAttribute("not_member", user);
-		return "true";
+		if(user != null) {
+			session.setAttribute("not_member", user);
+			return "true";
+		}
+		return null;
 	}
 }

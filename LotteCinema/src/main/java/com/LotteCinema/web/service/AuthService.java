@@ -9,5 +9,6 @@ public interface AuthService {
 	public boolean signup(User user, PhoneCertificate phoneCertificate);
 	public int usernameCheck(String username);
 	public User loadUserByUsername(SigninDto signinDto);
+	public boolean checkPhone(String phone);
 	public User notMemberLogin(NotMemberLoginDto notMemberLoginDto);
 }

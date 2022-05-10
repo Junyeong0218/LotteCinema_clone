@@ -27,17 +27,15 @@ public class NotMemberLoginDto {
 	private LocalDateTime update_date;
 	
 	public User toNotMemberEntity() {
-		role = "NOT_MEMBER";
-		username = "tempuser"+1;
 		return User.builder()
 				.username(username)
+				.password(BCrypt.hashpw(password, BCrypt.gensalt()))
 				.name(name)
 				.phone(phone)
 				.birth_date(birth_date)
-				.password(BCrypt.hashpw(password, BCrypt.gensalt()))
-				.role(role)
 				.create_date(create_date)
 				.update_date(update_date)
+				.role(role)
 				.build();
 	}
 }

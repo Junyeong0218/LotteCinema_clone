@@ -52,4 +52,14 @@ public class UserRepositoryImpl implements UserRepository {
 	public User loadUserByPhone(String phone) {
 		return session.selectOne(NAME_SPACE + "loadUserByPhone", phone);
 	}
+	
+	@Override
+	public int isUsername(String role) {
+		return session.selectOne(NAME_SPACE + "isUsername", role);
+	}
+	
+	@Override
+	public String selectUsername(String role) {
+		return session.selectOne(NAME_SPACE + "selectUsername", role);
+	}
 }
