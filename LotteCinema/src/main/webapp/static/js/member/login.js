@@ -242,6 +242,15 @@ function closeModal() {
 }
 
 notMemberLoginBtn.onclick = () => {
+	const layerInput = document.querySelectorAll(".layer-input");
+	const nameInput = layerInput[0];
+	const phoneInput = layerInput[1];
+	const bookPasswordInput = layerInput[2];
+	
+	nameInput.value = notLoginInput[0].value;
+	phoneInput.value = notLoginInput[1].value;
+	bookPasswordInput.value = notLoginInput[2].value;
+	
 	birth_date();
 	agree_check();
 	activeModal();

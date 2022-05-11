@@ -46,4 +46,9 @@ public class MemberController {
 	public String login() {
 		return LOGIN;
 	}
+	
+	@RequestMapping(value="/member/join/find_username", method=RequestMethod.GET)
+	public String find_username() {
+		return "/member/join/find_username";
+	}
 }

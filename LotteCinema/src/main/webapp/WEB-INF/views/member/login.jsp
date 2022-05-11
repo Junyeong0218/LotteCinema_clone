@@ -33,25 +33,25 @@
 					<div class="not-member-login-layer">
 						<div class="layer-contents">
 							<p class="layer-title">
-								"입력하신 정보로 "<br>
-								"비회원 로그인을 진행 합니다."
+								입력하신 정보로 <br>
+								비회원 로그인을 진행 합니다.
 							</p>
 							<div class="input-label-wrap">
 								<label class="input-label">
 									<span class="title">이름 : </span>
-									<input type="text" id="name" name="name" class="layer-input">
+									<input type="text" id="name" name="name" class="layer-input" readonly>
 								</label>
 								<label class="input-label">
 									<span class="title">휴대폰 번호 : </span>
-									<input type="text" id="phone" name="phone" class="layer-input">
+									<input type="text" id="phone" name="phone" class="layer-input" readonly>
 								</label>
 								<label class="input-label">
 									<span class="title">고유번호 : </span>
-									<input type="text" id="phoneCode" name="phoneCode" class="layer-input">
+									<input type="text" id="phoneCode" name="phoneCode" class="layer-input" readonly>
 								</label>
 							</div>
 							<p class="layer-text">
-								"본화면을 캡쳐하시면 비회원 예매 내력 조회 시, 유용하게 사용하실 수 있습니다."
+								본화면을 캡쳐하시면 비회원 예매 내력 조회 시, 유용하게 사용하실 수 있습니다.
 							</p>
 						</div>
 						<div class="layer-footer">
@@ -59,7 +59,7 @@
 								<li>
 									<button type="button" class="close-btn">취소</button>
 								</li>
-								<li>
+								<li class="sect">
 									<button type="button" class="check-btn">확인</button>
 								</li>
 							</ul>
