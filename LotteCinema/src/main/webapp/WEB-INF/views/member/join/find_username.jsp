@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="colomn-menu-div">
                                 <div class="ui-radio">
-                                    <input type="radio" id="find-phone" name="find-way" data-code="1">
+                                    <input type="radio" id="find-phone" name="find-way" data-code="1" checked>
                                     <label for="find-phone">휴대폰 번호로 찾기</label>
                                 </div>
                                 <div id="find-phone-section" class="inner-content active">
@@ -40,7 +40,7 @@
                                             <label for="find-phone-name">이름</label>
                                         </div>
                                         <div class="ui-input">
-                                            <input type="text" id="find-phone-name">
+                                            <input type="text" id="find-phone-name" class="ui-input-index">
                                             <span class="placeholder">한글 또는 영문으로 입력해주세요.</span>
                                         </div>
                                     </div>
@@ -58,11 +58,11 @@
                                                 <option value="018">018</option>
                                                 <option value="019">019</option>
                                             </select>
-                                            <div class="middle-num">
-                                                <input type="tel" id="find-phone-num-1" maxlength="4">
+                                            <div class="ui-input">
+                                                <input type="tel" id="find-phone-num-1" maxlength="4" class="ui-input-index">
                                             </div>
-                                            <div class="last-num">
-                                                <input type="tel" id="find-phone-num-2" maxlength="4">
+                                            <div class="ui-input">
+                                                <input type="tel" id="find-phone-num-2" maxlength="4" class="ui-input-index">
                                             </div>
                                         </div>
                                     </div>
@@ -75,6 +75,26 @@
                                     <input type="radio" id="find-email" name="find-way" data-code="2">
                                     <label for="find-email">이메일주소로 찾기</label>
                                 </div>
+                                <div id="find-email-section" class="inner-content">
+                                    <div class="row">
+                                        <div class="namebox">
+                                            <label for="find-email-name">이름</label>
+                                        </div>
+                                        <div class="ui-input">
+                                            <input type="text" id="find-email-name" class="ui-input-index">
+                                            <span class="placeholder">한글 또는 영문으로 입력해주세요.</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="namebox">
+                                            <label for="find-email-address">이메일 주소</label>
+                                        </div>
+                                        <div class="ui-input">
+                                            <input type="text" id="find-email-address" class="ui-input-index">
+                                            <span class="placeholder">이메일주소를 입력해주세요.</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -83,6 +103,7 @@
             </div>
         </main>
         <jsp:include page="/WEB-INF/templetes/member/footer.jsp" />
+        <script src="/static/js/member/join/find_username.js"></script>
         <script src="/static/js/member/join/footer_insite.js"></script>
     </body>
 

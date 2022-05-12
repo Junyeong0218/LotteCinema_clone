@@ -4,6 +4,11 @@
     max-width: 1100px;
 }
 
+.ui-input-index._focus{
+	border: 1px solid #ee1c25;
+	opacity: 1;
+}
+
 .toparea {
     margin-bottom: 65px;
 }
@@ -110,7 +115,7 @@
     background-color: #f0f0f0;
 }
 
-.ui-input>input {
+.ui-input-index {
     position: relative;
     padding: 0 10px;
     width: 100%;
@@ -164,8 +169,7 @@ option {
     line-height: 32px;
 }
 
-.middle-num,
-.last-num {
+.phone-wrap .ui-input {
     position: relative;
     display: inline-block;
     margin-left: 7px;
@@ -174,20 +178,8 @@ option {
     background-color: #f0f0f0;
 }
 
-.middle-num>input,
-.last-num>input {
-    position: relative;
-    padding: 0 10px;
-    width: 100%;
-    height: 34px;
-    font-size: 14px;
-    line-height: 34px;
-    background-color: #fff;
-    opacity: 0;
-    z-index: 1;
-}
 
-.last-num::before {
+.phone-wrap .ui-input:last-child::before {
     content: '-';
     position: absolute;
     left: -10px;
