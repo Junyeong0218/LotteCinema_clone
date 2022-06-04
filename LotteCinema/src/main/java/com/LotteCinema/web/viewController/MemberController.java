@@ -25,6 +25,8 @@ public class MemberController {
 	private final String FIND_PASSWORD = "/member/join/find_password";
 	private final String FIND_PASSWORD_CERTIFICATE = "/member/join/find_password_certificate";
 	
+	
+	
 	@RequestMapping(value = JOIN, method = RequestMethod.GET)
 	public String join() {
 		return JOIN;
@@ -51,6 +53,7 @@ public class MemberController {
 		System.out.println((SignupRequestDto) request.getSession().getAttribute("signupRequestDto"));
 		return SIGNUP;
 	}
+	
 	
 	@RequestMapping(value = LOGIN, method = RequestMethod.GET)
 	public String login() {

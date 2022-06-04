@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.LotteCinema.web.domain.user.UserRepository">
+  
+  <insert id="signup" parameterType="com.LotteCinema.web.domain.user.User">
+  	insert into 
+  		user_mst
+  	values(
+  		0,
+  		#{username},
+  		#{password},
+  		#{name},
+  		#{telecom},
+  		#{phone},
+  		#{email},
+  		#{birth_date},
+  		#{gender},
+  		#{email_assent},
+  		#{sms_assent},
+  		now(),
+  		now(),
+  		"MEMBER",
+  		null
+  	);
+  	
+  	<selectKey keyProperty="usercode" resultType="Integer" order="AFTER">
+  		select usercode from user_mst where username = #{username};
+  	</selectKey>
+  </insert>
+  
+  <select id="usernameCheck" parameterType="String" resultType="Integer">
+  	select
+  		count(username)
+  	from
+  		user_mst
+  	where
+  		username = #{username};
+  </select>
+  
+  <select id="selectPassword" parameterType="String" resultType="String">
+  	select
+  		password
+  	from
+  		user_mst
+  	where
+  		username = #{username};
+  </select>
+  
+  <select id="loadUserByUsername" parameterType="String" resultType="com.LotteCinema.web.domain.user.User">
+  	select
+  		*
+  	from
+  		user_mst
+  	where
+  		username = #{username};
+  </select>
+  
+  <insert id="notMemberSignup" parameterType="com.LotteCinema.web.domain.user.User">
+  	insert into
+  		user_mst
+  	values(
+  		0,
+  		#{username},
+  		#{password},
+  		#{name},
+  		null,
+  		#{phone},
+  		null,
+  		#{birth_date},
+  		null,
+  		null,
+  		null,
+  		now(),
+  		now(),
+  		#{role},
+  		null
+  	);
+  	
+  </insert>
+  
+  <select id="selectPhone" parameterType="String" resultType="Integer">
+  	select
+  		count(phone)
+  	from
+  		user_mst
+  	where
+  		phone = #{phone};
+  </select>
+  
+  <select id="loadUserByPhone" parameterType="String" resultType="com.LotteCinema.web.domain.user.User">
+  	select
+  		username,
+  		name,
+  		phone,
+  		birth_date,
+  		password
+  	from
+  		user_mst
+  	where
+  		phone = #{phone};
+  </select>
+  
+  <select id="isUsername" parameterType="String" resultType="Integer">
+  	select
+  		count(username)
+  	from
+  		user_mst
+  	where
+  		role = #{role};
+  </select>
+  
+  <select id="selectUsername" parameterType="String" resultType="String">
+  	select
+  		username
+  	from
+  		user_mst
+  	where
+  		role = #{role}
+  	order by
+  		usercode
+  	desc limit 1;
+  	
+  </select>
+  
+  
+  </mapper>

@@ -1,5 +1,21 @@
 main {
-	width: 100%;
+    width: 100%;
+}
+
+.dim {
+    display: none;
+}
+
+.dim.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
 }
 
 .contents {
@@ -9,6 +25,144 @@ main {
     padding-top: 105px;
     width: 100%;
 }
+
+.not-member-login-layer {
+    display: none;
+    left: 50%;
+    top: 50%;
+    margin-top: -194px;
+    margin-left: -210px;
+
+    width: 420px;
+    height: 387.88px;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.not-member-login-layer.active {
+    display: block;
+    position: fixed;
+    z-index: 6;
+    height: auto;
+}
+
+.layer-contents {
+    padding: 30px 25px;
+    width: 420px;
+    height: 336.88px;
+
+}
+
+.layer-title {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.input-label-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 370px;
+    height: 175px;
+}
+
+.input-label {
+    position: relative;
+    margin-bottom: 20px;
+    width: 370px;
+    height: 45px;
+}
+
+.title {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    line-height: 45px;
+    font-size: 13px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.layer-input {
+    padding: 0 18px;
+    padding-left: 110px;
+    width: 100%;
+    height: 45px;
+
+    text-align: right;
+    line-height: 45px;
+    font-size: 14px;
+
+    background-color: #F8F8F8;
+    border-radius: 4px;
+    border: none;
+}
+
+.layer-text {
+    margin: 20px 0 5px 8px;
+    text-indent: -8px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.layer-footer {
+    border-top: 1px solid #DDD;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.layer-footer>ul {
+    display: flex;
+}
+
+.layer-footer>ul>li {
+    width: 50%;
+}
+
+.close-btn {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border: none;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.check-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 25px;
+    margin-top: -12px;
+    border-left: 1px solid #ddd;
+}
+
+.sect::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 25px;
+    margin-top: -12px;
+    border-left: 1px solid #ddd;
+}
+
+
+.check-btn {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border: none;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+
 
 .select-button {
     display: flex;
@@ -65,7 +219,7 @@ main {
 
 .member {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     width: 980px;
     height: 363.5px;
@@ -209,11 +363,11 @@ main {
 }
 
 #tab-section-2 {
-	margin: 0;
+    margin: 0;
 }
 
 .not-member-login {
-    display: none;
+    display: flex;
     flex-direction: column;
     margin: 0px auto;
     padding: 30px 0px 60px;
@@ -221,8 +375,10 @@ main {
 }
 
 .not-member-select-btn {
+    padding: 10px 0 0 10px;
     display: flex;
 }
+
 
 .not-member-select-btn button:first-child {
     position: relative;
@@ -252,9 +408,13 @@ main {
 }
 
 .n-login-input-box {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 980px;
+}
+
+.n-login-input-box.current {
+    display: flex;
 }
 
 .n-login-items {
@@ -438,8 +598,8 @@ main {
     text-align: right;
 }
 
-.agreement-check-box > input {
-	display: none;
+.agreement-check-box>input {
+    display: none;
 }
 
 .agreement-check-box:first-child Label {
@@ -483,8 +643,8 @@ main {
     height: 45px;
 }
 
-.signup-signin-button > a,
-.signup-signin-button > button {
+.signup-signin-button>a,
+.signup-signin-button>button {
     min-width: 160px;
     margin: 0px 3px;
 }
@@ -502,7 +662,21 @@ main {
     background-color: #ffffff;
 }
 
-.btn-signin {
+.not-member-login-btn {
+    height: 45px;
+    line-height: 43px;
+    padding: 0px 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #414141;
+    font-size: 14px;
+    color: #ffffff !important;
+    background-color: #414141;
+
+}
+
+.not-member-booking {
     height: 45px;
     line-height: 43px;
     padding: 0px 18px;
@@ -526,11 +700,11 @@ main {
 }
 
 .not-member-reservation.current {
-	display: flex;
+    display: flex;
 }
 
 .not-member-login.current {
-	display: flex;
+    display: flex;
 }
 
 .n-reservation-input {

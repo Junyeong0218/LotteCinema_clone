@@ -122,18 +122,18 @@ form,
 }
 
 .form-message.black {
-	display: inline-block;
-	color: black;
+    display: inline-block;
+    color: black;
 }
 
 .form-message.red {
-	display: inline-block;
+    display: inline-block;
     color: #EE1C25;
 }
 
 .form-message.green {
-	display: inline-block;
-	color: #0C8448;
+    display: inline-block;
+    color: #0C8448;
 }
 
 .check-all {
